@@ -9223,6 +9223,7 @@ Cta One
   border-top-left-radius: var(--farmology-bdr-radius);
   border-top-right-radius: var(--farmology-bdr-radius);
   overflow: hidden;
+
 }
 
 .services-two__img::before {
@@ -22922,3 +22923,21 @@ Product Description
 /*--------------------------------------------------------------
 # End All Css
 --------------------------------------------------------------*/
+
+
+
+/* NEW CSS JEET */
+
+.services-two__icon-img{
+  top: -10px;
+height: 40pX;
+width: 40pX;
+
+
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    transition: all 500ms linear;
+    transition-delay: 0.1s;
+}
+
