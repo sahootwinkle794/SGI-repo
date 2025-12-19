@@ -372,7 +372,7 @@ ul {
   font-size: 20px;
   color: #fff;
   border-radius: 5px;
-  background: var(--farmology-base);
+  background: #4a9c40;
   z-index: 1;
   border: none;
 }
@@ -384,7 +384,7 @@ ul {
   left: -5px;
   right: -5px;
   bottom: -5px;
-  background-color: rgba(var(--farmology-base-rgb), .20);
+  background-color: #4a9c40;
   border-radius: 5px;
   z-index: -1;
 }
@@ -879,6 +879,7 @@ xs sidebar
   letter-spacing: 0.1em;
   font-weight: 700;
   margin-left: 10px;
+  color: #4a9c40;
 }
 
 .scroll-to-top__wrapper {
@@ -8618,7 +8619,7 @@ About One
 }
 
 .blog-one__meta li {
-  position: relative;
+  position: relative;  
   display: block;
 }
 
@@ -8634,11 +8635,11 @@ About One
 .blog-one__meta li a span {
   position: relative;
   font-size: 16px;
-  color: var(--farmology-base);
+  color: #4a9c40;
 }
 
 .blog-one__meta li a:hover {
-  color: var(--farmology-base);
+  color: #4a9b40;
 }
 
 .blog-one__title {
@@ -8654,7 +8655,7 @@ About One
 }
 
 .blog-one__title a:hover {
-  color: var(--farmology-base);
+  color: #49993f;
 }
 
 .blog-one__read-more {
@@ -8676,7 +8677,8 @@ About One
 }
 
 .blog-one__read-more a:hover {
-  color: var(--farmology-base);
+    color: var(--farmology-base);
+    background-color: #0f1417;
 }
 
 /***
