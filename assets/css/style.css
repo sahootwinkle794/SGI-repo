@@ -6082,7 +6082,7 @@ About One
 }
 
 .author-one__Vission-mission-point li p::before {
-  content: "";
+  /* content: ""; */
   position: absolute;
   bottom: -7px;
   left: 50%;
@@ -6093,7 +6093,7 @@ About One
 }
 
 .author-one__Vission-mission-point li p::after {
-  content: "";
+  /* content: ""; */
   position: absolute;
   bottom: -16px;
   left: 50%;
@@ -6129,7 +6129,7 @@ About One
 
 .author-one__ratting-box {
   position: absolute;
-  bottom: 135px;
+  bottom: 325px;
   left: 20px;
   width: 200px;
   height: 200px;
@@ -6203,6 +6203,7 @@ About One
 
 .author-one__ratting-box-shape img {
   width: auto;
+  display: none;
 }
 
 .author-one__img-shape {
@@ -9566,6 +9567,7 @@ Cta One
 
 .about-two__shape-2 img {
   width: auto;
+  display: none;
 }
 
 .about-two__shape-3 {
@@ -9577,6 +9579,7 @@ Cta One
 
 .about-two__shape-3 img {
   width: auto;
+  display: none;
 }
 
 .about-two__experience {
