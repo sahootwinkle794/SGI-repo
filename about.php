@@ -32,13 +32,13 @@
                                     <div class="about-one__crop-harvest-icon">
                                         <span class="icon-tractor"></span>
                                     </div>
-                                    <h3 class="about-one__crop-harvest-title">Crops<br> Harvested</h3>
+                                    <h3 class="about-one__crop-harvest-title">Produce <br> Irradiated</h3>
                                     <div class="about-one__crop-harvest-count count-box">
                                         <h3 class="count-text" data-stop="6.9" data-speed="1500"></h3>
                                         <span>M+</span>
                                     </div>
                                 </div>
-                                <div class="about-one__img-shape-1 float-bob-y">
+                                <div class="about_side_icons about-one__img-shape-1 float-bob-y">
                                     <img src="assets/images/shapes/about-one-img-shape-1.png"
                                         alt="about-one-img-shape-1">
                                 </div>
@@ -69,12 +69,12 @@
                                             alt="section-title-shape-2">
                                     </div>
                                 </div>
-                                <h3 class="section-title__title title-animation">Transforming Agriculture<br>Through Advanced Food Processing
+                                <h3 class="section-title__title title-animation">Gamma-Enabled Agricultural Growth
                                 </h3>
                             </div>
-                            <p class="about-one__text">SUKSHMA GAMMA Food Processing Facility will be the first of its kind in Andhra Pradesh, combining a Gamma Irradiation Facility with a Pack House to enhance food safety, open new markets, and create additional income opportunities for farmers and exporters. Andhra Pradesh, known as the “Rice Bowl of India,” is a leading agricultural state where agriculture is the primary livelihood for nearly 60% of the population and rice remains the major staple and export crop.</p>
+                            <p class="new_text about-one__text">SUKSHMA GAMMA Food Processing Facility will be the first of its kind in Andhra Pradesh, combining a Gamma Irradiation Facility with a Pack House to enhance food safety, open new markets, and create additional income opportunities for farmers and exporters. Andhra Pradesh, known as the “Rice Bowl of India,” is a leading agricultural state where agriculture is the primary livelihood for nearly 60% of the population and rice remains the major staple and export crop.</p>
                             <h4 class="about-one__title-1">Commitment to Farmer and Exporter Growth</h4>
-                            <div class="about-one__points-box-and-since">
+                            <div class="about_shape_2 about-one__points-box-and-since">
                                 <ul class="about-one__points list-unstyled">
                                     <li>
                                         <div class="icon">
@@ -99,8 +99,8 @@
                                     <div class="about-one__since-icon">
                                         <span class="icon-harvester"></span>
                                     </div>
-                                    <h5 class="about-one__since-title">Harvesting since</h5>
-                                    <h4 class="about-one__since-year">2000</h4>
+                                    <h5 class="about-one__since-title">Precision Gamma Solutions</h5>
+                                    <!-- <h4 class="about-one__since-year">2000</h4> -->
                                 </div>
                             </div>
                             <div class="about-one__btn-and-video">
@@ -225,19 +225,19 @@
         </section>
         <!--Author One End -->
         <!--About Two Start -->
-        <section class="about-two">
+      <section class="about-two">
             <div class="about-two__shape-3 float-bob-x">
                 <img src="assets/images/shapes/about-two-shape-3.png" alt="">
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-6">
+                    <div class="col-xl-6 mission_image">
                         <div class="about-two__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
                             <div class="about-two__img-box">
                                 <div class="about-two__img">
-                                    <img src="assets/images/resources/mission-4.svg" alt="">
+                                    <img src="assets/images/resources/mission-4.png" alt="">
                                 </div>
-                                <div class="about-two__img-2">
+                                <div class="new_about_mission about-two__img-2">
                                     <img src="assets/images/resources/mission-2.png" alt="">
                                 </div>
                                 <div class="about-two__shape-1">
@@ -246,13 +246,13 @@
                                 <div class="about-two__shape-2 float-bob-y">
                                     <img src="assets/images/shapes/about-two-shape-2.png" alt="">
                                 </div>
-                                <div class="about-two__experience">
+                                <!-- <div class="about-two__experience">
                                     <div class="about-two__experience-count-box count-box">
                                         <h3 class="count-text" data-stop="25" data-speed="1500"></h3>
                                         <span>+</span>
                                     </div>
                                     <p class="about-two__experience-count-text">Years of<br> Experience</p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -268,27 +268,26 @@
                                         <img src="assets/images/resources/section-title-shape-2.png" alt="">
                                     </div>
                                 </div>
-                                <h3 class="section-title__title title-animation">Healthy & Fresh Livestock With Natural
-                                    Care
+                                <h3 class="section-title__title title-animation">Our Mission
                                 </h3>
                             </div>
-                            <p class="about-two__text">"Sustainable Farming, Livestock, and Dairy — Together With You".
-                            </p>
-                            <p class="about-two__text-2">Started with a passion for agriculture, Farmology has grown
+                            <!-- <p class="about-two__text">"Sustainable Farming, Livestock, and Dairy — Together With You".
+                            </p> -->
+                            <!-- <p class="about-two__text-2">Started with a passion for agriculture, Farmology has grown
                                 into a trusted partner for farmers across livestock, crops, and dairy.
-                            </p>
+                            </p> -->
                             <div class="about-two__tab tab-box">
-                                <ul class="tabs-button-box list-unstyled clearfix">
-                                    <li data-tab="#mission" class="tab-btn-item active-btn">
+                                <!-- <ul class="tabs-button-box list-unstyled clearfix"> -->
+                                    <!-- <li data-tab="#mission" class="tab-btn-item active-btn">
                                         <h3>Our Mission</h3>
-                                    </li>
+                                    </li> -->
                                     <!-- <li data-tab="#vision" class="tab-btn-item">
                                         <h3> Our Vision</h3>
                                     </li>
                                     <li data-tab="#commitment" class="tab-btn-item">
                                         <h3> Our commitment</h3>
                                     </li> -->
-                                </ul>
+                                <!-- </ul> -->
                                 <div class="tabs-content tabs-content-box">
                                     <div class="tab tab-active" id="mission">
                                         <div class="about-two__single-tab">

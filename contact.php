@@ -1,7 +1,6 @@
 <?php include 'header.php'; ?>
 
-
-        <!--Page Header Start-->
+    <!--Page Header Start-->
         <section class="page-header">
             <div class="page-header__bg" style="background-image: url(assets/images/backgrounds/page-header-bg.png);">
             </div>
@@ -18,9 +17,9 @@
                 </div>
             </div>
         </section>
-        <!--Page Header End-->
+    <!--Page Header End-->
 
-        <!--Contact Info Start-->
+    <!--Contact Info Start-->
         <section class="contact-info">
             <div class="container">
                 <div class="row">
@@ -83,9 +82,9 @@
                 </div>
             </div>
         </section>
-        <!--Contact Info End-->
+    <!--Contact Info End-->
 
-        <!--Contact Page Start-->
+    <!--Contact Page Start-->
         <section class="contact-page">
             <div class="container">
                 <div class="contact-page__inner">
@@ -161,7 +160,258 @@
                 </div>
             </div>
         </section>
-        <!--Contact Page End-->
-
+    <!--Contact Page End-->
 
 <?php include 'footer.php'; ?>
+<script src="assets/js/script.js"></script>
+<script>
+        (function () {
+            'use strict';
+
+            const forms = document.querySelectorAll('.needs-validation');
+
+            Array.from(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+        //  function loadCaptcha() {
+        //     $.ajax({
+        //        url: "generate_captcha.php",
+        //        type: "GET",
+        //        dataType: "json",
+        //        success: function(res) {
+        //              $("#captchaCode").text(res.captcha);
+        //        }
+        //     });
+        //  }
+
+        //  loadCaptcha();
+
+        //  $("#refreshCaptcha").click(function() {
+        //     loadCaptcha();
+        //  });
+
+            $("input[name='name']").on("input", function () {
+                let name = $(this).val().trim();
+                if (/^[A-Za-z ]{3,80}$/.test(name)) {
+                    $(".error-name").text("");
+                    $(this).removeClass("is-invalid");
+                } else {
+                    $(".error-name").text("Name must be 3-80 characters (letters & spaces only)");
+                    $(this).addClass("is-invalid");
+                }
+            });
+
+           $("input[name='number']").on("input", function () {
+                let number = $(this).val().trim();
+                if (/^[6-9][0-9]{9}$/.test(number)) {
+                    $(".error-number").text("");
+                    $(this).removeClass("is-invalid");
+                } else {
+                    $(".error-number").text("Enter a valid 10-digit Indian mobile number");
+                    $(this).addClass("is-invalid");
+                }
+            });
+
+
+            $("input[name='email']").on("input", function () {
+                let email = $(this).val().trim();
+                if (/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/.test(email)) {
+                    $(".error-email").text("");
+                    $(this).removeClass("is-invalid");
+                } else {
+                    $(".error-email").text("Enter a valid email address");
+                    $(this).addClass("is-invalid");
+                }
+            });
+
+            $("input[name='company']").on("input", function () {
+                let company = $(this).val().trim();
+                if (/^[A-Za-z ]{3,80}$/.test(company)) {
+                    $(".error-company").text("");
+                    $(this).removeClass("is-invalid");
+                } else {
+                    $(".error-company").text("Company must be 3-80 characters (letters & spaces only)");
+                    $(this).addClass("is-invalid");
+                }
+            });
+
+            $("textarea[name='message']").on("input", function () {
+                let message = $(this).val().trim();
+                if (/^[A-Za-z0-9 .,!?@#()\-_\r\n]{10,1000}$/s.test(message)) {
+                    $(".error-message").text("");
+                    $(this).removeClass("is-invalid");
+                } else {
+                    $(".error-message").text("Message must be 10-1000 characters.");
+                    $(this).addClass("is-invalid");
+                }
+            });
+
+        // $("input[name='captcha_input']").on("input", function () {
+        //    let captcha = $(this).val().trim();
+
+        //    if (captcha.length !== 6) {
+        //       $(".error-captcha").text("Enter valid captcha");
+        //    } else {
+        //       $(".error-captcha").text("");
+        //    }
+        // });
+
+        $("#contactForm").on("submit", function (e) {
+            e.preventDefault();
+
+            $(".text-danger").text("");
+
+            let isValid = true;
+
+            let name = $("input[name='name']").val().trim();
+            let number = $("input[name='number']").val().trim();
+            let email = $("input[name='email']").val().trim();
+            let company = $("input[name='company']").val().trim();
+            let message = $("textarea[name='message']").val().trim();
+            // let captcha = $("input[name='captcha_input']").val().trim();
+
+            // Escape HTML to prevent XSS (client side)
+            const escapeInput = str => $("<div>").text(str).html();
+
+            name = escapeInput(name);
+            number = escapeInput(number);
+            email = escapeInput(email);
+            company = escapeInput(company);
+            message = escapeInput(message);
+            // captcha = escapeInput(captcha);
+
+
+            // if (!/^[A-Za-z ]{3,80}$/.test(name)) {
+            //    $(".error-name").text("Name must be 3-80 characters (letters & spaces only)");
+            //    isValid = false;
+            // }
+
+            // if (!/^[6-9][0-9]{9}$/.test(number)) {
+            //    $(".error-number").text("Enter a valid 10 digits mobile number");
+            //    isValid = false;
+            // }
+
+
+            // if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/.test(email)) {
+            //    $(".error-email").text("Enter a valid email address");
+            //    isValid = false;
+            // }
+
+            // if (!/^[A-Za-z ]{3,80}$/.test(company)) {
+            //    $(".error-company").text("Company must be 3-80 characters (letters & spaces only)");
+            //    isValid = false;
+            // }
+
+            // if (!/^[A-Za-z0-9 .,!?@#()\-_\r\n]{10,1000}$/s.test(message)) {
+            //    $(".error-message").text("Message must be 10-1000 characters. Allowed: letters, numbers, spaces & common symbols.");
+            //    isValid = false;
+            // }
+
+            // if (captcha.length !== 6) {
+            //    $(".error-captcha").text("Enter valid captcha");
+            //    isValid = false;
+            // }
+
+            // reCAPTCHA validation
+            // let recaptcha = grecaptcha.getResponse();
+            // if (recaptcha.length === 0) {
+            //    $(".error-recaptcha").text("Please verify you are not a robot");
+            //    isValid = false;
+            // } else {
+            //    $(".error-recaptcha").text("");
+            // }
+
+            if (!isValid) {
+                //    grecaptcha.reset(); 
+                return;
+            }
+
+            $.ajax({
+                url: "mail.php",
+                type: "POST",
+                dataType: "json",
+                data: $("#contactForm").serialize(),
+                beforeSend: function () {
+                    $(".btn-submit").attr("disabled", true).text("Sending...");
+                    $("#pageLoader").show();
+                },
+                success: function (res) {
+                    $(".alert").remove();
+                    //  if (res.status !== "success") {
+                    //     grecaptcha.reset(); 
+                    //  }
+
+                    //  const alertHTML = `
+                    //     <div class="alert alert-${res.status === "success" ? "success" : "danger"}">
+                    //        ${res.status === "success" ? "✔" : "❌"} ${res.message}
+                    //     </div>
+                    //  `;
+                    const alertHTML = `
+                        <div class="alert alert-${res.status === "success" ? "success" : "danger"} alert-dismissible fade show">
+                            <button type="button" class="btn-close alert-close" aria-label="Close"></button>
+                            ${res.status === "success" ? "✔" : "❌"} ${res.message}
+                        </div>
+                    `;
+
+                    $(".contact-form").prepend(alertHTML);
+
+                    // 👉 manual close button handler
+                    $(document).on("click", ".alert-close", function () {
+                        $(this).closest(".alert").fadeOut(300, function () {
+                            $(this).remove();
+                        });
+                    });
+
+                    // short robust scroll to the newly added alert
+                    setTimeout(function () {
+                        const container = $(".page-wrapper");
+                        const alertBox = $(".contact-form .alert").first();
+                        if (!container.length || !alertBox.length) return;
+
+                        const cRect = container[0].getBoundingClientRect();
+                        const aRect = alertBox[0].getBoundingClientRect();
+
+                        const target = Math.max(0, Math.round(container.scrollTop() + (aRect.top - cRect.top) - 20));
+
+                        container.stop(true, true).animate({ scrollTop: target }, 450);
+                        // quick re-scroll to defeat other scripts that may run right after
+                        setTimeout(() => container.stop(true, true).animate({ scrollTop: target }, 300), 300);
+                    }, 200);
+
+                    // remove alert after 20 seconds
+                    setTimeout(() => {
+                        $(".contact-form .alert").fadeOut(400, function () {
+                            $(this).remove();
+                        });
+                    }, 20000);
+
+                    if (res.status === "success") {
+                        $("#contactForm")[0].reset();
+                        //loadCaptcha();
+                        //grecaptcha.reset(); 
+                    }
+                },
+                error: function () {
+                    $(".contact-form").prepend(`
+                        <div class="alert alert-danger">
+                           ❌ Something went wrong!
+                        </div>
+                     `);
+                },
+                complete: function () {
+                    $(".btn-submit").attr("disabled", false).text("Send Message");
+                    $("#pageLoader").hide();
+                }
+            });
+        });
+
+    </script>

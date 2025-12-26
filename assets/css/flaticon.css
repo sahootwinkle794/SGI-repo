@@ -34,9 +34,11 @@
 }
 
 .icon-hydroponic-gardening:before {
-  content: "\e901";
+  content: "Step-02";
 }
-
+.icon-hydroponic-gardening2:before {
+  content: "Step-05";
+}
 .icon-planting:before {
   content: "\e902";
 }
@@ -60,7 +62,12 @@
 .icon-harvester:before {
   content: "\e907";
 }
-
+.icon-harvester1:before {
+  content: "Step-01";
+}
+.icon-harvester2:before {
+  content: "Step-04";
+}
 .icon-harvester-1:before {
   content: "\e908";
 }
@@ -122,9 +129,11 @@
 }
 
 .icon-supply-chain:before {
-  content: "\e917";
+  content: "Step-04";
 }
-
+.icon-supply-chain2:before {
+  content: "Step-07";
+}
 .icon-logistics:before {
   content: "\e918";
 }
@@ -256,7 +265,12 @@
 .icon-product:before {
   content: "\e938";
 }
-
+.icon-product3:before {
+  content: "Step-03";
+}
+.icon-product2:before {
+  content: "Step-06";
+}
 .icon-satisfication:before {
   content: "\e939";
 }

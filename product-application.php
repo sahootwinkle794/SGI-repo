@@ -127,7 +127,7 @@
 
 
 
-<section class="about-two">
+<section class="about-two about-1-new">
     <div class="about-two__shape-3 float-bob-x">
         <img src="assets/images/shapes/about-two-shape-3.png" alt="">
     </div>
@@ -139,8 +139,8 @@
                         <div class="about-two__img">
                             <img src="assets/images/resources/mission-4.svg" alt="">
                         </div>
-                        <div class="about-two__img-2">
-                            <img src="assets/images/resources/mission-2.png" alt="">
+                        <div class="new_product about-two__img-2">
+                            <img src="assets/images/resources/mission-4.png" alt="">
                         </div>
                         <div class="about-two__shape-1">
                             <!-- <img src="assets/images/shapes/about-two-shape-1.png" alt=""> -->
@@ -170,18 +170,27 @@
                                 <img src="assets/images/resources/section-title-shape-2.png" alt="">
                             </div>
                         </div>
-                        <h3 class="section-title__title title-animation">Food Irradiation for Safety and
-                            Preservation
+                        <h3 class="section-title__title title-animation">
+                            Food Irradiation for Safer, Longer-Lasting Foods
+
                         </h3>
+                        <!-- <div class="blog-one__date">
+                            <p>Trust</p>
+                        </div> -->
                     </div>
-                    <p class="about-two__text">"Sustainable Farming, Livestock, and Dairy — Together With You".
+
+                    <p class="about-two__text">
+                        A scientifically validated process using controlled gamma radiation to improve food safety.
                     </p>
-                    <p class="about-two__text-2">Started with a passion for agriculture, Farmology has grown
-                        into a trusted partner for farmers across livestock, crops, and dairy.
+
+                    <p class="about-two__text-2">
+                        Food irradiation extends shelf life, reduces food losses, and eliminates harmful microorganisms
+                        such as bacteria, parasites, and insects without compromising food quality.
                     </p>
-                    <div class="about-two__tab tab-box">
+
+                    <div class="about-two__tab tab-box tab-box-one">
                         <ul class="tabs-button-box list-unstyled clearfix">
-                            <h3>Our Mission</h3>
+                            <h3>How Food Irradiation Helps</h3>
                         </ul>
                         <div class="tabs-content tabs-content-box">
                             <div class="tab tab-active" id="mission">
@@ -194,9 +203,7 @@
                                                 <div class="icon">
                                                     <span class="fas fa-check"></span>
                                                 </div>
-                                                <p>Deliver safe, reliable, and fully compliant gamma irradiation
-                                                    services across food, pharmaceutical, and industrial
-                                                    sectors.
+                                                <p>Controls foodborne pathogens like Salmonella and E. coli.
                                                 </p>
                                             </li>
 
@@ -204,38 +211,76 @@
                                                 <div class="icon">
                                                     <span class="fas fa-check"></span>
                                                 </div>
-                                                <p>Empower exporters, farmers, and manufacturers to meet
-                                                    stringent national and international quality benchmarks.</p>
+                                                <p>Delays ripening and senescence in fruits and vegetables.</p>
                                             </li>
                                             <li>
                                                 <div class="icon">
                                                     <span class="fas fa-check"></span>
                                                 </div>
-                                                <p>Minimize post-harvest losses and extend shelf life through
-                                                    non-chemical, residue-free preservation solutions.</p>
+                                                <p>Prevents sprouting in potatoes, onions, and garlic.</p>
                                             </li>
                                             <li>
                                                 <div class="icon">
                                                     <span class="fas fa-check"></span>
                                                 </div>
-                                                <p>Advance scientific awareness and acceptance of irradiation as
-                                                    vital infrastructure for food security and public health.
+                                                <p>Disinfests grains and pulses from insects.
                                                 </p>
                                             </li>
                                             <li>
                                                 <div class="icon">
                                                     <span class="fas fa-check"></span>
                                                 </div>
-                                                <p>Maintain the highest standards of radiation safety, quality
-                                                    assurance, and operational transparency.</p>
+                                                <p>Reduces dependence on chemical fumigants.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-two__tab tab-box">
+                        <ul class="tabs-button-box list-unstyled clearfix">
+                            <h3>Food Categories Treated</h3>
+                        </ul>
+                        <div class="tabs-content tabs-content-box">
+                            <div class="tab tab-active" id="mission">
+                                <div class="about-two__single-tab">
+                                    <div class="about-two__single-tab-inner">
+                                        <div class="about-two__single-tab-text">
+                                        </div>
+                                        <ul class="about-two__single-tab-bottom-list list-unstyled">
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="fas fa-check"></span>
+                                                </div>
+                                                <p>Fruits and vegetables.
+                                                </p>
+                                            </li>
+
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="fas fa-check"></span>
+                                                </div>
+                                                <p>Spices and condiments.</p>
                                             </li>
                                             <li>
                                                 <div class="icon">
                                                     <span class="fas fa-check"></span>
                                                 </div>
-                                                <p>Continuously invest in technology, skilled talent, and
-                                                    process excellence to drive sustainable, long-term value
-                                                    creation.</p>
+                                                <p>Cereals, pulses, and grains.</p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="fas fa-check"></span>
+                                                </div>
+                                                <p>Meat, poultry, and seafood.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="fas fa-check"></span>
+                                                </div>
+                                                <p>Dry and packaged food products.</p>
                                             </li>
                                         </ul>
                                     </div>
@@ -244,12 +289,16 @@
                         </div>
                     </div>
 
+                    <p class="about-two__text-2">
+                        Food irradiation is approved by WHO, FAO, IAEA, FSSAI, and AERB, and is widely used to meet domestic and export food safety standards.
+                    </p>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="about-two">
+<section class="about-two about-2-new">
     <div class="about-two__shape-3 float-bob-x">
         <img src="assets/images/shapes/about-two-shape-3.png" alt="">
     </div>
@@ -263,23 +312,22 @@
                             <div class="section-title__shape-1">
                                 <img src="assets/images/resources/section-title-shape-1.png" alt="">
                             </div>
-                            <h6 class="section-title__tagline"> Food Irradiation</h6>
+                            <h6 class="section-title__tagline"> Individually Quick Frozen (IQF) Technology</h6>
                             <div class="section-title__shape-1">
                                 <img src="assets/images/resources/section-title-shape-2.png" alt="">
                             </div>
                         </div>
-                        <h3 class="section-title__title title-animation">Food Irradiation for Safety and
-                            Preservation
+                        <h3 class="section-title__title title-animation">Individually Quick Frozen (IQF) Technology
                         </h3>
                     </div>
-                    <p class="about-two__text">"Sustainable Farming, Livestock, and Dairy — Together With You".
+                    <p class="about-two__text">"An advanced freezing process designed to preserve the natural quality of food products".
                     </p>
-                    <p class="about-two__text-2">Started with a passion for agriculture, Farmology has grown
-                        into a trusted partner for farmers across livestock, crops, and dairy.
+                    <p class="about-two__text-2">IQF rapidly freezes individual food items to maintain freshness, texture, nutrition, and appearance,
+                        while preventing clumping and ensuring products remain free-flowing and easy to handle.
                     </p>
-                    <div class="about-two__tab tab-box">
+                    <div class="about-two__tab tab-box tab-box-one">
                         <ul class="tabs-button-box list-unstyled clearfix">
-                            <h3>Our Mission</h3>
+                            <h3>IQF Process Overview</h3>
                         </ul>
                         <div class="tabs-content tabs-content-box">
                             <div class="tab tab-active" id="mission">
@@ -292,48 +340,32 @@
                                                 <div class="icon">
                                                     <span class="fas fa-check"></span>
                                                 </div>
-                                                <p>Deliver safe, reliable, and fully compliant gamma irradiation
-                                                    services across food, pharmaceutical, and industrial
-                                                    sectors.
-                                                </p>
+                                                <p>Sorting and grading of raw produce.</p>
                                             </li>
 
                                             <li>
                                                 <div class="icon">
                                                     <span class="fas fa-check"></span>
                                                 </div>
-                                                <p>Empower exporters, farmers, and manufacturers to meet
-                                                    stringent national and international quality benchmarks.</p>
+                                                <p>Washing and blanching (if required).</p>
                                             </li>
                                             <li>
                                                 <div class="icon">
                                                     <span class="fas fa-check"></span>
                                                 </div>
-                                                <p>Minimize post-harvest losses and extend shelf life through
-                                                    non-chemical, residue-free preservation solutions.</p>
+                                                <p>Rapid freezing at ultra-low temperatures.</p>
                                             </li>
                                             <li>
                                                 <div class="icon">
                                                     <span class="fas fa-check"></span>
                                                 </div>
-                                                <p>Advance scientific awareness and acceptance of irradiation as
-                                                    vital infrastructure for food security and public health.
-                                                </p>
+                                                <p>Individual piece separation.</p>
                                             </li>
                                             <li>
                                                 <div class="icon">
                                                     <span class="fas fa-check"></span>
                                                 </div>
-                                                <p>Maintain the highest standards of radiation safety, quality
-                                                    assurance, and operational transparency.</p>
-                                            </li>
-                                            <li>
-                                                <div class="icon">
-                                                    <span class="fas fa-check"></span>
-                                                </div>
-                                                <p>Continuously invest in technology, skilled talent, and
-                                                    process excellence to drive sustainable, long-term value
-                                                    creation.</p>
+                                                <p>Hygienic packaging and cold storage.</p>
                                             </li>
                                         </ul>
                                     </div>
@@ -341,6 +373,45 @@
                             </div>
                         </div>
                     </div>
+                    <div class="about-two__tab tab-box">
+                        <ul class="tabs-button-box list-unstyled clearfix">
+                            <h3>IQF Product Range</h3>
+                        </ul>
+                        <div class="tabs-content tabs-content-box">
+                            <div class="tab tab-active" id="mission">
+                                <div class="about-two__single-tab">
+                                    <div class="about-two__single-tab-inner">
+                                        <div class="about-two__single-tab-text">
+                                        </div>
+                                        <ul class="about-two__single-tab-bottom-list list-unstyled">
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="fas fa-check"></span>
+                                                </div>
+                                                <p>Fruits (mango, berries, pineapple).</p>
+                                            </li>
+
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="fas fa-check"></span>
+                                                </div>
+                                                <p>Vegetables (peas, corn, beans).</p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="fas fa-check"></span>
+                                                </div>
+                                                <p>Ready-to-cook and ready-to-eat food items.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="about-two__text-2">IQF technology preserves natural taste, color, and nutrients while extending shelf life, minimizing microbial growth, and enabling convenient portion-based usage for retail and export markets.
+                    </p>
 
                 </div>
             </div>
@@ -350,14 +421,8 @@
                         <div class="about-two__img">
                             <img src="assets/images/resources/mission-4.svg" alt="">
                         </div>
-                        <div class="about-two__img-2">
-                            <img src="assets/images/resources/mission-2.png" alt="">
-                        </div>
-                        <div class="about-two__shape-1">
-                            <!-- <img src="assets/images/shapes/about-two-shape-1.png" alt=""> -->
-                        </div>
-                        <div class="about-two__shape-2 float-bob-y">
-                            <!-- <img src="assets/images/shapes/about-two-shape-2.png" alt=""> -->
+                        <div class="new_product about-two__img-2">
+                            <img src="assets/images/resources/mission-4.png" alt="">
                         </div>
                         <div class="about-two__experience">
                             <div class="about-two__experience-count-box count-box">

@@ -7,13 +7,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Home One || sukshmagamma|| sukshmagamma HTML 5 Template </title>
+    <title>Sukshma Gamma LLP | Your Trusted Irradiation Partner & IQF Facility</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="sukshmagamma HTML 5 Template " />
+    <meta name="description" content="India's first specialized frozen food irradiation facility and Farm to Freezer JBT IQF processing plant located in Andhra Pradesh. FDA compliant." />
+    <meta name="keywords" content="Shrimp Irradiation India, Farm to Freezer IQF, Gamma Irradiation Service AP, Cold Chain Logistics Mallavalli">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -37,12 +38,80 @@
     <link rel="stylesheet" href="assets/css/nice-select.css" />
     <link rel="stylesheet" href="assets/css/jquery-ui.css" />
     <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
 
 
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <style>
+        #button {
+        display: inline-block;
+        background-color: #FF9800;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 4px;
+        position: fixed;
+        bottom: 78px;
+        right: 0px;
+        transition: background-color .3s, 
+            opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+        }
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+.content {
+  width: 77%;
+  margin: 50px auto;
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
+  color: #6c767a;
+  line-height: 1.9;
+}
+@media (min-width: 500px) {
+  .content {
+    width: 43%;
+  }
+  #button {
+    margin: 30px;
+  }
+}
+.content h1 {
+  margin-bottom: -10px;
+  color: #03a9f4;
+  line-height: 1.5;
+}
+.content h3 {
+  font-style: italic;
+  color: #96a2a7;
+}
+    </style>
 </head>
 
 <body class="custom-cursor">
@@ -59,7 +128,7 @@
     </div>
     <!--End Preloader-->
 
-
+    <a id="button"></a>
 
     <div class="chat-icon"><button type="button" class="chat-toggler"><i class="fa fa-comment"></i></button></div>
     <!--Chat Popup-->
@@ -228,9 +297,9 @@
                                 <li>
                                     <a href="product-application">Products & Applications</a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="javascript:void(0);">Request Facility Tour</a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="services">Our Services</a>
                                 </li>

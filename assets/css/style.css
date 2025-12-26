@@ -50,7 +50,6 @@
 
 --------------------------------------------------------------*/
 
-
 /*--------------------------------------------------------------
 # Common
 --------------------------------------------------------------*/
@@ -76,6 +75,9 @@
   --farmology-bdr-radius: 5px;
 }
 
+/* p{
+  text-align: justify;
+} */
 .row {
   --bs-gutter-x: 30px;
 }
@@ -242,8 +244,6 @@ ul {
   z-index: -1;
 }
 
-
-
 /*** chat popup ***/
 
 .chat-popup {
@@ -255,7 +255,7 @@ ul {
   visibility: hidden;
   opacity: 0;
   background: var(--farmology-black);
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.10);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -292,7 +292,7 @@ ul {
   color: #fff;
   background: var(--farmology-base);
   cursor: pointer;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   align-items: center;
   justify-content: center;
   border-top-left-radius: 0;
@@ -307,7 +307,7 @@ ul {
   line-height: 20px;
   text-align: center;
   margin-bottom: 40px;
-  color: rgba(255, 255, 255, .70);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .chat-popup .chat-form .form-group {
@@ -320,19 +320,19 @@ ul {
   margin-bottom: 0px;
 }
 
-.chat-popup .chat-form .form-group input[type='text'],
-.chat-popup .chat-form .form-group input[type='email'],
+.chat-popup .chat-form .form-group input[type="text"],
+.chat-popup .chat-form .form-group input[type="email"],
 .chat-popup .chat-form .form-group textarea {
   position: relative;
   display: block;
   width: 100%;
   height: 40px;
-  border: 1px solid rgba(255, 255, 255, .10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
   font-size: 13px;
-  color: rgba(255, 255, 255, .70);
+  color: rgba(255, 255, 255, 0.7);
   padding: 10px 20px;
-  background-color: rgba(255, 255, 255, .10);
+  background-color: rgba(255, 255, 255, 0.1);
   transition: all 500ms ease;
 }
 
@@ -389,8 +389,6 @@ ul {
   z-index: -1;
 }
 
-
-
 /***
 =============================================
 xs sidebar
@@ -404,8 +402,7 @@ xs sidebar
   opacity: 0;
   width: 100%;
   visibility: hidden;
-  cursor: url(../images/icon/cross-out.png),
-    pointer;
+  cursor: url(../images/icon/cross-out.png), pointer;
   transform: translateX(-100%);
   transition: background-color 0.5s ease;
   transition: all 0.5s ease;
@@ -413,7 +410,7 @@ xs sidebar
 }
 
 .xs-sidebar-group.isActive .xs-overlay {
-  opacity: .8;
+  opacity: 0.8;
   visibility: visible;
   transform: translateX(0%);
 }
@@ -460,7 +457,7 @@ xs sidebar
   overflow-y: auto;
   visibility: hidden;
   opacity: 0;
-  border-right: 5px solid rgba(var(--farmology-white-rgb), .50);
+  border-right: 5px solid rgba(var(--farmology-white-rgb), 0.5);
   transform: translateX(-100%);
   transition: background-color 0.5s ease;
   transition: all 0.5s ease;
@@ -499,7 +496,7 @@ xs sidebar
   left: 0;
   height: 100%;
   width: 100%;
-  opacity: .8;
+  opacity: 0.8;
   z-index: 0;
 }
 
@@ -544,8 +541,8 @@ xs sidebar
   margin-bottom: 0px;
 }
 
-.xs-sidebar-group .content-inner .form-inner .form-group input[type='text'],
-.xs-sidebar-group .content-inner .form-inner .form-group input[type='email'],
+.xs-sidebar-group .content-inner .form-inner .form-group input[type="text"],
+.xs-sidebar-group .content-inner .form-inner .form-group input[type="email"],
 .xs-sidebar-group .content-inner .form-inner .form-group textarea {
   position: relative;
   display: block;
@@ -553,12 +550,12 @@ xs sidebar
   height: 50px;
   font-size: 15px;
   padding: 10px 20px;
-  color: rgba(var(--farmology-white-rgb), .70);
+  color: rgba(var(--farmology-white-rgb), 0.7);
   border: none;
   border-radius: var(--farmology-bdr-radius);
   outline: none;
   transition: all 500ms ease;
-  background-color: rgba(var(--farmology-white-rgb), .05);
+  background-color: rgba(var(--farmology-white-rgb), 0.05);
 }
 
 .xs-sidebar-group .content-inner .form-inner .form-group textarea {
@@ -585,9 +582,11 @@ xs sidebar
 .xs-sidebar-group .content-inner .form-inner .form-group button.thm-btn:hover {
   color: var(--farmology-black);
 }
-.con-num{
+
+.con-num {
   display: flex;
 }
+
 .sidebar-contact-info {
   position: relative;
   display: block;
@@ -657,7 +656,7 @@ xs sidebar
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: rgba(var(--farmology-white-rgb), .10);
+  background: rgba(var(--farmology-white-rgb), 0.1);
   border-radius: 50%;
   color: var(--farmology-white);
   font-size: 15px;
@@ -674,10 +673,10 @@ xs sidebar
   right: 0px;
   background: var(--farmology-base);
   border-radius: 50%;
-  transition: .5s;
-  transform: scale(.5);
+  transition: 0.5s;
+  transform: scale(0.5);
   opacity: 0;
-  content: '';
+  content: "";
   z-index: -1;
 }
 
@@ -690,7 +689,6 @@ xs sidebar
   color: var(--farmology-white);
 }
 
-
 /*=============== scrollbar-Css =============*/
 
 .xs-sidebar-widget {
@@ -701,8 +699,6 @@ xs sidebar
 .xs-sidebar-widget::-webkit-scrollbar {
   display: none;
 }
-
-
 
 .mobile-nav__content {
   max-height: 100vh;
@@ -731,9 +727,6 @@ xs sidebar
   background: rgba(255, 255, 255, 0.5);
 }
 
-
-
-
 /*--------------------------------------------------------------
 # Custom Cursor
 --------------------------------------------------------------*/
@@ -758,13 +751,13 @@ xs sidebar
   height: 10px;
   border-radius: 100%;
   background-color: var(--farmology-base);
-  opacity: .3;
+  opacity: 0.3;
   position: fixed;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   pointer-events: none;
-  -webkit-transition: width .3s, height .3s, opacity .3s;
-  transition: width .3s, height .3s, opacity .3s;
+  -webkit-transition: width 0.3s, height 0.3s, opacity 0.3s;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
   z-index: 999991;
 }
 
@@ -776,7 +769,7 @@ xs sidebar
 .custom-cursor__innerhover {
   width: 25px;
   height: 25px;
-  opacity: .4;
+  opacity: 0.4;
 }
 
 /*---------------------------------
@@ -848,7 +841,6 @@ xs sidebar
 
 /*--- End of Preloader ---*/
 
-
 /* scroll to top */
 .scroll-to-top {
   display: flex;
@@ -906,11 +898,6 @@ xs sidebar
   bottom: 70px;
 }
 
-
-
-
-
-
 /*--------------------------------------------------------------
 # Search Popup
 --------------------------------------------------------------*/
@@ -931,7 +918,7 @@ xs sidebar
 
 .search-popup .color-layer {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   top: 0;
   height: 120px;
@@ -971,7 +958,7 @@ xs sidebar
 
 .search-popup .close-search:hover {
   color: var(--farmology-base);
-  background-color: rgba(255, 255, 255, 1.0);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .search-active .search-popup .close-search {
@@ -979,9 +966,6 @@ xs sidebar
   transform: translateX(0px);
   visibility: visible;
 }
-
-
-
 
 .search-popup form {
   position: absolute;
@@ -1010,7 +994,7 @@ xs sidebar
 .search-popup .form-group input[type="search"] {
   position: relative;
   display: block;
-  background-color: rgba(255, 255, 255, 1.0);
+  background-color: rgba(255, 255, 255, 1);
   font-size: 18px;
   color: var(--farmology-black);
   height: 70px;
@@ -1023,7 +1007,7 @@ xs sidebar
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
   text-transform: capitalize;
-  border: 0px solid rgba(0, 0, 0, 0.10)
+  border: 0px solid rgba(0, 0, 0, 0.1);
 }
 
 .search-popup .form-group input[type="text"],
@@ -1065,21 +1049,6 @@ xs sidebar
 .search-popup input::placeholder {
   color: var(--farmology-black);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Section Title Css */
 .section-title {
@@ -1129,9 +1098,6 @@ xs sidebar
 .section-title__title span {
   color: var(--farmology-base);
 }
-
-
-
 
 /* Thm Btn Css */
 
@@ -1212,7 +1178,6 @@ xs sidebar
   transform: scale(1);
 }
 
-
 /*--------------------------------------------------------------
 # Navigations One
 --------------------------------------------------------------*/
@@ -1251,7 +1216,7 @@ xs sidebar
   align-items: center;
 }
 
-.main-menu__contact-list li+li {
+.main-menu__contact-list li + li {
   margin-left: 46px;
 }
 
@@ -1262,7 +1227,7 @@ xs sidebar
   bottom: 2px;
   left: -23px;
   width: 1px;
-  background-color: rgba(var(--farmology-white-rgb), .30);
+  background-color: rgba(var(--farmology-white-rgb), 0.3);
 }
 
 .main-menu__contact-list li:first-child:before {
@@ -1339,7 +1304,7 @@ xs sidebar
   justify-content: center;
   height: 40px;
   width: 40px;
-  border: 1px solid rgba(var(--farmology-white-rgb), .40);
+  border: 1px solid rgba(var(--farmology-white-rgb), 0.4);
   border-radius: 50%;
   font-size: 15px;
   color: var(--farmology-white);
@@ -1374,11 +1339,11 @@ xs sidebar
 }
 
 .main-menu__social a:hover::before {
-  transform: scale(1.0);
+  transform: scale(1);
   opacity: 1;
 }
 
-.main-menu__social a+a {
+.main-menu__social a + a {
   margin-left: 5px;
 }
 
@@ -1390,7 +1355,7 @@ xs sidebar
 .main-menu__wrapper {
   position: relative;
   display: block;
-  background-color: rgba(var(--farmology-white-rgb), .05);
+  background-color: rgba(var(--farmology-white-rgb), 0.05);
 }
 
 .main-menu__wrapper-inner {
@@ -1610,20 +1575,16 @@ xs sidebar
   line-height: 0;
 }
 
-
-
-
-
 .stricky-header.main-menu {
   background-color: var(--farmology-white);
 }
 
 .main-menu .main-menu__list,
-.main-menu .main-menu__list>li>ul,
-.main-menu .main-menu__list>li>ul>li>ul,
+.main-menu .main-menu__list > li > ul,
+.main-menu .main-menu__list > li > ul > li > ul,
 .stricky-header .main-menu__list,
-.stricky-header .main-menu__list>li>ul,
-.stricky-header .main-menu__list>li>ul>li>ul {
+.stricky-header .main-menu__list > li > ul,
+.stricky-header .main-menu__list > li > ul > li > ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1633,36 +1594,33 @@ xs sidebar
   display: none;
 }
 
-
-
 @media (min-width: 1200px) {
-
   .main-menu .main-menu__list,
-  .main-menu .main-menu__list>li>ul,
-  .main-menu .main-menu__list>li>ul>li>ul,
+  .main-menu .main-menu__list > li > ul,
+  .main-menu .main-menu__list > li > ul > li > ul,
   .stricky-header .main-menu__list,
-  .stricky-header .main-menu__list>li>ul,
-  .stricky-header .main-menu__list>li>ul>li>ul {
+  .stricky-header .main-menu__list > li > ul,
+  .stricky-header .main-menu__list > li > ul > li > ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.main-menu .main-menu__list>li,
-.stricky-header .main-menu__list>li {
+.main-menu .main-menu__list > li,
+.stricky-header .main-menu__list > li {
   padding-top: 40px;
   padding-bottom: 40px;
   position: relative;
 }
 
-.main-menu .main-menu__list>li+li,
-.stricky-header .main-menu__list>li+li {
+.main-menu .main-menu__list > li + li,
+.stricky-header .main-menu__list > li + li {
   margin-left: 20px;
 }
 
-.main-menu .main-menu__list>li>a,
-.stricky-header .main-menu__list>li>a {
+.main-menu .main-menu__list > li > a,
+.stricky-header .main-menu__list > li > a {
   font-size: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1680,15 +1638,15 @@ xs sidebar
   font-family: var(--farmology-font-two);
 }
 
-.main-menu .main-menu__list>li.current>a,
-.main-menu .main-menu__list>li:hover>a,
-.stricky-header .main-menu__list>li.current>a,
-.stricky-header .main-menu__list>li:hover>a {
+.main-menu .main-menu__list > li.current > a,
+.main-menu .main-menu__list > li:hover > a,
+.stricky-header .main-menu__list > li.current > a,
+.stricky-header .main-menu__list > li:hover > a {
   color: var(--farmology-base);
 }
 
-.main-menu .main-menu__list>li>a::before,
-.stricky-header .main-menu__list>li>a::before {
+.main-menu .main-menu__list > li > a::before,
+.stricky-header .main-menu__list > li > a::before {
   content: "";
   height: 2px;
   border-radius: 0px;
@@ -1703,19 +1661,19 @@ xs sidebar
   z-index: 1;
 }
 
-.main-menu .main-menu__list>li.current>a::before,
-.main-menu .main-menu__list>li:hover>a::before,
-.stricky-header .main-menu__list>li.current>a::before,
-.stricky-header .main-menu__list>li:hover>a::before {
+.main-menu .main-menu__list > li.current > a::before,
+.main-menu .main-menu__list > li:hover > a::before,
+.stricky-header .main-menu__list > li.current > a::before,
+.stricky-header .main-menu__list > li:hover > a::before {
   transform: scale(1, 1);
   transform-origin: right center;
 }
 
-.main-menu .main-menu__list>li.dropdown>a {
+.main-menu .main-menu__list > li.dropdown > a {
   padding-right: 15px;
 }
 
-.main-menu .main-menu__list>li.dropdown>a:after {
+.main-menu .main-menu__list > li.dropdown > a:after {
   position: absolute;
   top: 60%;
   right: 0;
@@ -1730,17 +1688,17 @@ xs sidebar
   z-index: 1;
 }
 
-.main-menu .main-menu__list>li.current>a::after,
-.main-menu .main-menu__list>li:hover>a::after,
-.stricky-header .main-menu__list>li.current>a::after,
-.stricky-header .main-menu__list>li:hover>a::after {
+.main-menu .main-menu__list > li.current > a::after,
+.main-menu .main-menu__list > li:hover > a::after,
+.stricky-header .main-menu__list > li.current > a::after,
+.stricky-header .main-menu__list > li:hover > a::after {
   color: var(--farmology-base);
 }
 
-.main-menu .main-menu__list>li>ul,
-.main-menu .main-menu__list>li>ul>li>ul,
-.stricky-header .main-menu__list>li>ul,
-.stricky-header .main-menu__list>li>ul>li>ul {
+.main-menu .main-menu__list > li > ul,
+.main-menu .main-menu__list > li > ul > li > ul,
+.stricky-header .main-menu__list > li > ul,
+.stricky-header .main-menu__list > li > ul > li > ul {
   position: absolute;
   top: 100%;
   left: 0;
@@ -1771,24 +1729,24 @@ xs sidebar
   box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
 }
 
-.main-menu .main-menu__list>li>ul>li>ul>li>ul,
-.stricky-header .main-menu__list>li>ul>li>ul>li>ul {
+.main-menu .main-menu__list > li > ul > li > ul > li > ul,
+.stricky-header .main-menu__list > li > ul > li > ul > li > ul {
   display: none;
 }
 
-.main-menu .main-menu__list>li:hover>ul,
-.main-menu .main-menu__list>li>ul>li:hover>ul,
-.stricky-header .main-menu__list>li:hover>ul,
-.stricky-header .main-menu__list>li>ul>li:hover>ul {
+.main-menu .main-menu__list > li:hover > ul,
+.main-menu .main-menu__list > li > ul > li:hover > ul,
+.stricky-header .main-menu__list > li:hover > ul,
+.stricky-header .main-menu__list > li > ul > li:hover > ul {
   opacity: 1;
   visibility: visible;
   transform: perspective(500px) rotatex(0);
 }
 
-.main-menu .main-menu__list>li>ul>li,
-.main-menu .main-menu__list>li>ul>li>ul>li,
-.stricky-header .main-menu__list>li>ul>li,
-.stricky-header .main-menu__list>li>ul>li>ul>li {
+.main-menu .main-menu__list > li > ul > li,
+.main-menu .main-menu__list > li > ul > li > ul > li,
+.stricky-header .main-menu__list > li > ul > li,
+.stricky-header .main-menu__list > li > ul > li > ul > li {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -1796,18 +1754,18 @@ xs sidebar
   position: relative;
 }
 
-.main-menu .main-menu__list>li>ul>li+li,
-.main-menu .main-menu__list>li>ul>li>ul>li+li,
-.stricky-header .main-menu__list>li>ul>li+li,
-.stricky-header .main-menu__list>li>ul>li>ul>li+li {
-  border-top: 1px solid rgba(var(--farmology-black-rgb), 0.10);
+.main-menu .main-menu__list > li > ul > li + li,
+.main-menu .main-menu__list > li > ul > li > ul > li + li,
+.stricky-header .main-menu__list > li > ul > li + li,
+.stricky-header .main-menu__list > li > ul > li > ul > li + li {
+  border-top: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   margin-top: 0px;
 }
 
-.main-menu .main-menu__list>li>ul>li>a,
-.main-menu .main-menu__list>li>ul>li>ul>li>a,
-.stricky-header .main-menu__list>li>ul>li>a,
-.stricky-header .main-menu__list>li>ul>li>ul>li>a {
+.main-menu .main-menu__list > li > ul > li > a,
+.main-menu .main-menu__list > li > ul > li > ul > li > a,
+.stricky-header .main-menu__list > li > ul > li > a,
+.stricky-header .main-menu__list > li > ul > li > ul > li > a {
   position: relative;
   display: flex;
   align-items: center;
@@ -1826,22 +1784,22 @@ xs sidebar
   transition: all 200ms linear 0ms;
 }
 
-.main-menu .main-menu__list>li>ul>li:hover>a,
-.main-menu .main-menu__list>li>ul>li.current>a,
-.main-menu .main-menu__list>li>ul>li>ul>li:hover>a,
-.main-menu .main-menu__list>li>ul>li>ul>li.current>a,
-.stricky-header .main-menu__list>li>ul>li:hover>a,
-.stricky-header .main-menu__list>li>ul>li.current>a,
-.stricky-header .main-menu__list>li>ul>li>ul>li:hover>a,
-.stricky-header .main-menu__list>li>ul>li>ul>li.current>a {
-  color: rgba(var(--farmology-base-rgb), 1.0);
+.main-menu .main-menu__list > li > ul > li:hover > a,
+.main-menu .main-menu__list > li > ul > li.current > a,
+.main-menu .main-menu__list > li > ul > li > ul > li:hover > a,
+.main-menu .main-menu__list > li > ul > li > ul > li.current > a,
+.stricky-header .main-menu__list > li > ul > li:hover > a,
+.stricky-header .main-menu__list > li > ul > li.current > a,
+.stricky-header .main-menu__list > li > ul > li > ul > li:hover > a,
+.stricky-header .main-menu__list > li > ul > li > ul > li.current > a {
+  color: rgba(var(--farmology-base-rgb), 1);
   padding-left: 5px;
 }
 
-.main-menu .main-menu__list>li>ul>li>a::before,
-.main-menu .main-menu__list>li>ul>li>ul>li>a::before,
-.stricky-header .main-menu__list>li>ul>li>a::before,
-.stricky-header .main-menu__list>li>ul>li>ul>li>a::before {
+.main-menu .main-menu__list > li > ul > li > a::before,
+.main-menu .main-menu__list > li > ul > li > ul > li > a::before,
+.stricky-header .main-menu__list > li > ul > li > a::before,
+.stricky-header .main-menu__list > li > ul > li > ul > li > a::before {
   position: absolute;
   top: 50%;
   right: 20px;
@@ -1855,51 +1813,51 @@ xs sidebar
   transition: 500ms;
 }
 
-.main-menu .main-menu__list>li>ul>li:hover>a::before,
-.main-menu .main-menu__list>li>ul>li.current>a::before,
-.main-menu .main-menu__list>li>ul>li>ul>li:hover>a::before,
-.main-menu .main-menu__list>li>ul>li>ul>li.current>a::before,
-.stricky-header .main-menu__list>li>ul>li:hover>a::before,
-.stricky-header .main-menu__list>li>ul>li.current>a::before,
-.stricky-header .main-menu__list>li>ul>li>ul>li:hover>a::before,
-.stricky-header .main-menu__list>li>ul>li>ul>li.current>a::before {
+.main-menu .main-menu__list > li > ul > li:hover > a::before,
+.main-menu .main-menu__list > li > ul > li.current > a::before,
+.main-menu .main-menu__list > li > ul > li > ul > li:hover > a::before,
+.main-menu .main-menu__list > li > ul > li > ul > li.current > a::before,
+.stricky-header .main-menu__list > li > ul > li:hover > a::before,
+.stricky-header .main-menu__list > li > ul > li.current > a::before,
+.stricky-header .main-menu__list > li > ul > li > ul > li:hover > a::before,
+.stricky-header .main-menu__list > li > ul > li > ul > li.current > a::before {
   transform: translateY(-50%) scale(1);
 }
 
-.main-menu .main-menu__list>li>ul>li>ul,
-.stricky-header .main-menu__list>li>ul>li>ul {
+.main-menu .main-menu__list > li > ul > li > ul,
+.stricky-header .main-menu__list > li > ul > li > ul {
   top: 0;
   left: 100%;
 }
 
-.main-menu .main-menu__list li ul li>ul.right-align,
-.stricky-header .main-menu__list li ul li>ul.right-align {
+.main-menu .main-menu__list li ul li > ul.right-align,
+.stricky-header .main-menu__list li ul li > ul.right-align {
   top: 0;
   left: auto;
   right: 100%;
 }
 
-.main-menu-four__main-menu-box .main-menu__list>.megamenu,
-.main-menu-three__main-menu-box .main-menu__list>.megamenu,
-.main-menu-two__main-menu-box .main-menu__list>.megamenu,
-.main-menu__wrapper .main-menu__list>.megamenu {
+.main-menu-four__main-menu-box .main-menu__list > .megamenu,
+.main-menu-three__main-menu-box .main-menu__list > .megamenu,
+.main-menu-two__main-menu-box .main-menu__list > .megamenu,
+.main-menu__wrapper .main-menu__list > .megamenu {
   position: static;
 }
 
-.main-menu-four__main-menu-box .main-menu__list>.megamenu>ul,
-.main-menu-three__main-menu-box .main-menu__list>.megamenu>ul,
-.main-menu-two__main-menu-box .main-menu__list>.megamenu>ul,
-.main-menu__wrapper .main-menu__list>.megamenu>ul {
+.main-menu-four__main-menu-box .main-menu__list > .megamenu > ul,
+.main-menu-three__main-menu-box .main-menu__list > .megamenu > ul,
+.main-menu-two__main-menu-box .main-menu__list > .megamenu > ul,
+.main-menu__wrapper .main-menu__list > .megamenu > ul {
   top: 100% !important;
   left: 0 !important;
   right: 0 !important;
   background-color: transparent;
 }
 
-.main-menu-four__main-menu-box .main-menu__list>.megamenu>ul>li,
-.main-menu-three__main-menu-box .main-menu__list>.megamenu>ul>li,
-.main-menu-two__main-menu-box .main-menu__list>.megamenu>ul>li,
-.main-menu__wrapper .main-menu__list>.megamenu>ul>li {
+.main-menu-four__main-menu-box .main-menu__list > .megamenu > ul > li,
+.main-menu-three__main-menu-box .main-menu__list > .megamenu > ul > li,
+.main-menu-two__main-menu-box .main-menu__list > .megamenu > ul > li,
+.main-menu__wrapper .main-menu__list > .megamenu > ul > li {
   padding: 0 !important;
 }
 
@@ -1916,7 +1874,8 @@ xs sidebar
   -webkit-transition: visibility 500ms ease, -webkit-transform 500ms ease;
   transition: visibility 500ms ease, -webkit-transform 500ms ease;
   transition: transform 500ms ease, visibility 500ms ease;
-  transition: transform 500ms ease, visibility 500ms ease, -webkit-transform 500ms ease;
+  transition: transform 500ms ease, visibility 500ms ease,
+    -webkit-transform 500ms ease;
   -webkit-box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.05);
 }
@@ -1962,7 +1921,7 @@ xs sidebar
   cursor: pointer;
 }
 
-.mobile-nav__buttons a+a {
+.mobile-nav__buttons a + a {
   margin-left: 10px;
 }
 
@@ -2002,10 +1961,12 @@ xs sidebar
   transform: translateX(-100%);
   -webkit-transform-origin: left center;
   transform-origin: left center;
-  -webkit-transition: visibility 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
+  -webkit-transition: visibility 500ms ease 500ms,
+    -webkit-transform 500ms ease 500ms;
   transition: visibility 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
   transition: transform 500ms ease 500ms, visibility 500ms ease 500ms;
-  transition: transform 500ms ease 500ms, visibility 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
+  transition: transform 500ms ease 500ms, visibility 500ms ease 500ms,
+    -webkit-transform 500ms ease 500ms;
   visibility: hidden;
 }
 
@@ -2019,10 +1980,12 @@ xs sidebar
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
   visibility: visible;
-  -webkit-transition: visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
+  -webkit-transition: visibility 500ms ease 0ms,
+    -webkit-transform 500ms ease 0ms;
   transition: visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
   transition: transform 500ms ease 0ms, visibility 500ms ease 0ms;
-  transition: transform 500ms ease 0ms, visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
+  transition: transform 500ms ease 0ms, visibility 500ms ease 0ms,
+    -webkit-transform 500ms ease 0ms;
 }
 
 .mobile-nav__overlay {
@@ -2051,10 +2014,14 @@ xs sidebar
   visibility: hidden;
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
-  -webkit-transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
-  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
-  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, transform 500ms ease 0ms;
-  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, transform 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
+  -webkit-transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms,
+    -webkit-transform 500ms ease 0ms;
+  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms,
+    -webkit-transform 500ms ease 0ms;
+  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms,
+    transform 500ms ease 0ms;
+  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms,
+    transform 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
 }
 
 .mobile-nav__wrapper.expanded .mobile-nav__content {
@@ -2062,10 +2029,14 @@ xs sidebar
   visibility: visible;
   -webkit-transform: translateX(0);
   transform: translateX(0);
-  -webkit-transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
-  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
-  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms, transform 500ms ease 500ms;
-  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms, transform 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
+  -webkit-transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms,
+    -webkit-transform 500ms ease 500ms;
+  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms,
+    -webkit-transform 500ms ease 500ms;
+  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms,
+    transform 500ms ease 500ms;
+  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms,
+    transform 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
 }
 
 .mobile-nav__content .logo-box {
@@ -2085,33 +2056,39 @@ xs sidebar
 }
 
 .mobile-nav__content .main-menu__list,
-.mobile-nav__content .main-menu__list>li>ul,
-.mobile-nav__content .main-menu__list>li>ul>li>ul {
+.mobile-nav__content .main-menu__list > li > ul,
+.mobile-nav__content .main-menu__list > li > ul > li > ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.mobile-nav__content .main-menu__list>li>ul,
-.mobile-nav__content .main-menu__list>li>ul>li>ul {
+.mobile-nav__content .main-menu__list > li > ul,
+.mobile-nav__content .main-menu__list > li > ul > li > ul {
   display: none;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-left: 0.5em;
 }
 
-.mobile-nav__content .main-menu__list>li:not(:last-child),
-.mobile-nav__content .main-menu__list>li>ul>li:not(:last-child),
-.mobile-nav__content .main-menu__list>li>ul>li>ul>li:not(:last-child) {
+.mobile-nav__content .main-menu__list > li:not(:last-child),
+.mobile-nav__content .main-menu__list > li > ul > li:not(:last-child),
+.mobile-nav__content
+  .main-menu__list
+  > li
+  > ul
+  > li
+  > ul
+  > li:not(:last-child) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.mobile-nav__content .main-menu__list>li>a>.main-menu-border {
+.mobile-nav__content .main-menu__list > li > a > .main-menu-border {
   display: none !important;
 }
 
-.mobile-nav__content .main-menu__list>li>a,
-.mobile-nav__content .main-menu__list>li>ul>li>a,
-.mobile-nav__content .main-menu__list>li>ul>li>ul>li>a {
+.mobile-nav__content .main-menu__list > li > a,
+.mobile-nav__content .main-menu__list > li > ul > li > a,
+.mobile-nav__content .main-menu__list > li > ul > li > ul > li > a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2131,7 +2108,24 @@ xs sidebar
   transition: 500ms;
 }
 
-.mobile-nav__content .main-menu__list>li>a.expanded .mobile-nav__content .main-menu__list>li>ul>li>a.expanded .mobile-nav__content .main-menu__list>li>ul>li>ul>li>a.expanded {
+.mobile-nav__content
+  .main-menu__list
+  > li
+  > a.expanded
+  .mobile-nav__content
+  .main-menu__list
+  > li
+  > ul
+  > li
+  > a.expanded
+  .mobile-nav__content
+  .main-menu__list
+  > li
+  > ul
+  > li
+  > ul
+  > li
+  > a.expanded {
   color: var(--farmology-base);
 }
 
@@ -2139,9 +2133,9 @@ xs sidebar
   color: var(--farmology-base);
 }
 
-.mobile-nav__content .main-menu__list>li>a>button,
-.mobile-nav__content .main-menu__list>li>ul>li>a>button,
-.mobile-nav__content .main-menu__list>li>ul>li>ul>li>a>button {
+.mobile-nav__content .main-menu__list > li > a > button,
+.mobile-nav__content .main-menu__list > li > ul > li > a > button,
+.mobile-nav__content .main-menu__list > li > ul > li > ul > li > a > button {
   width: 30px;
   height: 30px;
   background-color: var(--farmology-base);
@@ -2167,9 +2161,17 @@ xs sidebar
   padding: 0;
 }
 
-.mobile-nav__content .main-menu__list>li>a>button.expanded,
-.mobile-nav__content .main-menu__list>li>ul>li>a>button.expanded,
-.mobile-nav__content .main-menu__list>li>ul>li>ul>li>a>button.expanded {
+.mobile-nav__content .main-menu__list > li > a > button.expanded,
+.mobile-nav__content .main-menu__list > li > ul > li > a > button.expanded,
+.mobile-nav__content
+  .main-menu__list
+  > li
+  > ul
+  > li
+  > ul
+  > li
+  > a
+  > button.expanded {
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
   background-color: #fff;
@@ -2177,8 +2179,8 @@ xs sidebar
 }
 
 /* no menu after 2rd level dropdown */
-.mobile-nav__content .main-menu__list>li>ul>li>ul>li>a>button,
-.mobile-nav__content .main-menu__list>li>ul>li>ul>li>ul {
+.mobile-nav__content .main-menu__list > li > ul > li > ul > li > a > button,
+.mobile-nav__content .main-menu__list > li > ul > li > ul > li > ul {
   display: none !important;
 }
 
@@ -2234,14 +2236,14 @@ xs sidebar
   justify-content: center;
   height: 40px;
   width: 40px;
-  border: 1px solid rgba(var(--farmology-white-rgb), .10);
+  border: 1px solid rgba(var(--farmology-white-rgb), 0.1);
   border-radius: 50%;
   -webkit-transition: 500ms;
   transition: 500ms;
   z-index: 1;
 }
 
-.mobile-nav__social a+a {
+.mobile-nav__social a + a {
   margin-left: 10px;
 }
 
@@ -2263,7 +2265,7 @@ xs sidebar
 }
 
 .mobile-nav__social a:hover::after {
-  transform: scale(1.0);
+  transform: scale(1);
   opacity: 1;
 }
 
@@ -2291,7 +2293,7 @@ xs sidebar
   align-items: center;
 }
 
-.mobile-nav__contact li+li {
+.mobile-nav__contact li + li {
   margin-top: 15px;
 }
 
@@ -2305,7 +2307,7 @@ xs sidebar
   color: var(--farmology-base);
 }
 
-.mobile-nav__contact li>i {
+.mobile-nav__contact li > i {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -2331,8 +2333,6 @@ xs sidebar
 .mobile-nav__container .main-menu__login {
   display: none;
 }
-
-
 
 /*--------------------------------------------------------------
 # Home Showcase
@@ -2363,7 +2363,7 @@ xs sidebar
 .home-showcase__item {
   position: relative;
   display: block;
-  border: 1px solid rgba(var(--farmology-black-rgb), .15);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.15);
   padding: 10px 10px 18px;
   border-radius: var(--farmology-bdr-radius);
 }
@@ -2371,19 +2371,19 @@ xs sidebar
 .home-showcase__image {
   position: relative;
   overflow: hidden;
-  background-color: rgb(0, 0, 0, 0.10);
+  background-color: rgb(0, 0, 0, 0.1);
   padding: 1px;
   border-radius: var(--farmology-bdr-radius);
 }
 
-.home-showcase__image>img {
+.home-showcase__image > img {
   width: 100%;
   transition: filter 500ms ease;
   filter: blur(0px);
   border-radius: var(--farmology-bdr-radius);
 }
 
-.home-showcase__image:hover>img {
+.home-showcase__image:hover > img {
   filter: blur(2px);
 }
 
@@ -2400,13 +2400,13 @@ xs sidebar
   transform: scale(1, 0);
   transition: transform 800ms ease, opacity 600ms linear;
   transform-origin: bottom center;
-  opacity: 0.70;
+  opacity: 0.7;
   z-index: 1;
 }
 
 .home-showcase__image:hover .home-showcase__buttons {
   transform: scale(1, 1);
-  opacity: 1.0;
+  opacity: 1;
   transform-origin: top center;
 }
 
@@ -2420,7 +2420,13 @@ xs sidebar
   background-image: -ms-linear-gradient(left, #222222 0%, #222222 100%);
   background-image: -moz-linear-gradient(left, #222222 0%, #222222 100%);
   background-image: -o-linear-gradient(left, #222222 0%, #222222 100%);
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #222222), color-stop(100, #222222));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, #222222),
+    color-stop(100, #222222)
+  );
   background-image: -webkit-linear-gradient(left, #222222 0%, #222222 100%);
   background-image: linear-gradient(to right, #222222 0%, #222222 100%);
 
@@ -2443,7 +2449,7 @@ xs sidebar
 }
 
 .home-showcase__image:hover .home-showcase__buttons::before {
-  opacity: 0.90;
+  opacity: 0.9;
   visibility: visible;
   transform: perspective(500px) rotatex(0);
 }
@@ -2464,7 +2470,7 @@ xs sidebar
   color: var(--farmology-extra);
 }
 
-.home-showcase__buttons__item+.home-showcase__buttons__item {
+.home-showcase__buttons__item + .home-showcase__buttons__item {
   margin-top: 10px;
 }
 
@@ -2479,7 +2485,7 @@ xs sidebar
   text-transform: capitalize;
 }
 
-.mobile-nav__wrapper .home-showcase .row [class*=col-] {
+.mobile-nav__wrapper .home-showcase .row [class*="col-"] {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
@@ -2537,7 +2543,7 @@ xs sidebar
   left: 0;
   right: 0;
   height: 1px;
-  background-color: rgba(var(--farmology-white-rgb), .10);
+  background-color: rgba(var(--farmology-white-rgb), 0.1);
   z-index: -1;
 }
 
@@ -2553,7 +2559,7 @@ xs sidebar
   align-items: center;
 }
 
-.main-menu-two__contact-list li+li {
+.main-menu-two__contact-list li + li {
   margin-left: 46px;
 }
 
@@ -2564,7 +2570,7 @@ xs sidebar
   bottom: 2px;
   left: -23px;
   width: 1px;
-  background-color: rgba(var(--farmology-black-rgb), .20);
+  background-color: rgba(var(--farmology-black-rgb), 0.2);
 }
 
 .main-menu-two__contact-list li:first-child:before {
@@ -2655,7 +2661,7 @@ xs sidebar
   justify-content: center;
   height: 35px;
   width: 35px;
-  border: 1px solid rgba(var(--farmology-black-rgb), .40);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.4);
   border-radius: 50%;
   font-size: 14px;
   color: var(--farmology-extra);
@@ -2690,11 +2696,11 @@ xs sidebar
 }
 
 .main-menu-two__social a:hover::before {
-  transform: scale(1.0);
+  transform: scale(1);
   opacity: 1;
 }
 
-.main-menu-two__social a+a {
+.main-menu-two__social a + a {
   margin-left: 5px;
 }
 
@@ -2832,29 +2838,28 @@ xs sidebar
   background-color: var(--farmology-white);
 }
 
-.main-menu-two .main-menu__list>li>a,
-.stricky-header.main-menu-two .main-menu__list>li>a {
+.main-menu-two .main-menu__list > li > a,
+.stricky-header.main-menu-two .main-menu__list > li > a {
   color: var(--farmology-white);
 }
 
-.main-menu-two .main-menu__list>li.current>a,
-.main-menu-two .main-menu__list>li:hover>a,
-.stricky-header.main-menu-two .main-menu__list>li.current>a,
-.stricky-header.main-menu-two .main-menu__list>li:hover>a {
+.main-menu-two .main-menu__list > li.current > a,
+.main-menu-two .main-menu__list > li:hover > a,
+.stricky-header.main-menu-two .main-menu__list > li.current > a,
+.stricky-header.main-menu-two .main-menu__list > li:hover > a {
   color: var(--farmology-base);
 }
 
-.main-menu-two .main-menu__list>li.dropdown>a:after {
+.main-menu-two .main-menu__list > li.dropdown > a:after {
   color: var(--farmology-white);
 }
 
-.main-menu-two .main-menu__list>li.current>a::after,
-.main-menu-two .main-menu__list>li:hover>a::after,
-.stricky-header.main-menu-two .main-menu__list>li.current>a::after,
-.stricky-header.main-menu-two .main-menu__list>li:hover>a::after {
+.main-menu-two .main-menu__list > li.current > a::after,
+.main-menu-two .main-menu__list > li:hover > a::after,
+.stricky-header.main-menu-two .main-menu__list > li.current > a::after,
+.stricky-header.main-menu-two .main-menu__list > li:hover > a::after {
   color: var(--farmology-base);
 }
-
 
 .stricky-header.main-menu-two {
   background-color: #02070b;
@@ -2921,7 +2926,7 @@ xs sidebar
   display: none;
 }
 
-.main-menu-three__contact-list li+li {
+.main-menu-three__contact-list li + li {
   margin-left: 46px;
 }
 
@@ -2932,7 +2937,7 @@ xs sidebar
   bottom: 7px;
   left: -23px;
   width: 1px;
-  background-color: rgba(var(--farmology-white-rgb), .20);
+  background-color: rgba(var(--farmology-white-rgb), 0.2);
 }
 
 .main-menu-three__contact-list li:first-child:before {
@@ -2996,7 +3001,7 @@ xs sidebar
   width: 1px;
   background: var(--farmology-white);
   content: "";
-  opacity: .20;
+  opacity: 0.2;
 }
 
 .main-menu-three__language-switcher .icon {
@@ -3070,7 +3075,7 @@ xs sidebar
   justify-content: center;
   height: 35px;
   width: 35px;
-  border: 1px solid rgba(var(--farmology-white-rgb), .20);
+  border: 1px solid rgba(var(--farmology-white-rgb), 0.2);
   border-radius: 50%;
   font-size: 14px;
   color: var(--farmology-white);
@@ -3105,11 +3110,11 @@ xs sidebar
 }
 
 .main-menu-three__social a:hover::before {
-  transform: scale(1.0);
+  transform: scale(1);
   opacity: 1;
 }
 
-.main-menu-three__social a+a {
+.main-menu-three__social a + a {
   margin-left: 10px;
 }
 
@@ -3220,13 +3225,11 @@ xs sidebar
   color: var(--farmology-base);
 }
 
-
 .main-menu-three__btn-box {
   position: relative;
   display: block;
   line-height: 0;
 }
-
 
 .stricky-header.main-menu-three {
   background-color: var(--farmology-white);
@@ -3312,7 +3315,7 @@ xs sidebar
   content: "";
   background-color: var(--farmology-base);
   border-radius: 50%;
-  transform: scale(0.0);
+  transform: scale(0);
   transform-origin: center;
   transform-style: preserve-3d;
   transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
@@ -3320,7 +3323,7 @@ xs sidebar
 }
 
 .main-header-four__top-social a:hover:before {
-  transform: scaleX(1.0);
+  transform: scaleX(1);
 }
 
 .main-header-four__top-menu {
@@ -3345,7 +3348,7 @@ xs sidebar
   bottom: 4px;
   left: -14px;
   width: 1px;
-  background-color: rgba(var(--farmology-extra-rgb), .30);
+  background-color: rgba(var(--farmology-extra-rgb), 0.3);
 }
 
 .main-header-four__top-menu li:first-child:before {
@@ -3648,13 +3651,11 @@ xs sidebar
   color: var(--farmology-base);
 }
 
-
 .main-menu-four__btn-box {
   position: relative;
   display: block;
   line-height: 0;
 }
-
 
 .stricky-header.main-menu-four {
   background-color: var(--farmology-white);
@@ -3664,7 +3665,6 @@ xs sidebar
   padding: 0 0px 0;
   margin-top: 0;
 }
-
 
 /*--------------------------------------------------------------
 # Main Slider
@@ -3695,7 +3695,8 @@ xs sidebar
   -webkit-transition: opacity 1000ms ease-in, -webkit-transform 7000ms ease;
   transition: opacity 1000ms ease-in, -webkit-transform 7000ms ease;
   transition: transform 7000ms ease, opacity 1000ms ease-in;
-  transition: transform 7000ms ease, opacity 1000ms ease-in, -webkit-transform 7000ms ease;
+  transition: transform 7000ms ease, opacity 1000ms ease-in,
+    -webkit-transform 7000ms ease;
   z-index: -1;
 }
 
@@ -3706,7 +3707,7 @@ xs sidebar
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(var(--farmology-black-rgb), .8);
+  background-color: rgba(var(--farmology-black-rgb), 0.8);
   z-index: -1;
 }
 
@@ -3726,7 +3727,8 @@ xs sidebar
   position: relative;
   display: block;
   opacity: 0;
-  -webkit-transform: perspective(400px) rotateY(0deg) translateX(100px) scale(0.9);
+  -webkit-transform: perspective(400px) rotateY(0deg) translateX(100px)
+    scale(0.9);
   -ms-transform: perspective(400px) rotateY(0deg) translateX(100px) scale(0.9);
   transform: perspective(400px) rotateY(0deg) translateX(100px) scale(0.9);
   -webkit-transform-origin: center;
@@ -3945,7 +3947,7 @@ xs sidebar
   position: relative;
   display: block;
   font-size: 18px;
-  color: rgba(var(--farmology-white-rgb), .70);
+  color: rgba(var(--farmology-white-rgb), 0.7);
   font-weight: 400;
   margin-top: 20px;
   margin-bottom: 44px;
@@ -4040,7 +4042,7 @@ xs sidebar
   float: left;
 }
 
-.main-slider__review-box ul li+li {
+.main-slider__review-box ul li + li {
   margin-left: -20px;
 }
 
@@ -4080,7 +4082,6 @@ xs sidebar
   font-weight: 500;
 }
 
-
 #main-slider-pagination {
   position: absolute;
   left: 60px;
@@ -4102,7 +4103,13 @@ xs sidebar
   width: 4px;
   height: 85px;
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 14%, rgba(255, 255, 255, 0.7595413165266106) 35%, rgba(255, 255, 255, 0.5746673669467788) 57%, rgba(255, 255, 255, 0.19371498599439774) 95%);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 14%,
+    rgba(255, 255, 255, 0.7595413165266106) 35%,
+    rgba(255, 255, 255, 0.5746673669467788) 57%,
+    rgba(255, 255, 255, 0.19371498599439774) 95%
+  );
   transform: translateX(-50%);
   opacity: 0.3;
   content: "";
@@ -4115,7 +4122,13 @@ xs sidebar
   width: 4px;
   height: 85px;
   background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 14%, rgba(255, 255, 255, 0.7595413165266106) 35%, rgba(255, 255, 255, 0.5746673669467788) 57%, rgba(255, 255, 255, 0.19371498599439774) 95%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 14%,
+    rgba(255, 255, 255, 0.7595413165266106) 35%,
+    rgba(255, 255, 255, 0.5746673669467788) 57%,
+    rgba(255, 255, 255, 0.19371498599439774) 95%
+  );
   transform: translateX(-50%);
   opacity: 0.3;
   content: "";
@@ -4135,7 +4148,8 @@ xs sidebar
   transition-delay: 0.1s;
 }
 
-#main-slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+#main-slider-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: rgba(var(--farmology-white-rgb), 1);
 }
 
@@ -4153,16 +4167,16 @@ xs sidebar
   content: "";
 }
 
-#main-slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::before,
+#main-slider-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active::before,
 #main-slider-pagination .swiper-pagination-bullet:hover {
-  transform: scaleX(1.0);
-  border: 1px solid rgba(var(--farmology-white-rgb), 1.0);
+  transform: scaleX(1);
+  border: 1px solid rgba(var(--farmology-white-rgb), 1);
 }
 
-#main-slider-pagination .swiper-pagination-bullet+.swiper-pagination-bullet {
+#main-slider-pagination .swiper-pagination-bullet + .swiper-pagination-bullet {
   margin-top: 25px;
 }
-
 
 /*--------------------------------------------------------------
   # Main Slider Two
@@ -4188,7 +4202,7 @@ xs sidebar
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: .10;
+  opacity: 0.1;
   z-index: -1;
 }
 
@@ -4257,7 +4271,8 @@ xs sidebar
   -webkit-transition: opacity 1000ms ease-in, -webkit-transform 7000ms ease;
   transition: opacity 1000ms ease-in, -webkit-transform 7000ms ease;
   transition: transform 7000ms ease, opacity 1000ms ease-in;
-  transition: transform 7000ms ease, opacity 1000ms ease-in, -webkit-transform 7000ms ease;
+  transition: transform 7000ms ease, opacity 1000ms ease-in,
+    -webkit-transform 7000ms ease;
   z-index: -1;
 }
 
@@ -4519,7 +4534,9 @@ xs sidebar
   counter-reset: count;
 }
 
-#main-slider-two-pagination .swiper-pagination-bullet+.swiper-pagination-bullet {
+#main-slider-two-pagination
+  .swiper-pagination-bullet
+  + .swiper-pagination-bullet {
   margin-top: 50px;
 }
 
@@ -4529,7 +4546,7 @@ xs sidebar
   width: 40px;
   height: 1px;
   border-radius: 0;
-  background-color: rgba(var(--farmology-white-rgb), .50);
+  background-color: rgba(var(--farmology-white-rgb), 0.5);
   margin: 0;
   opacity: 1;
   -webkit-transition: all 300ms ease;
@@ -4541,7 +4558,7 @@ xs sidebar
   height: 40px;
   width: 40px;
   border: 1px solid transparent;
-  background: rgba(var(--farmology-white-rgb), .20);
+  background: rgba(var(--farmology-white-rgb), 0.2);
   border-radius: 50%;
   text-align: center;
   display: flex;
@@ -4552,24 +4569,25 @@ xs sidebar
   line-height: 16px;
   font-weight: 600;
   counter-increment: count;
-  content: ""counter(count);
+  content: "" counter(count);
   transition: all 200ms linear;
   transition-delay: 0.1s;
   top: -20px;
   left: -40px;
 }
 
-#main-slider-two-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+#main-slider-two-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
   background-color: var(--farmology-extra);
   color: var(--farmology-base);
   border: 1px solid var(--farmology-extra);
 }
 
-#main-slider-two-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+#main-slider-two-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: rgba(var(--farmology-extra-rgb), 1);
   width: 60px;
 }
-
 
 /*--------------------------------------------------------------
   # Main Slider Three
@@ -4600,7 +4618,8 @@ xs sidebar
   -webkit-transition: opacity 1000ms ease-in, -webkit-transform 7000ms ease;
   transition: opacity 1000ms ease-in, -webkit-transform 7000ms ease;
   transition: transform 7000ms ease, opacity 1000ms ease-in;
-  transition: transform 7000ms ease, opacity 1000ms ease-in, -webkit-transform 7000ms ease;
+  transition: transform 7000ms ease, opacity 1000ms ease-in,
+    -webkit-transform 7000ms ease;
   z-index: -1;
 }
 
@@ -4611,7 +4630,7 @@ xs sidebar
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(var(--farmology-extra-rgb), .9);
+  background-color: rgba(var(--farmology-extra-rgb), 0.9);
   z-index: -1;
 }
 
@@ -4719,7 +4738,7 @@ xs sidebar
 }
 
 .main-slider-three__text {
-  color: rgba(var(--farmology-white-rgb), .70);
+  color: rgba(var(--farmology-white-rgb), 0.7);
   opacity: 0;
   -webkit-transform: perspective(400px) rotateY(0deg) translateY(80px);
   -ms-transform: perspective(400px) rotateY(0deg) translateY(80px);
@@ -4880,7 +4899,9 @@ xs sidebar
   transform: translateY(-50%);
 }
 
-#main-slider-three-pagination .swiper-pagination-bullet+.swiper-pagination-bullet {
+#main-slider-three-pagination
+  .swiper-pagination-bullet
+  + .swiper-pagination-bullet {
   margin-top: 10px;
 }
 
@@ -4906,7 +4927,7 @@ xs sidebar
   height: 40px;
   width: 40px;
   border: 1px solid transparent;
-  background: rgba(var(--farmology-white-rgb), .20);
+  background: rgba(var(--farmology-white-rgb), 0.2);
   border-radius: 50%;
   text-align: center;
   display: flex;
@@ -4917,18 +4938,20 @@ xs sidebar
   line-height: 16px;
   font-weight: 600;
   counter-increment: count;
-  content: ""counter(count);
+  content: "" counter(count);
   transition: all 200ms linear;
   transition-delay: 0.1s;
 }
 
-#main-slider-three-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+#main-slider-three-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
   background-color: var(--farmology-base);
   color: var(--farmology-extra);
   border: 1px solid var(--farmology-extra);
 }
 
-#main-slider-three-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+#main-slider-three-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: rgba(var(--farmology-extra-rgb), 1);
 }
 
@@ -5044,10 +5067,6 @@ xs sidebar
   width: 100%;
 }
 
-
-
-
-
 /*--------------------------------------------------------------
 # Banner One
 --------------------------------------------------------------*/
@@ -5070,7 +5089,7 @@ xs sidebar
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: .10;
+  opacity: 0.1;
   z-index: -1;
 }
 
@@ -5184,6 +5203,7 @@ xs sidebar
   font-weight: 400;
   margin-top: 20px;
   margin-bottom: 44px;
+  text-align: justify;
 }
 
 .banner-one__thm-and-other-btn-box {
@@ -5298,7 +5318,7 @@ xs sidebar
   z-index: 1;
 }
 
-.banner-one__img>img {
+.banner-one__img > img {
   width: 100%;
   animation: topBottom 3s ease-in-out infinite;
 }
@@ -5310,7 +5330,7 @@ xs sidebar
   right: 0;
   width: 552px;
   height: 552px;
-  background: rgba(var(--farmology-base-rgb), .40);
+  background: rgba(var(--farmology-base-rgb), 0.4);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -5323,7 +5343,7 @@ xs sidebar
   position: relative;
   width: 451px;
   height: 451px;
-  background: rgba(var(--farmology-base-rgb), .40);
+  background: rgba(var(--farmology-base-rgb), 0.4);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -5334,7 +5354,7 @@ xs sidebar
   position: relative;
   width: 368px;
   height: 368px;
-  background: rgba(var(--farmology-base-rgb), .40);
+  background: rgba(var(--farmology-base-rgb), 0.4);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -5348,7 +5368,7 @@ xs sidebar
 }
 
 .banner-one__shape-1 img {
-  width: auto
+  width: auto;
 }
 
 .banner-one__shape-2 {
@@ -5358,7 +5378,7 @@ xs sidebar
 }
 
 .banner-one__shape-2 img {
-  width: auto
+  width: auto;
 }
 
 .banner-one__shape-3 {
@@ -5368,7 +5388,7 @@ xs sidebar
 }
 
 .banner-one__shape-3 img {
-  width: auto
+  width: auto;
 }
 
 .banner-one__discount-box {
@@ -5492,7 +5512,7 @@ xs sidebar
   flex-wrap: wrap;
 }
 
-.banner-one__happy-customer-list li+li {
+.banner-one__happy-customer-list li + li {
   margin-left: -10px;
 }
 
@@ -5564,6 +5584,10 @@ About One
   padding: 90px 0 120px;
 }
 
+.about-one__text {
+  text-align: justify;
+}
+
 .about-one__left {
   position: relative;
   display: block;
@@ -5594,14 +5618,14 @@ About One
 
 .about-one__shape-1 {
   position: absolute;
-  bottom: -250px;
-  left: 77px;
+  bottom: -192px;
+  left: 15px;
   z-index: -1;
   transform: rotate(-25deg);
 }
 
 .about-one__shape-1 img {
-  width: auto;
+  width: 70%;
 }
 
 .about-one__field-box {
@@ -5754,9 +5778,11 @@ About One
   align-items: flex-start;
   gap: 10px;
 }
-.specific-p p{
+
+.specific-p p {
   display: flex;
 }
+
 .about-one__points li .icon {
   position: relative;
   display: inline-block;
@@ -5774,7 +5800,7 @@ About One
   flex: 1;
 }
 
-.about-one__points li+li {
+.about-one__points li + li {
   margin-top: 7px;
 }
 
@@ -5836,7 +5862,6 @@ About One
   line-height: 34px;
   color: var(--farmology-extra);
 }
-
 
 .about-one__btn-and-video {
   position: relative;
@@ -5941,7 +5966,11 @@ About One
 .author-one {
   position: relative;
   display: block;
-  background: linear-gradient(0deg, rgba(247, 243, 229, 1) 0%, rgba(253, 187, 45, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(247, 243, 229, 1) 0%,
+    rgba(253, 187, 45, 0) 100%
+  );
   counter-reset: count;
   z-index: 1;
 }
@@ -6065,7 +6094,7 @@ About One
   display: block;
 }
 
-.author-one__Vission-mission-point li+li {
+.author-one__Vission-mission-point li + li {
   margin-top: 30px;
 }
 
@@ -6107,19 +6136,6 @@ About One
 .author-one__Vission-mission-point li:last-child p::after {
   display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .author-one__ratting-box-inner {
   position: absolute;
@@ -6266,7 +6282,7 @@ About One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .20);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.2);
   border-radius: 5px;
   z-index: -1;
 }
@@ -6277,7 +6293,7 @@ About One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  opacity: 0.10;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -6416,7 +6432,7 @@ About One
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .10;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -6555,7 +6571,6 @@ About One
   right: 0;
 }
 
-
 /***=============================================
     Feature One
 =============================================***/
@@ -6585,7 +6600,7 @@ About One
   left: 15px;
   right: 15px;
   bottom: 15px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .20);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.2);
   border-radius: var(--farmology-bdr-radius);
 }
 
@@ -6709,7 +6724,7 @@ About One
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .10;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -6765,7 +6780,7 @@ About One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
   z-index: -1;
 }
@@ -6793,8 +6808,6 @@ About One
 .brand-one__single img {
   width: auto;
 }
-
-
 
 /*--------------------------------------------------------------
 # Products One
@@ -6831,9 +6844,9 @@ About One
   left: 0;
   width: 100%;
   height: 100%;
-  transition-delay: .1s;
+  transition-delay: 0.1s;
   transition-timing-function: ease-in-out;
-  transition-duration: .7s;
+  transition-duration: 0.7s;
   transition-property: all;
   background: rgba(var(--farmology-black-rgb), 0.6);
   opacity: 0;
@@ -6865,14 +6878,17 @@ About One
   text-align: center;
   border-bottom-left-radius: var(--farmology-bdr-radius);
   border-bottom-right-radius: var(--farmology-bdr-radius);
-  transition: box-shadow 0.3s ease; 
+  transition: box-shadow 0.3s ease;
 }
-.products-one__single{
-  transition: box-shadow 0.3s ease; 
+
+.products-one__single {
+  transition: box-shadow 0.3s ease;
 }
-.products-one__single:hover{
+
+.products-one__single:hover {
   box-shadow: 0px 0px 48.51px 0.49px rgba(0, 0, 0, 0.308);
 }
+
 .products-one__icon-and-title {
   position: relative;
   display: block;
@@ -6888,7 +6904,7 @@ About One
   left: 15px;
   right: 15px;
   bottom: 15px;
-  border: 1px dashed rgba(var(--farmology-primary-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-primary-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
   z-index: -1;
 }
@@ -6929,9 +6945,9 @@ About One
   bottom: 10px;
   width: 80px;
   height: 47px;
-  border-left: 1px dashed rgba(var(--farmology-primary-rgb), .50);
-  border-right: 1px dashed rgba(var(--farmology-primary-rgb), .50);
-  border-bottom: 1px dashed rgba(var(--farmology-primary-rgb), .50);
+  border-left: 1px dashed rgba(var(--farmology-primary-rgb), 0.5);
+  border-right: 1px dashed rgba(var(--farmology-primary-rgb), 0.5);
+  border-bottom: 1px dashed rgba(var(--farmology-primary-rgb), 0.5);
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   z-index: -1;
@@ -6962,6 +6978,10 @@ About One
   font-size: 24px;
   font-weight: 700;
   line-height: 34px;
+}
+
+.use-card .products-one__title {
+  font-size: 16px;
 }
 
 .products-one__title a {
@@ -7004,7 +7024,7 @@ About One
   color: var(--farmology-base);
 }
 
-.products-one__read-more a>span {
+.products-one__read-more a > span {
   color: var(--farmology-base);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -7040,7 +7060,11 @@ About One
   right: 0;
   height: 180%;
   z-index: -1;
-  background: linear-gradient(0deg, rgba(247, 243, 229, 1) 0%, rgba(253, 187, 45, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(247, 243, 229, 1) 0%,
+    rgba(253, 187, 45, 0) 100%
+  );
 }
 
 .counter-one__inner {
@@ -7129,7 +7153,11 @@ About One
   position: relative;
   display: inline-block;
   font-size: 40px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 35%, rgba(78, 52, 46, 1) 35%);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 35%,
+    rgba(78, 52, 46, 1) 35%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -7242,7 +7270,7 @@ About One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  opacity: .10;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
@@ -7257,13 +7285,13 @@ About One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
   z-index: -1;
 }
 
 .why-choose-one__title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 28px;
   text-transform: capitalize;
@@ -7361,7 +7389,11 @@ About One
   right: 0px;
   bottom: 0px;
   border-radius: var(--farmology-bdr-radius);
-  background: linear-gradient(0deg, rgba(68, 44, 38, 1) 13%, rgba(253, 187, 45, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(68, 44, 38, 1) 13%,
+    rgba(253, 187, 45, 0) 100%
+  );
   z-index: 1;
 }
 
@@ -7380,7 +7412,7 @@ About One
 .project-one__img img {
   width: 100%;
   border-radius: var(--farmology-bdr-radius);
-  transform: scale(1.0);
+  transform: scale(1);
   transition: all 1000ms ease;
 }
 
@@ -7559,7 +7591,7 @@ About One
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .10;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -7614,7 +7646,7 @@ About One
   left: 50%;
   width: 30px;
   height: 30px;
-  background-color: rgba(var(--farmology-base-rgb), .50);
+  background-color: rgba(var(--farmology-base-rgb), 0.5);
   transform: translateX(-50%) translateY(-50%);
   border-radius: 50%;
   z-index: -1;
@@ -7668,7 +7700,7 @@ About One
   left: 5px;
   right: 5px;
   bottom: 5px;
-  opacity: .15;
+  opacity: 0.15;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
@@ -7739,9 +7771,13 @@ About One
   top: 0px;
   left: -6px;
 }
-.do-and-donts__single-10,.do-and-donts__single-9,.do-and-donts__single-4{
+
+.do-and-donts__single-10,
+.do-and-donts__single-9,
+.do-and-donts__single-4 {
   display: none;
 }
+
 .do-and-donts__single-10 {
   position: absolute;
   bottom: 0;
@@ -7775,7 +7811,7 @@ About One
   text-align: center;
   max-width: 350px;
   margin: 0 auto;
-  color: rgba(var(--farmology-white-rgb), .50);
+  color: rgba(var(--farmology-white-rgb), 0.5);
 }
 
 .do-and-donts__btn-box {
@@ -7808,7 +7844,11 @@ About One
   left: 0;
   right: 0;
   height: 50px;
-  background: linear-gradient(0deg, rgba(68, 44, 38, 1) 15%, rgba(253, 187, 45, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(68, 44, 38, 1) 15%,
+    rgba(253, 187, 45, 0) 100%
+  );
   z-index: 2;
 }
 
@@ -7823,7 +7863,7 @@ About One
   width: 1px;
   left: 5px;
   height: 65px;
-  border: 1px dashed rgba(var(--farmology-black-rgb), .40);
+  border: 1px dashed rgba(var(--farmology-black-rgb), 0.4);
   transform: translateY(-50%);
 }
 
@@ -7834,7 +7874,7 @@ About One
   left: 34px;
   width: 1px;
   height: 82px;
-  border: 1px dashed rgba(var(--farmology-black-rgb), .40);
+  border: 1px dashed rgba(var(--farmology-black-rgb), 0.4);
   transform: rotate(60deg);
 }
 
@@ -7845,7 +7885,7 @@ About One
   left: 34px;
   width: 1px;
   height: 82px;
-  border: 1px dashed rgba(var(--farmology-black-rgb), .40);
+  border: 1px dashed rgba(var(--farmology-black-rgb), 0.4);
   transform: rotate(-60deg);
 }
 
@@ -7855,7 +7895,7 @@ About One
   width: 1px;
   right: 5px;
   height: 65px;
-  border: 1px dashed rgba(var(--farmology-black-rgb), .40);
+  border: 1px dashed rgba(var(--farmology-black-rgb), 0.4);
   transform: translateY(-50%);
 }
 
@@ -7866,7 +7906,7 @@ About One
   right: 36px;
   width: 1px;
   height: 82px;
-  border: 1px dashed rgba(var(--farmology-black-rgb), .40);
+  border: 1px dashed rgba(var(--farmology-black-rgb), 0.4);
   transform: rotate(-60deg);
 }
 
@@ -7877,14 +7917,14 @@ About One
   right: 36px;
   width: 1px;
   height: 82px;
-  border: 1px dashed rgba(var(--farmology-black-rgb), .40);
+  border: 1px dashed rgba(var(--farmology-black-rgb), 0.4);
   transform: rotate(60deg);
 }
 
 /*==============================================
    Faq One
 ===============================================*/
-.faq-one {
+/* .faq-one {
   position: relative;
   display: block;
   padding: 120px 0 0px;
@@ -8172,7 +8212,7 @@ About One
 
 .faq-one__right .faq-one-accrodion .accrodion-content p {
   margin: 0;
-}
+} */
 
 /*--------------------------------------------------------------
 # Testimonial One
@@ -8191,7 +8231,11 @@ About One
   left: 0;
   right: 0;
   top: 0;
-  background: linear-gradient(0deg, rgba(68, 44, 38, 1) 6%, rgba(253, 187, 45, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(68, 44, 38, 1) 6%,
+    rgba(253, 187, 45, 0) 100%
+  );
 }
 
 .testimonial-one__bg {
@@ -8308,7 +8352,7 @@ About One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  opacity: .10;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -8329,13 +8373,13 @@ About One
 }
 
 .testimonial-one__text {
-  color: rgba(var(--farmology-white-rgb), .50);
+  color: rgba(var(--farmology-white-rgb), 0.5);
   margin-top: 5px;
 }
 
 .testimonial-one__text span {
   font-size: 18px;
-  color: rgba(var(--farmology-primary-rgb), .40);
+  color: rgba(var(--farmology-primary-rgb), 0.4);
 }
 
 .testimonial-one__text .quote-two {
@@ -8432,12 +8476,12 @@ About One
 
 .blog-one__img:before {
   position: absolute;
-  content: '';
+  content: "";
   left: 0px;
   bottom: 0px;
   width: 50%;
   height: 100%;
-  background-color: rgba(var(--farmology-black-rgb), .70);
+  background-color: rgba(var(--farmology-black-rgb), 0.7);
   visibility: hidden;
   opacity: 0;
   transform-style: preserve-3d;
@@ -8459,12 +8503,12 @@ About One
 
 .blog-one__img:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0px;
   right: 0px;
   width: 50%;
   height: 100%;
-  background-color: rgba(var(--farmology-black-rgb), .70);
+  background-color: rgba(var(--farmology-black-rgb), 0.7);
   visibility: hidden;
   opacity: 0;
   transform-style: preserve-3d;
@@ -8572,7 +8616,7 @@ About One
   width: 52px;
   height: 52px;
   border-radius: var(--farmology-bdr-radius);
-  border: 1px solid rgba(var(--farmology-primary-rgb), .90);
+  border: 1px solid rgba(var(--farmology-primary-rgb), 0.9);
 }
 
 .blog-one__date p {
@@ -8620,7 +8664,7 @@ About One
 }
 
 .blog-one__meta li {
-  position: relative;  
+  position: relative;
   display: block;
 }
 
@@ -8678,8 +8722,8 @@ About One
 }
 
 .blog-one__read-more a:hover {
-    color: var(--farmology-base);
-    background-color: #0f1417;
+  color: var(--farmology-base);
+  background-color: #0f1417;
 }
 
 /***
@@ -8741,7 +8785,7 @@ Cta One
   right: 0;
   bottom: 0;
   width: 465px;
-  opacity: .60;
+  opacity: 0.6;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -8911,7 +8955,7 @@ Cta One
 
 .footer-widget__about-text {
   margin: 0;
-  color: rgba(var(--farmology-white-rgb), .70);
+  color: rgba(var(--farmology-white-rgb), 0.7);
   padding-top: 24px;
   padding-bottom: 17px;
 }
@@ -8929,7 +8973,7 @@ Cta One
   justify-content: center;
   height: 40px;
   width: 40px;
-  border: 1px solid rgba(var(--farmology-white-rgb), .40);
+  border: 1px solid rgba(var(--farmology-white-rgb), 0.4);
   border-radius: 50%;
   font-size: 15px;
   color: var(--farmology-white);
@@ -8964,11 +9008,11 @@ Cta One
 }
 
 .footer-widget__social a:hover::before {
-  transform: scale(1.0);
+  transform: scale(1);
   opacity: 1;
 }
 
-.footer-widget__social a+a {
+.footer-widget__social a + a {
   margin-left: 5px;
 }
 
@@ -9000,12 +9044,12 @@ Cta One
   gap: 10px;
 }
 
-.footer-widget__links-list li+li {
+.footer-widget__links-list li + li {
   margin-top: 16px;
 }
 
 .footer-widget__links-list li a {
-  color: rgba(var(--farmology-white-rgb), .70);
+  color: rgba(var(--farmology-white-rgb), 0.7);
   position: relative;
   display: inline-block;
   text-transform: capitalize;
@@ -9041,7 +9085,7 @@ Cta One
   gap: 15px;
 }
 
-.footer-widget__contact-list li+li {
+.footer-widget__contact-list li + li {
   margin-top: 20px;
 }
 
@@ -9052,7 +9096,7 @@ Cta One
   justify-content: center;
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(var(--farmology-white-rgb), .20);
+  border: 1px solid rgba(var(--farmology-white-rgb), 0.2);
   border-radius: 50%;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -9076,11 +9120,11 @@ Cta One
   position: relative;
   display: block;
   flex: 1;
-  color: rgba(var(--farmology-white-rgb), .70);
+  color: rgba(var(--farmology-white-rgb), 0.7);
 }
 
 .footer-widget__contact-list li p a {
-  color: rgba(var(--farmology-white-rgb), .70);
+  color: rgba(var(--farmology-white-rgb), 0.7);
   position: relative;
   display: block;
   line-height: 0;
@@ -9129,7 +9173,7 @@ Cta One
 .site-footer__bottom {
   position: relative;
   display: block;
-  border-top: 1px solid rgba(var(--farmology-white-rgb), .20);
+  border-top: 1px solid rgba(var(--farmology-white-rgb), 0.2);
 }
 
 .site-footer__bottom-inner {
@@ -9146,7 +9190,7 @@ Cta One
 }
 
 .site-footer__copyright-text {
-  color: rgba(var(--farmology-white-rgb), .70);
+  color: rgba(var(--farmology-white-rgb), 0.7);
 }
 
 .site-footer__copyright-text a {
@@ -9174,14 +9218,14 @@ Cta One
   display: block;
 }
 
-.site-footer__bottom-menu li+li {
+.site-footer__bottom-menu li + li {
   margin-left: 20px;
 }
 
 .site-footer__bottom-menu li a {
   position: relative;
   display: inline-block;
-  color: rgba(var(--farmology-white-rgb), .70);
+  color: rgba(var(--farmology-white-rgb), 0.7);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -9226,7 +9270,6 @@ Cta One
   border-top-left-radius: var(--farmology-bdr-radius);
   border-top-right-radius: var(--farmology-bdr-radius);
   overflow: hidden;
-
 }
 
 .services-two__img::before {
@@ -9236,7 +9279,7 @@ Cta One
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(var(--farmology-black-rgb), .65);
+  background-color: rgba(var(--farmology-black-rgb), 0.65);
   border-radius: var(--farmology-bdr-radius);
   opacity: 0;
   transform: translateY(50px);
@@ -9280,7 +9323,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  opacity: .10;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
@@ -9296,7 +9339,7 @@ Cta One
   bottom: 10px;
   right: 10px;
   top: 0;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .20);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.2);
   border-top: 0;
   border-radius: var(--farmology-bdr-radius);
   z-index: -1;
@@ -9421,7 +9464,13 @@ Cta One
   width: 85px;
   height: 4px;
   background: rgb(68, 44, 38);
-  background: linear-gradient(-90deg, rgba(68, 44, 38, 1) 14%, rgba(68, 44, 38, 0.7595413165266106) 35%, rgba(68, 44, 38, 0.5746673669467788) 57%, rgba(68, 44, 38, 0.19371498599439774) 95%);
+  background: linear-gradient(
+    -90deg,
+    rgba(68, 44, 38, 1) 14%,
+    rgba(68, 44, 38, 0.7595413165266106) 35%,
+    rgba(68, 44, 38, 0.5746673669467788) 57%,
+    rgba(68, 44, 38, 0.19371498599439774) 95%
+  );
   transform: translateY(-50%);
   opacity: 0.3;
   content: "";
@@ -9434,7 +9483,13 @@ Cta One
   width: 85px;
   height: 4px;
   background: rgb(68, 44, 38);
-  background: linear-gradient(90deg, rgba(68, 44, 38, 1) 14%, rgba(68, 44, 38, 0.7595413165266106) 35%, rgba(68, 44, 38, 0.5746673669467788) 57%, rgba(68, 44, 38, 0.19371498599439774) 95%);
+  background: linear-gradient(
+    90deg,
+    rgba(68, 44, 38, 1) 14%,
+    rgba(68, 44, 38, 0.7595413165266106) 35%,
+    rgba(68, 44, 38, 0.5746673669467788) 57%,
+    rgba(68, 44, 38, 0.19371498599439774) 95%
+  );
   transform: translateY(-50%);
   opacity: 0.3;
   content: "";
@@ -9472,7 +9527,7 @@ Cta One
 }
 
 .services-two__carousel.owl-carousel .owl-dot.active:before {
-  transform: scaleX(1.0);
+  transform: scaleX(1);
   border: 1px solid var(--farmology-base);
 }
 
@@ -9505,8 +9560,12 @@ Cta One
 .about-two {
   position: relative;
   display: block;
-  padding: 116px 0 120px;
-  background: linear-gradient(0deg, rgba(247, 243, 229, 1) 0%, rgba(253, 187, 45, 0) 100%);
+  padding: 79px 0 120px;
+  background: linear-gradient(
+    0deg,
+    rgba(247, 243, 229, 1) 0%,
+    rgba(253, 187, 45, 0) 100%
+  );
   z-index: 1;
 }
 
@@ -9531,6 +9590,20 @@ Cta One
   border-radius: var(--farmology-bdr-radius);
 }
 
+/* .about-two__img-2 {
+  position: absolute;
+  bottom: -46px;
+  right: -165px;
+  border-top: 5px solid var(--farmology-white);
+  border-left: 5px solid var(--farmology-white);
+  border-radius: var(--farmology-bdr-radius);
+}
+
+.about-two__img-2 img {
+  width: auto;
+  border-radius: var(--farmology-bdr-radius);
+} */
+
 .about-two__img-2 {
   position: absolute;
   bottom: -156px;
@@ -9543,13 +9616,25 @@ Cta One
 .about-two__img-2 img {
   width: auto;
   border-radius: var(--farmology-bdr-radius);
+  /* height: 560px; */
 }
-
+.new_about_mission.about-two__img-2 img {
+  width: 10%8;
+  border-radius: var(--farmology-bdr-radius);
+  height: 520px;
+}
+/* Product-application */
+.new_product.about-two__img-2 img {
+  width: 100%;
+  border-radius: var(--farmology-bdr-radius);
+  height: 560px;
+}
 .about-two__shape-1 {
   position: absolute;
   right: -127px;
   top: 64px;
   z-index: -1;
+  display: none;
 }
 
 .about-two__shape-1 img {
@@ -9604,7 +9689,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-primary-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-primary-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
 }
 
@@ -9653,7 +9738,9 @@ Cta One
   font-style: italic;
   color: var(--farmology-base);
 }
-
+.quote-text.about-two__text{
+  color: #4a9c40;
+}
 .about-two__text-2 {
   margin: 12px 0 20px;
 }
@@ -9748,7 +9835,7 @@ Cta One
 }
 
 .about-two__tab .tabs-content .tab.tab-active .about-two__single-tab {
-  opacity: 1.0;
+  opacity: 1;
   transform: scaleY(1);
   transform-origin: bottom top;
 }
@@ -9780,7 +9867,7 @@ Cta One
   gap: 10px;
 }
 
-.about-two__single-tab-bottom-list li+li {
+.about-two__single-tab-bottom-list li + li {
   margin-top: 5px;
 }
 
@@ -9830,7 +9917,7 @@ Cta One
   display: block;
   background-color: var(--farmology-white);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 48.51px 0.49px;
-  border: 1px solid rgba(var(--farmology-extra-rgb), 0.10);
+  border: 1px solid rgba(var(--farmology-extra-rgb), 0.1);
   padding: 30px 30px 30px;
   margin-bottom: 30px;
   border-radius: var(--farmology-bdr-radius);
@@ -9844,7 +9931,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  opacity: 0.10;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -9858,7 +9945,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
   z-index: -1;
 }
@@ -10007,7 +10094,7 @@ Cta One
   left: 0;
   bottom: 0;
   right: 0;
-  opacity: .10;
+  opacity: 0.1;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -10172,9 +10259,9 @@ Cta One
   -webkit-transform-origin: center;
   -ms-transform-origin: center;
   transform-origin: center;
-  transition-delay: .1s;
+  transition-delay: 0.1s;
   transition-timing-function: ease-in-out;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
   transition-property: all;
   z-index: 1;
 }
@@ -10185,7 +10272,7 @@ Cta One
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .10;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -10193,12 +10280,12 @@ Cta One
 }
 
 .project-two__single:hover .project-two__content {
-  -webkit-transform: perspective(400px) rotateX(0deg) scaleY(1.0);
-  -ms-transform: perspective(400px) rotateX(0deg) scaleY(1.0);
-  transform: perspective(400px) rotateX(0deg) scaleY(1.0);
-  transition-delay: .1s;
+  -webkit-transform: perspective(400px) rotateX(0deg) scaleY(1);
+  -ms-transform: perspective(400px) rotateX(0deg) scaleY(1);
+  transform: perspective(400px) rotateX(0deg) scaleY(1);
+  transition-delay: 0.1s;
   transition-timing-function: ease-in-out;
-  transition-duration: .7s;
+  transition-duration: 0.7s;
   transition-property: all;
 }
 
@@ -10210,9 +10297,9 @@ Cta One
   width: 2px;
   background: var(--farmology-extra);
   content: "";
-  transition: -webkit-transform 2.0s ease;
-  transition: transform 2.0s ease;
-  transition: transform 2.0s ease, -webkit-transform 2.0s ease;
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease;
   transform-origin: top center;
   -webkit-transform: scale(1, 0);
   transform: scale(1, 0);
@@ -10393,7 +10480,11 @@ Cta One
   right: 0;
   border-top-right-radius: var(--farmology-bdr-radius);
   border-bottom-right-radius: var(--farmology-bdr-radius);
-  background: linear-gradient(90deg, rgba(68, 44, 38, 0) 0%, rgba(68, 44, 38, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(68, 44, 38, 0) 0%,
+    rgba(68, 44, 38, 1) 100%
+  );
 }
 
 .progress-one__left {
@@ -10437,7 +10528,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  opacity: .15;
+  opacity: 0.15;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10453,7 +10544,7 @@ Cta One
   right: 10px;
   bottom: 10px;
   border-radius: 50%;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .50);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.5);
   z-index: -1;
 }
 
@@ -10587,7 +10678,7 @@ Cta One
   width: 100%;
 }
 
-.progress-one__progress-box-single+.progress-one__progress-box-single {
+.progress-one__progress-box-single + .progress-one__progress-box-single {
   margin-top: 20px;
 }
 
@@ -10657,8 +10748,6 @@ Cta One
   border-left: 5px solid var(--farmology-extra);
 }
 
-
-
 /*--------------------------------------------------------------
 # Team One
 --------------------------------------------------------------*/
@@ -10695,7 +10784,7 @@ Cta One
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(var(--farmology-extra-rgb), .50);
+  background-color: rgba(var(--farmology-extra-rgb), 0.5);
   opacity: 0;
   transform: translateY(50px);
   transition: background-color 0.7s ease;
@@ -10711,7 +10800,7 @@ Cta One
 .team-one__img img {
   width: 100%;
   border-radius: var(--farmology-bdr-radius);
-  transform: scale(1.0);
+  transform: scale(1);
   transition: all 1000ms ease;
 }
 
@@ -10741,7 +10830,7 @@ Cta One
   right: 10px;
   bottom: 10px;
   border-radius: var(--farmology-bdr-radius);
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   z-index: -1;
 }
 
@@ -10751,7 +10840,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  opacity: .15;
+  opacity: 0.15;
   border-radius: var(--farmology-bdr-radius);
   background-repeat: no-repeat;
   background-size: cover;
@@ -10828,7 +10917,7 @@ Cta One
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .10;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -10858,12 +10947,12 @@ Cta One
 .testimonial-two__single-shape-1 {
   position: absolute;
   top: 0;
-  left: 60px;
+  left: 93px;
   bottom: 0;
   right: 100px;
   border: 2px solid var(--farmology-primary);
   border-radius: 10px;
-  opacity: .50;
+  opacity: 0.5;
 }
 
 .testimonial-two__single-shape-1:before {
@@ -10874,7 +10963,7 @@ Cta One
   width: 2px;
   bottom: 80px;
   background-color: var(--farmology-extra);
-  opacity: .90;
+  opacity: 0.9;
   z-index: 1;
 }
 
@@ -10898,7 +10987,7 @@ Cta One
   left: 58px;
   right: 58px;
   bottom: -20px;
-  background-color: rgba(var(--farmology-extra-rgb), .80);
+  background-color: rgba(var(--farmology-extra-rgb), 0.8);
 }
 
 .testimonial-two__client-info-shape-1::before {
@@ -10928,11 +11017,14 @@ Cta One
 .testimonial-two__client-img {
   position: relative;
   display: block;
-  max-width: 120px;
+  max-width: 188px;
   width: 100%;
   border-radius: var(--farmology-bdr-radius);
 }
 
+/* .gamma-use .testimonial-two__client-img{
+  max-width: 188px !important;
+} */
 .testimonial-two__client-img img {
   width: 100%;
   border-radius: var(--farmology-bdr-radius);
@@ -10981,7 +11073,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
   z-index: -1;
 }
@@ -10992,7 +11084,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  opacity: .10;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -11019,7 +11111,7 @@ Cta One
   left: 10px;
   bottom: 10px;
   right: 0px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   border-right: 0;
   border-radius: 3px;
   border-top-right-radius: 0;
@@ -11086,7 +11178,7 @@ Cta One
   position: relative;
   display: inline-block;
   font-size: 30px;
-  color: rgba(var(--farmology-extra-rgb), .15);
+  color: rgba(var(--farmology-extra-rgb), 0.15);
 }
 
 .testimonial-two__inner {
@@ -11177,7 +11269,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
   z-index: -1;
 }
@@ -11201,7 +11293,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 0;
-  border: 1px dashed rgba(var(--farmology-primary-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-primary-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
   z-index: -1;
   border-bottom: 0;
@@ -11285,11 +11377,11 @@ Cta One
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border-bottom: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   padding-bottom: 7px;
 }
 
-.pricing-one__points li+li {
+.pricing-one__points li + li {
   margin-top: 12px;
 }
 
@@ -11331,7 +11423,7 @@ Cta One
   position: relative;
   display: inline-block;
   font-size: 16px;
-  color: #c31324
+  color: #c31324;
 }
 
 .pricing-one__btn-box {
@@ -11389,7 +11481,7 @@ Cta One
 }
 
 .blog-two__single:hover .blog-two__img:before {
-  opacity: .50;
+  opacity: 0.5;
 }
 
 .blog-two__img img {
@@ -11456,7 +11548,7 @@ Cta One
   right: 0px;
   bottom: 0px;
   border-radius: 40px;
-  border: 1px solid rgba(var(--farmology-extra-rgb), .60);
+  border: 1px solid rgba(var(--farmology-extra-rgb), 0.6);
   z-index: -1;
 }
 
@@ -11494,7 +11586,7 @@ Cta One
   display: block;
 }
 
-.blog-two__meta li+li {
+.blog-two__meta li + li {
   margin-left: 26px;
 }
 
@@ -11600,7 +11692,7 @@ Cta One
 }
 
 .blog-two__single-two:hover .blog-two__img-two:before {
-  opacity: .50;
+  opacity: 0.5;
 }
 
 .blog-two__img-two img {
@@ -11648,7 +11740,7 @@ Cta One
   right: 0px;
   bottom: 0px;
   border-radius: 40px;
-  border: 1px solid rgba(var(--farmology-extra-rgb), .60);
+  border: 1px solid rgba(var(--farmology-extra-rgb), 0.6);
   z-index: -1;
 }
 
@@ -11726,7 +11818,7 @@ Cta One
   display: block;
 }
 
-.blog-two__meta-two li+li {
+.blog-two__meta-two li + li {
   margin-left: 26px;
 }
 
@@ -11795,7 +11887,7 @@ Cta One
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.10;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -11844,9 +11936,9 @@ Cta One
   display: block;
 }
 
-.footer-widget-two__working-hour li+li {
+.footer-widget-two__working-hour li + li {
   margin-top: 18px;
-  border-top: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border-top: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   padding-top: 18px;
 }
 
@@ -11901,12 +11993,12 @@ Cta One
   font-size: 16px;
 }
 
-.footer-widget-two__link li+li {
+.footer-widget-two__link li + li {
   margin-top: 12px;
 }
 
 .footer-widget-two__link li a {
-  color: rgba(var(--farmology-white-rgb), .80);
+  color: rgba(var(--farmology-white-rgb), 0.8);
   text-transform: capitalize;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -11944,7 +12036,7 @@ Cta One
   left: 20px;
   right: 20px;
   bottom: 20px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
 }
 
@@ -11954,7 +12046,7 @@ Cta One
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .20;
+  opacity: 0.2;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -11993,7 +12085,7 @@ Cta One
   background-color: var(--farmology-extra);
   outline: none;
   border: none;
-  color: rgba(var(--farmology-white-rgb), .80);
+  color: rgba(var(--farmology-white-rgb), 0.8);
   font-weight: 400;
   border-radius: 0;
   padding-right: 25px;
@@ -12047,26 +12139,31 @@ Cta One
   left: 0;
   right: 0;
   content: "";
-  background-color: rgba(var(--farmology-base-rgb), .50);
+  background-color: rgba(var(--farmology-base-rgb), 0.5);
   transition: all 700ms ease;
   transform: translateY(-100%);
   z-index: 1;
 }
 
-.footer-widget-two__instagram-list li:hover .footer-widget-two__instagram-img:before {
+.footer-widget-two__instagram-list
+  li:hover
+  .footer-widget-two__instagram-img:before {
   transform: translateY(0%);
 }
 
 .footer-widget-two__instagram-img img {
   width: 100%;
   border-radius: 4px;
-  transition-delay: .1s;
+  transition-delay: 0.1s;
   transition-timing-function: ease-in-out;
-  transition-duration: .7s;
+  transition-duration: 0.7s;
   transition-property: all;
 }
 
-.footer-widget-two__instagram-list li:hover .footer-widget-two__instagram-img img {
+.footer-widget-two__instagram-list
+  li:hover
+  .footer-widget-two__instagram-img
+  img {
   transform: scale(1.05) rotate(0deg);
 }
 
@@ -12087,13 +12184,19 @@ Cta One
   z-index: 2;
 }
 
-.footer-widget-two__instagram-list li:hover .footer-widget-two__instagram-img a {
+.footer-widget-two__instagram-list
+  li:hover
+  .footer-widget-two__instagram-img
+  a {
   transform: translateY(0px);
   opacity: 1;
   transition-delay: 0.3s;
 }
 
-.footer-widget-two__instagram-list li .footer-widget-two__instagram-img a:hover {
+.footer-widget-two__instagram-list
+  li
+  .footer-widget-two__instagram-img
+  a:hover {
   color: var(--farmology-white);
 }
 
@@ -12111,7 +12214,7 @@ Cta One
   left: 0;
   right: 0;
   height: 1px;
-  border: 1px dashed rgba(var(--farmology-base-rgb), .50);
+  border: 1px dashed rgba(var(--farmology-base-rgb), 0.5);
   transform: translateY(-50%);
 }
 
@@ -12172,12 +12275,12 @@ Cta One
   right: 0;
   height: 100%;
   background-color: var(--farmology-primary);
-  -webkit-transition-delay: .1s;
-  transition-delay: .1s;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
-  -webkit-transition-duration: .4s;
-  transition-duration: .4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
   -webkit-transition-property: all;
   transition-property: all;
   opacity: 1;
@@ -12196,7 +12299,7 @@ Cta One
   transform: scaleY(1);
 }
 
-.site-footer-two__social a+a {
+.site-footer-two__social a + a {
   margin-left: 10px;
 }
 
@@ -12216,7 +12319,7 @@ Cta One
 }
 
 .site-footer-two__bottom-text {
-  color: rgba(var(--farmology-white-rgb), .80);
+  color: rgba(var(--farmology-white-rgb), 0.8);
 }
 
 .site-footer-two__bottom-text a {
@@ -12238,7 +12341,7 @@ Cta One
   display: block;
 }
 
-.site-footer-two__bottom-menu li+li {
+.site-footer-two__bottom-menu li + li {
   margin-left: 30px;
 }
 
@@ -12247,7 +12350,7 @@ Cta One
   display: flex;
   align-items: center;
   font-size: 16px;
-  color: rgba(var(--farmology-white-rgb), .80);
+  color: rgba(var(--farmology-white-rgb), 0.8);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -12295,7 +12398,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   border-radius: 10px;
   z-index: -1;
 }
@@ -12349,7 +12452,8 @@ Cta One
 .process-one__icon span {
   position: relative;
   display: inline-block;
-  font-size: 50px;
+  font-size: 20px;
+  font-weight: 800;
   color: var(--farmology-primary);
   transition: all 500ms linear;
   transition-delay: 0.1s;
@@ -12369,10 +12473,10 @@ Cta One
 .process-one__content {
   position: relative;
   display: block;
-  border: 1px solid rgba(var(--farmology-extra-rgb), .50);
+  border: 1px solid rgba(var(--farmology-extra-rgb), 0.5);
   border-radius: var(--farmology-bdr-radius);
   padding: 15px 20px 15px;
-  max-width: 230px;
+  /* max-width: 230px; */
   margin: 0 auto;
   width: 100%;
   margin-top: -1px;
@@ -12403,7 +12507,7 @@ Cta One
   font-weight: 600;
   color: var(--farmology-extra);
   counter-increment: count;
-  content: "0"counter(count);
+  /* content: "0" counter(count); */
   transition: all 200ms linear;
   transition-delay: 0.1s;
 }
@@ -12421,7 +12525,7 @@ Cta One
   position: relative;
   display: block;
   width: 25px;
-  border: 1px solid rgba(var(--farmology-extra-rgb), .50);
+  border: 1px solid rgba(var(--farmology-extra-rgb), 0.5);
   height: 15px;
   margin: 0 auto;
   border-bottom: 0;
@@ -12580,7 +12684,7 @@ Cta One
   z-index: 1;
 }
 
-.about-three__img>img {
+.about-three__img > img {
   width: 100%;
   border-radius: 50%;
   border-bottom-right-radius: 0;
@@ -12606,7 +12710,7 @@ Cta One
   z-index: -1;
 }
 
-.about-three__img-shape-2>img {
+.about-three__img-shape-2 > img {
   width: auto;
 }
 
@@ -12618,7 +12722,7 @@ Cta One
   transform: rotate(6deg);
 }
 
-.about-three__img-shape-3>img {
+.about-three__img-shape-3 > img {
   width: auto;
   animation: topBottom 3s ease-in-out infinite;
 }
@@ -12629,6 +12733,10 @@ Cta One
   right: -174px;
   transform: rotate(-90deg);
   z-index: 1;
+}
+
+.about-three__text {
+  text-align: justify;
 }
 
 .about-three__text-1 p {
@@ -12705,7 +12813,7 @@ Cta One
   left: -5px;
   right: -5px;
   bottom: -5px;
-  border: 5px solid rgba(var(--farmology-white-rgb), .30);
+  border: 5px solid rgba(var(--farmology-white-rgb), 0.3);
   border-radius: 50%;
   z-index: -1;
 }
@@ -12772,7 +12880,7 @@ Cta One
   gap: 20px;
 }
 
-.about-three__points-1 li+li {
+.about-three__points-1 li + li {
   margin-top: 12px;
 }
 
@@ -12826,7 +12934,7 @@ Cta One
   color: var(--farmology-base);
 }
 
-.about-three__points li+li {
+.about-three__points li + li {
   margin-top: 5px;
 }
 
@@ -12908,7 +13016,12 @@ Cta One
   left: 0;
   right: 0;
   height: 400px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 72%, rgba(255, 255, 255, 1) 73%);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 72%,
+    rgba(255, 255, 255, 1) 73%
+  );
 }
 
 .products-three__bg-color {
@@ -12918,7 +13031,11 @@ Cta One
   left: 0;
   right: 0;
   height: 450px;
-  background: linear-gradient(0deg, rgba(68, 44, 38, 1) 0%, rgba(68, 44, 38, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(68, 44, 38, 1) 0%,
+    rgba(68, 44, 38, 0) 100%
+  );
   z-index: -1;
 }
 
@@ -13060,7 +13177,7 @@ Cta One
 .products-three__text {
   font-size: 15px;
   line-height: 25px;
-  color: rgba(var(--farmology-white-rgb), .50);
+  color: rgba(var(--farmology-white-rgb), 0.5);
 }
 
 .products-three__arrow {
@@ -13113,7 +13230,13 @@ Cta One
   width: 85px;
   height: 4px;
   background: rgb(255, 255, 255);
-  background: linear-gradient(-90deg, rgba(255, 255, 255, 1) 14%, rgba(255, 255, 255, 0.7595413165266106) 35%, rgba(255, 255, 255, 0.5746673669467788) 57%, rgba(255, 255, 255, 0.19371498599439774) 95%);
+  background: linear-gradient(
+    -90deg,
+    rgba(255, 255, 255, 1) 14%,
+    rgba(255, 255, 255, 0.7595413165266106) 35%,
+    rgba(255, 255, 255, 0.5746673669467788) 57%,
+    rgba(255, 255, 255, 0.19371498599439774) 95%
+  );
   transform: translateY(-50%);
   opacity: 0.3;
   content: "";
@@ -13126,12 +13249,17 @@ Cta One
   width: 85px;
   height: 4px;
   background: rgb(255, 255, 255);
-  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 14%, rgba(255, 255, 255, 0.7595413165266106) 35%, rgba(255, 255, 255, 0.5746673669467788) 57%, rgba(255, 255, 255, 0.19371498599439774) 95%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 14%,
+    rgba(255, 255, 255, 0.7595413165266106) 35%,
+    rgba(255, 255, 255, 0.5746673669467788) 57%,
+    rgba(255, 255, 255, 0.19371498599439774) 95%
+  );
   transform: translateY(-50%);
   opacity: 0.3;
   content: "";
 }
-
 
 .products-three__carousel .swiper-dot-style1 .swiper-pagination-bullet {
   position: relative;
@@ -13146,7 +13274,9 @@ Cta One
   transition-delay: 0.1s;
 }
 
-.products-three__carousel .swiper-dot-style1 .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.products-three__carousel
+  .swiper-dot-style1
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: var(--farmology-base);
 }
 
@@ -13164,9 +13294,11 @@ Cta One
   content: "";
 }
 
-.products-three__carousel .swiper-dot-style1 .swiper-pagination-bullet.swiper-pagination-bullet-active::before,
+.products-three__carousel
+  .swiper-dot-style1
+  .swiper-pagination-bullet.swiper-pagination-bullet-active::before,
 .products-three__carousel .swiper-dot-style1 .swiper-pagination-bullet:hover {
-  transform: scale(1.0);
+  transform: scale(1);
 }
 
 /*--------------------------------------------------------------
@@ -13202,7 +13334,7 @@ Cta One
   border-radius: var(--farmology-bdr-radius);
 }
 
-.farm-activities__left-img>img {
+.farm-activities__left-img > img {
   width: 100%;
   border-radius: var(--farmology-bdr-radius);
 }
@@ -13249,7 +13381,7 @@ Cta One
   left: 20px;
   right: 20px;
   bottom: 20px;
-  border: 1px dashed rgba(var(--farmology-primary-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-primary-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
   z-index: -1;
 }
@@ -13382,21 +13514,30 @@ Cta One
   color: var(--farmology-primary);
 }
 
-.farm-activities__right-inner ul li:nth-child(2) .farm-activities__single-title {
+.farm-activities__right-inner
+  ul
+  li:nth-child(2)
+  .farm-activities__single-title {
   transform: rotate(-45deg);
   left: -77px;
   top: -3px;
   right: inherit;
 }
 
-.farm-activities__right-inner ul li:nth-child(3) .farm-activities__single-title {
+.farm-activities__right-inner
+  ul
+  li:nth-child(3)
+  .farm-activities__single-title {
   transform: rotate(133deg);
   right: 23px;
   bottom: 1px;
   top: inherit;
 }
 
-.farm-activities__right-inner ul li:nth-child(4) .farm-activities__single-title {
+.farm-activities__right-inner
+  ul
+  li:nth-child(4)
+  .farm-activities__single-title {
   transform: rotate(-132deg);
   left: -80px;
   bottom: -2px;
@@ -13404,13 +13545,21 @@ Cta One
   top: inherit;
 }
 
-.farm-activities__right-inner ul li:nth-child(4) .farm-activities__single-title a {
+.farm-activities__right-inner
+  ul
+  li:nth-child(4)
+  .farm-activities__single-title
+  a {
   position: relative;
   display: block;
   transform: rotate(180deg);
 }
 
-.farm-activities__right-inner ul li:nth-child(3) .farm-activities__single-title a {
+.farm-activities__right-inner
+  ul
+  li:nth-child(3)
+  .farm-activities__single-title
+  a {
   position: relative;
   display: block;
   transform: rotate(180deg);
@@ -13454,7 +13603,7 @@ Cta One
   right: 10px;
   bottom: 10px;
   border-radius: var(--farmology-bdr-radius);
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .20);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.2);
   z-index: -1;
 }
 
@@ -13554,7 +13703,13 @@ Cta One
   width: 85px;
   height: 4px;
   background: rgb(25, 15, 6);
-  background: linear-gradient(-90deg, rgba(25, 15, 6, 1) 14%, rgba(25, 15, 6, 0.7595413165266106) 35%, rgba(25, 15, 6, 0.5746673669467788) 57%, rgba(25, 15, 6, 0.19371498599439774) 95%);
+  background: linear-gradient(
+    -90deg,
+    rgba(25, 15, 6, 1) 14%,
+    rgba(25, 15, 6, 0.7595413165266106) 35%,
+    rgba(25, 15, 6, 0.5746673669467788) 57%,
+    rgba(25, 15, 6, 0.19371498599439774) 95%
+  );
   transform: translateY(-50%);
   opacity: 0.3;
   content: "";
@@ -13567,12 +13722,17 @@ Cta One
   width: 85px;
   height: 4px;
   background: rgb(25, 15, 6);
-  background: linear-gradient(90deg, rgba(25, 15, 6, 1) 14%, rgba(25, 15, 6, 0.7595413165266106) 35%, rgba(25, 15, 6, 0.5746673669467788) 57%, rgba(25, 15, 6, 0.19371498599439774) 95%);
+  background: linear-gradient(
+    90deg,
+    rgba(25, 15, 6, 1) 14%,
+    rgba(25, 15, 6, 0.7595413165266106) 35%,
+    rgba(25, 15, 6, 0.5746673669467788) 57%,
+    rgba(25, 15, 6, 0.19371498599439774) 95%
+  );
   transform: translateY(-50%);
   opacity: 0.3;
   content: "";
 }
-
 
 .farm-for-you__carousel .farm-for-you-dot-style1 .swiper-pagination-bullet {
   position: relative;
@@ -13587,11 +13747,15 @@ Cta One
   transition-delay: 0.1s;
 }
 
-.farm-for-you__carousel .farm-for-you-dot-style1 .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.farm-for-you__carousel
+  .farm-for-you-dot-style1
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: var(--farmology-base);
 }
 
-.farm-for-you__carousel .farm-for-you-dot-style1 .swiper-pagination-bullet::before {
+.farm-for-you__carousel
+  .farm-for-you-dot-style1
+  .swiper-pagination-bullet::before {
   position: absolute;
   top: -6px;
   left: -6px;
@@ -13605,9 +13769,13 @@ Cta One
   content: "";
 }
 
-.farm-for-you__carousel .farm-for-you-dot-style1 .swiper-pagination-bullet.swiper-pagination-bullet-active::before,
-.farm-for-you__carousel .farm-for-you-dot-style1 .swiper-pagination-bullet:hover {
-  transform: scale(1.0);
+.farm-for-you__carousel
+  .farm-for-you-dot-style1
+  .swiper-pagination-bullet.swiper-pagination-bullet-active::before,
+.farm-for-you__carousel
+  .farm-for-you-dot-style1
+  .swiper-pagination-bullet:hover {
+  transform: scale(1);
 }
 
 /*--------------------------------------------------------------
@@ -13746,7 +13914,7 @@ Cta One
   margin-bottom: 3px;
 }
 
-.our-story__points li+li {
+.our-story__points li + li {
   margin-top: 10px;
 }
 
@@ -13799,7 +13967,7 @@ Cta One
   left: 7px;
   right: 7px;
   bottom: 7px;
-  opacity: .10;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -13813,7 +13981,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
   z-index: -1;
 }
@@ -13906,7 +14074,7 @@ Cta One
   position: relative;
   display: block;
   margin-bottom: 30px;
-  border: 1px solid rgba(var(--farmology-extra-rgb), .20);
+  border: 1px solid rgba(var(--farmology-extra-rgb), 0.2);
   background-color: var(--farmology-white);
   padding: 0 20px 30px;
   border-radius: var(--farmology-bdr-radius);
@@ -14005,7 +14173,7 @@ Cta One
   display: block;
 }
 
-.shop-now__info li+li {
+.shop-now__info li + li {
   margin-left: 8px;
 }
 
@@ -14018,7 +14186,7 @@ Cta One
   height: 35px;
   border-radius: 50%;
   background-color: var(--farmology-white);
-  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, .2);
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2);
   color: var(--farmology-base);
   font-size: 15px;
   line-height: 0;
@@ -14133,7 +14301,7 @@ Cta One
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(var(--farmology-extra-rgb), .20);
+  background-color: rgba(var(--farmology-extra-rgb), 0.2);
   opacity: 0;
   transform: translateY(50px);
   transition: background-color 0.7s ease;
@@ -14151,7 +14319,7 @@ Cta One
   border-top-left-radius: var(--farmology-bdr-radius);
   border-top-right-radius: var(--farmology-bdr-radius);
   border-bottom-right-radius: 150px;
-  transform: scale(1.0);
+  transform: scale(1);
   transition: all 1000ms ease;
 }
 
@@ -14379,7 +14547,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
   z-index: -1;
 }
@@ -14480,7 +14648,7 @@ Cta One
   left: 29px;
   height: 32px;
   width: 1px;
-  border-left: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border-left: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   transform: rotate(17deg);
   top: -10px;
 }
@@ -14491,7 +14659,7 @@ Cta One
   right: 41px;
   height: 60px;
   width: 1px;
-  border-left: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border-left: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   transform: rotate(60deg);
   top: -23px;
 }
@@ -14597,7 +14765,7 @@ Cta One
 }
 
 .blog-three__single:hover .blog-three__img:before {
-  opacity: .50;
+  opacity: 0.5;
 }
 
 .blog-three__img img {
@@ -14739,7 +14907,7 @@ Cta One
   position: absolute;
   top: 0;
   left: 0;
-  opacity: .50;
+  opacity: 0.5;
   z-index: -1;
 }
 
@@ -14782,7 +14950,7 @@ Cta One
   position: absolute;
   top: 10px;
   right: 0px;
-  opacity: .20;
+  opacity: 0.2;
   z-index: -1;
 }
 
@@ -14917,7 +15085,7 @@ Cta One
 }
 
 .site-footer-three__text {
-  color: rgba(var(--farmology-white-rgb), .80);
+  color: rgba(var(--farmology-white-rgb), 0.8);
 }
 
 .site-footer-three__newsletter-form {
@@ -14969,7 +15137,7 @@ Cta One
   padding-left: 30px;
   margin-right: 0px;
   margin-bottom: 0;
-  color: rgba(var(--farmology-white-rgb), .80);
+  color: rgba(var(--farmology-white-rgb), 0.8);
   font-size: 15px;
   line-height: 25px;
   font-weight: 400;
@@ -14982,7 +15150,11 @@ Cta One
   display: none;
 }
 
-.site-footer-three__newsletter-form .checked-box input[type="checkbox"]+label span {
+.site-footer-three__newsletter-form
+  .checked-box
+  input[type="checkbox"]
+  + label
+  span {
   position: absolute;
   top: 2px;
   left: 0;
@@ -15007,7 +15179,7 @@ Cta One
   display: block;
   border-bottom: 2px solid var(--farmology-white);
   border-right: 2px solid var(--farmology-white);
-  content: '';
+  content: "";
   width: 6px;
   height: 9px;
   pointer-events: none;
@@ -15022,11 +15194,18 @@ Cta One
   opacity: 0;
 }
 
-.site-footer-three__newsletter-form.checked-box input[type="checkbox"]:checked+label span {
+.site-footer-three__newsletter-form.checked-box
+  input[type="checkbox"]:checked
+  + label
+  span {
   border-color: var(--farmology-white);
 }
 
-.site-footer-three__newsletter-form .checked-box input[type="checkbox"]:checked+label span:before {
+.site-footer-three__newsletter-form
+  .checked-box
+  input[type="checkbox"]:checked
+  + label
+  span:before {
   opacity: 1;
 }
 
@@ -15072,7 +15251,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
 }
 
@@ -15096,7 +15275,11 @@ Cta One
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, rgba(245, 203, 75, 1) 20%, rgba(245, 203, 75, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(245, 203, 75, 1) 20%,
+    rgba(245, 203, 75, 0) 100%
+  );
   border-radius: var(--farmology-bdr-radius);
 }
 
@@ -15157,7 +15340,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
 }
 
@@ -15181,7 +15364,11 @@ Cta One
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, rgba(245, 203, 75, 1) 20%, rgba(245, 203, 75, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(245, 203, 75, 1) 20%,
+    rgba(245, 203, 75, 0) 100%
+  );
   border-radius: var(--farmology-bdr-radius);
 }
 
@@ -15248,7 +15435,7 @@ Cta One
   left: 5px;
   right: 5px;
   bottom: 5px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .70);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.7);
   border-radius: 50%;
 }
 
@@ -15343,7 +15530,11 @@ Cta One
   left: 0;
   right: 0;
   top: 0;
-  background: linear-gradient(0deg, rgba(246, 242, 228, 1) 0, rgba(246, 242, 228, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(246, 242, 228, 1) 0,
+    rgba(246, 242, 228, 0) 100%
+  );
   z-index: -1;
 }
 
@@ -15384,7 +15575,11 @@ Cta One
   left: 0;
   right: 0;
   height: 64px;
-  background: linear-gradient(0deg, rgba(246, 242, 228, 1) 5%, rgba(246, 242, 228, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(246, 242, 228, 1) 5%,
+    rgba(246, 242, 228, 0) 100%
+  );
 }
 
 .about-four__img img {
@@ -15606,7 +15801,7 @@ Cta One
 # About Five
 --------------------------------------------------------------*/
 .about-five {
-  padding: 120px 0 120px;
+  padding: 81px 0 120px;
 }
 
 /*--------------------------------------------------------------
@@ -15626,7 +15821,7 @@ Cta One
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .10;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -15651,6 +15846,14 @@ Cta One
   justify-content: center;
 }
 
+.key-box.feature-two__img-box {
+  border: 5px solid white !important;
+}
+
+.key-img.feature-two__img {
+  padding: 14px !important;
+}
+
 .feature-two__img {
   position: relative;
   display: block;
@@ -15664,7 +15867,7 @@ Cta One
   bottom: -35px;
   width: 1px;
   height: 35px;
-  background-color: rgba(var(--farmology-primary-rgb), .20);
+  background-color: rgba(var(--farmology-primary-rgb), 0.2);
   left: 52%;
 }
 
@@ -15691,7 +15894,7 @@ Cta One
   display: block;
   height: 1px;
   width: 100%;
-  background-color: rgba(var(--farmology-primary-rgb), .20);
+  background-color: rgba(var(--farmology-primary-rgb), 0.2);
   max-width: 1102px;
   margin: 30px auto 50px;
 }
@@ -15701,6 +15904,7 @@ Cta One
   display: block;
 }
 
+/* .key-feature */
 .feature-two__single-inner {
   position: relative;
   display: block;
@@ -15715,7 +15919,7 @@ Cta One
 }
 
 .feature-two__single-inner:hover {
-  background-color: var(--farmology-base);
+  background-color: #3e673a !important;
 }
 
 .feature-two__single {
@@ -15746,7 +15950,7 @@ Cta One
   left: 50%;
   width: 1px;
   height: 50px;
-  background-color: rgba(var(--farmology-primary-rgb), .20);
+  background-color: rgba(var(--farmology-primary-rgb), 0.2);
   z-index: 1;
 }
 
@@ -15757,7 +15961,7 @@ Cta One
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
   z-index: -1;
 }
@@ -15771,7 +15975,7 @@ Cta One
   position: relative;
   display: inline-block;
   font-size: 35px;
-  color: var(--farmology-base);
+  color: #198754;
 }
 
 .feature-two__title-box {
@@ -15835,6 +16039,10 @@ Cta One
   opacity: 0;
 }
 
+.feature-two__content ul li {
+  color: white;
+}
+
 .feature-two__single-inner:hover .feature-two__content {
   opacity: 1;
   transform: translateY(0);
@@ -15842,6 +16050,29 @@ Cta One
 
 .feature-two__content p {
   color: var(--farmology-white);
+}
+
+/* Card hover pop-up effect */
+.feature-two__single-inner-wrap {
+  position: relative;
+  transform: scale(1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  z-index: 1;
+}
+
+.feature-two__single-inner:hover {
+  background-color: var(--farmology-base);
+}
+
+.feature-two__single-inner-wrap:hover {
+  transform: scale(1.06);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* Ensure scaling does not get clipped */
+.feature-two {
+  overflow: visible;
 }
 
 /*==============================================
@@ -15889,7 +16120,7 @@ Cta One
 }
 
 .blog-four__single:hover .blog-four__img:before {
-  opacity: .50;
+  opacity: 0.5;
 }
 
 .blog-four__img img {
@@ -15981,7 +16212,7 @@ Cta One
   width: 100%;
 }
 
-.blog-four__author-img>img {
+.blog-four__author-img > img {
   width: 100%;
   border-radius: 50%;
 }
@@ -16030,7 +16261,6 @@ Cta One
   padding: 120px 0 90px;
 }
 
-
 /*--------------------------------------------------------------
 # Page Header
 --------------------------------------------------------------*/
@@ -16060,7 +16290,11 @@ Cta One
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, rgba(78, 52, 46, 1) 8%, rgba(78, 52, 46, 0) 95%);
+  background: linear-gradient(
+    180deg,
+    rgba(78, 52, 46, 1) 8%,
+    rgba(78, 52, 46, 0) 95%
+  );
 }
 
 .page-header__inner {
@@ -16112,7 +16346,7 @@ Cta One
   transition: all 500ms ease;
 }
 
-.thm-breadcrumb li+li {
+.thm-breadcrumb li + li {
   margin-left: 5px;
 }
 
@@ -16206,7 +16440,7 @@ Cta One
   width: 52px;
   height: 52px;
   border-radius: var(--farmology-bdr-radius);
-  border: 1px solid rgba(var(--farmology-primary-rgb), .90);
+  border: 1px solid rgba(var(--farmology-primary-rgb), 0.9);
 }
 
 .blog-details__date p {
@@ -16303,7 +16537,7 @@ Cta One
 .blog-details__author-box {
   position: relative;
   display: block;
-  background-color: rgba(var(--farmology-base-rgb), .20);
+  background-color: rgba(var(--farmology-base-rgb), 0.2);
   border-radius: var(--farmology-bdr-radius);
   padding: 40px 40px 37px;
 }
@@ -16465,7 +16699,7 @@ Cta One
   padding: 29px 29px 30px;
 }
 
-.comment-one__single+.comment-one__single {
+.comment-one__single + .comment-one__single {
   margin-top: 30px;
 }
 
@@ -16614,7 +16848,7 @@ Cta One
   display: block;
 }
 
-.sidebar__single+.sidebar__single {
+.sidebar__single + .sidebar__single {
   margin-top: 30px;
 }
 
@@ -16740,7 +16974,7 @@ Cta One
   margin: 0;
 }
 
-.sidebar__category-list li+li {
+.sidebar__category-list li + li {
   position: relative;
   margin-top: 15px;
 }
@@ -16772,7 +17006,7 @@ Cta One
   width: 100%;
   background: var(--farmology-base);
   z-index: -1;
-  transform: scaleY(0.0);
+  transform: scaleY(0);
   transform-origin: left;
   transform-style: preserve-3d;
   transition: all 200ms linear;
@@ -16780,7 +17014,7 @@ Cta One
 }
 
 .sidebar__category-list li a:hover:before {
-  transform: scaleY(1.0);
+  transform: scaleY(1);
 }
 
 .sidebar__category-list li a:hover {
@@ -16838,7 +17072,7 @@ Cta One
   display: block;
 }
 
-.sidebar__post-single+.sidebar__post-single {
+.sidebar__post-single + .sidebar__post-single {
   margin-top: 27px;
 }
 
@@ -16851,39 +17085,39 @@ Cta One
 }
 
 .sidebar-post__img::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0%;
   right: 0%;
   width: 0;
   height: 100%;
-  background-color: rgba(var(--farmology-base-rgb), .80);
+  background-color: rgba(var(--farmology-base-rgb), 0.8);
   border-radius: var(--farmology-bdr-radius);
   -webkit-transform: translateX(90%, 90%);
   transform: translateX(90%, 90%);
-  opacity: 0.70;
+  opacity: 0.7;
   z-index: 1;
 }
 
 .sidebar__post-single:hover .sidebar-post__img::before {
-  -webkit-animation: circle .95s;
-  animation: circle .95s;
-  opacity: 1.0;
+  -webkit-animation: circle 0.95s;
+  animation: circle 0.95s;
+  opacity: 1;
 }
 
 .sidebar-post__img img {
   width: 100%;
   border-radius: var(--farmology-bdr-radius);
-  transform: scale(1.0);
-  transition: all 0.3s ease-in-out 0.1s opacity .2s ease-in;
-  transition-delay: .1s;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out 0.1s opacity 0.2s ease-in;
+  transition-delay: 0.1s;
   transition-timing-function: ease-in-out;
-  transition-duration: .7s;
+  transition-duration: 0.7s;
   transition-property: all;
 }
 
 .sidebar__post-single:hover .sidebar-post__img img {
-  opacity: 0.70;
+  opacity: 0.7;
   transform: scale(1.1) rotate(1deg);
 }
 
@@ -17112,7 +17346,7 @@ Cta One
   left: 0;
   right: 0;
   height: 1px;
-  background-color: #6E777D;
+  background-color: #6e777d;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -17143,7 +17377,7 @@ Cta One
   font-size: 16px;
   border-radius: 10px;
   background-color: transparent;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   font-family: var(--farmology-font-two);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -17271,9 +17505,8 @@ Cta One
 }
 
 .contact-info__single h3 a:hover {
-  color: var(--farmology-base)
+  color: var(--farmology-base);
 }
-
 
 /*--------------------------------------------------------------
 # Contact Page
@@ -17341,13 +17574,13 @@ Cta One
   height: 57px;
   width: 100%;
   background-color: rgba(var(--farmology-white-rgb), 0.05);
-  border: 1px solid rgba(var(--farmology-white-rgb), .10);
+  border: 1px solid rgba(var(--farmology-white-rgb), 0.1);
   padding-left: 20px;
   padding-right: 20px;
   outline: none;
   font-size: 16px;
   font-weight: 400;
-  color: rgba(var(--farmology-primary-rgb), .60);
+  color: rgba(var(--farmology-primary-rgb), 0.6);
   display: block;
   border-radius: var(--farmology-bdr-radius);
 }
@@ -17360,7 +17593,7 @@ Cta One
   height: 57px;
   width: 100%;
   background-color: rgba(var(--farmology-white-rgb), 0.05);
-  border: 1px solid rgba(var(--farmology-white-rgb), .10);
+  border: 1px solid rgba(var(--farmology-white-rgb), 0.1);
   padding-left: 20px;
   padding-right: 20px;
   outline: none;
@@ -17375,11 +17608,11 @@ Cta One
 
 .contact-page__input-box textarea {
   font-size: 16px;
-  color: rgba(var(--farmology-primary-rgb), .60);
+  color: rgba(var(--farmology-primary-rgb), 0.6);
   height: 175px;
   width: 100%;
   background-color: rgba(var(--farmology-white-rgb), 0.05);
-  border: 1px solid rgba(var(--farmology-white-rgb), .10);
+  border: 1px solid rgba(var(--farmology-white-rgb), 0.1);
   padding: 15px 20px 30px;
   border-radius: var(--farmology-bdr-radius);
   outline: none;
@@ -17391,7 +17624,6 @@ Cta One
 .contact-page__input-box.text-message-box {
   height: 175px;
 }
-
 
 .contact-page__btn-box {
   position: relative;
@@ -17510,7 +17742,7 @@ Error Page
   position: relative;
   display: block;
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-bottom: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   margin-bottom: 37px;
 }
 
@@ -17613,14 +17845,14 @@ Error Page
   transform: scaleX(1);
 }
 
-.team-details__social a+a {
+.team-details__social a + a {
   margin-left: 10px;
 }
 
 .team-details__client-address {
   position: relative;
   display: block;
-  border-top: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-top: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   margin-top: 19px;
   padding-top: 20px;
 }
@@ -17630,7 +17862,7 @@ Error Page
   display: block;
 }
 
-.team-details__client-address li+li {
+.team-details__client-address li + li {
   margin-top: 16px;
 }
 
@@ -17738,7 +17970,6 @@ Error Page
   color: var(--farmology-base);
 }
 
-
 .team-details__bottom-right {
   position: relative;
   display: block;
@@ -17762,7 +17993,7 @@ Error Page
   display: block;
 }
 
-.team-details__progress-list li+li {
+.team-details__progress-list li + li {
   margin-top: 20px;
 }
 
@@ -17863,7 +18094,7 @@ Error Page
   height: 60px;
   width: 100%;
   background-color: transparent;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   padding-left: 30px;
   padding-right: 30px;
   outline: none;
@@ -17882,7 +18113,7 @@ Error Page
   height: 60px;
   width: 100%;
   background-color: transparent;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   padding-left: 30px;
   padding-right: 30px;
   outline: none;
@@ -17911,7 +18142,7 @@ Error Page
   height: 200px;
   width: 100%;
   background-color: transparent;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   padding: 15px 30px 30px;
   outline: none;
   font-size: 16px;
@@ -17968,7 +18199,7 @@ Contact Info One
   left: 20px;
   right: 20px;
   bottom: 20px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.3);
   border-radius: var(--farmology-bdr-radius);
 }
 
@@ -17982,7 +18213,7 @@ Contact Info One
   left: 0;
   bottom: 0;
   right: 0;
-  opacity: .10;
+  opacity: 0.1;
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18016,7 +18247,7 @@ Contact Info One
   left: 5px;
   right: 5px;
   bottom: 5px;
-  border: 1px dashed rgba(var(--farmology-base-rgb), .70);
+  border: 1px dashed rgba(var(--farmology-base-rgb), 0.7);
   border-radius: 50%;
 }
 
@@ -18071,9 +18302,10 @@ Contact Info One
 Site Footer 
 =============================================***/
 .icon.add-icon {
-    width: 72px !important;
-    height: 51px;
+  width: 72px !important;
+  height: 51px;
 }
+
 .site-footer-four {
   position: relative;
   display: block;
@@ -18107,7 +18339,7 @@ Site Footer
 }
 
 .footer-widget-four__about-text {
-  color: rgba(var(--farmology-white-rgb), .80);
+  color: rgba(var(--farmology-white-rgb), 0.8);
   margin: 20px 0 20px;
 }
 
@@ -18132,7 +18364,7 @@ Site Footer
   display: block;
 }
 
-.footer-widget-four__social-links ul li+li {
+.footer-widget-four__social-links ul li + li {
   margin-left: 10px;
 }
 
@@ -18185,7 +18417,7 @@ Site Footer
   display: inline-block;
 }
 
-.site-footer-four__apps-box a+a {
+.site-footer-four__apps-box a + a {
   margin-left: 13px;
 }
 
@@ -18221,11 +18453,11 @@ Site Footer
 }
 
 .footer-widget-four__twitter-feed-single p {
-  color: rgba(var(--farmology-white-rgb), 0.80);
+  color: rgba(var(--farmology-white-rgb), 0.8);
 }
 
 .footer-widget-four__twitter-feed-single p a {
-  color: rgba(var(--farmology-white-rgb), 0.80);
+  color: rgba(var(--farmology-white-rgb), 0.8);
 }
 
 .footer-widget-four__twitter-feed-single p a:hover {
@@ -18247,7 +18479,7 @@ Site Footer
 .footer-widget-four__twitter-feed-icon span {
   position: relative;
   display: inline-block;
-  color: rgba(var(--farmology-white-rgb), 0.40);
+  color: rgba(var(--farmology-white-rgb), 0.4);
   font-size: 50px;
 }
 
@@ -18265,11 +18497,12 @@ Site Footer
 }
 
 .footer-widget-four__twitter-feed-details p {
-  color: rgba(var(--farmology-white-rgb), 0.80);
+  color: rgba(var(--farmology-white-rgb), 0.8);
 }
 
-
-.footer-widget-four__twitter-feed-carousel.owl-theme .owl-nav.disabled+.owl-dots {
+.footer-widget-four__twitter-feed-carousel.owl-theme
+  .owl-nav.disabled
+  + .owl-dots {
   margin-top: 25px;
 }
 
@@ -18300,7 +18533,10 @@ Site Footer
   outline: none;
 }
 
-.footer-widget-four__twitter-feed-carousel.owl-carousel .owl-dots .owl-dot span {
+.footer-widget-four__twitter-feed-carousel.owl-carousel
+  .owl-dots
+  .owl-dot
+  span {
   display: none;
 }
 
@@ -18308,7 +18544,7 @@ Site Footer
   position: absolute;
   bottom: 68px;
   right: 50px;
-  opacity: .60;
+  opacity: 0.6;
 }
 
 .site-footer-four__shape-1 img {
@@ -18318,7 +18554,7 @@ Site Footer
 .site-footer-four__bottom {
   position: relative;
   display: block;
-  border-top: 1px solid rgba(var(--farmology-primary-rgb), .10);
+  border-top: 1px solid rgba(var(--farmology-primary-rgb), 0.1);
   z-index: 5;
 }
 
@@ -18336,11 +18572,11 @@ Site Footer
 }
 
 .site-footer-four__copyright p {
-  color: rgba(var(--farmology-white-rgb), 0.80);
+  color: rgba(var(--farmology-white-rgb), 0.8);
 }
 
 .site-footer-four__copyright p a {
-  color: rgba(var(--farmology-white-rgb), 0.80);
+  color: rgba(var(--farmology-white-rgb), 0.8);
 }
 
 .site-footer-four__copyright p a:hover {
@@ -18445,7 +18681,7 @@ Site Footer
   gap: 10px;
 }
 
-.service-details__points-list li+li {
+.service-details__points-list li + li {
   margin-top: 16px;
 }
 
@@ -18591,7 +18827,7 @@ Site Footer
   display: block;
 }
 
-.service-details__services-list li+li {
+.service-details__services-list li + li {
   margin-top: 12px;
 }
 
@@ -18682,7 +18918,7 @@ Site Footer
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-base-rgb), .50);
+  border: 1px dashed rgba(var(--farmology-base-rgb), 0.5);
   border-radius: var(--farmology-bdr-radius);
   z-index: -1;
 }
@@ -18693,7 +18929,7 @@ Site Footer
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .20;
+  opacity: 0.2;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -18790,7 +19026,7 @@ Site Footer
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-bottom: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   padding: 14px 0px 14px;
   line-height: 0;
 }
@@ -18843,7 +19079,13 @@ Site Footer
   transition-delay: 0.1s;
 }
 
-.service-details__sidebar-single-download ul li .content-box .text-box h2 a:hover {
+.service-details__sidebar-single-download
+  ul
+  li
+  .content-box
+  .text-box
+  h2
+  a:hover {
   color: var(--farmology-base);
 }
 
@@ -18858,7 +19100,13 @@ Site Footer
   color: var(--farmology-gray);
 }
 
-.service-details__sidebar-single-download ul li .content-box .text-box p a:hover {
+.service-details__sidebar-single-download
+  ul
+  li
+  .content-box
+  .text-box
+  p
+  a:hover {
   color: var(--farmology-base);
 }
 
@@ -18999,7 +19247,7 @@ Site Footer
   gap: 14px;
 }
 
-.project-details__points li+li {
+.project-details__points li + li {
   margin-top: 16px;
 }
 
@@ -19054,7 +19302,7 @@ Site Footer
   padding: 18px 30px 19px;
 }
 
-.project-details__information-list li+li {
+.project-details__information-list li + li {
   margin-top: 12px;
 }
 
@@ -19066,7 +19314,6 @@ Site Footer
   color: var(--farmology-extra);
   margin-bottom: 4px;
 }
-
 
 .project-details__get-started {
   position: relative;
@@ -19100,7 +19347,7 @@ Site Footer
   gap: 14px;
 }
 
-.project-details__get-started-points li+li {
+.project-details__get-started-points li + li {
   margin-top: 11px;
 }
 
@@ -19145,7 +19392,7 @@ Site Footer
   position: relative;
   display: flex;
   align-items: center;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   padding: 15px 20px 15px;
   border-radius: var(--farmology-bdr-radius);
 }
@@ -19163,7 +19410,7 @@ Site Footer
   right: 0;
   bottom: -16px;
   width: 1px;
-  background: rgba(var(--farmology-black-rgb), .10);
+  background: rgba(var(--farmology-black-rgb), 0.1);
   content: "";
 }
 
@@ -19270,7 +19517,7 @@ History Page
   transform: translateX(-50%);
   bottom: 119px;
   width: 1px;
-  background-color: rgba(var(--farmology-black-rgb), .15);
+  background-color: rgba(var(--farmology-black-rgb), 0.15);
 }
 
 .history-page__single {
@@ -19373,7 +19620,7 @@ Product
   display: block;
 }
 
-.product__sidebar-single+.product__sidebar-single {
+.product__sidebar-single + .product__sidebar-single {
   margin-top: 30px;
 }
 
@@ -19412,8 +19659,8 @@ Product
   position: relative;
 }
 
-.shop-search form input[type=search],
-.shop-search form input[type=text] {
+.shop-search form input[type="search"],
+.shop-search form input[type="text"] {
   width: 100%;
   height: 60px;
   background-color: var(--farmology-white);
@@ -19510,7 +19757,10 @@ Product
   display: inline-block;
 }
 
-.product__price-ranger .price-ranger .ranger-min-max-block input[type="submit"] {
+.product__price-ranger
+  .price-ranger
+  .ranger-min-max-block
+  input[type="submit"] {
   position: relative;
   display: block;
   background: var(--farmology-extra);
@@ -19551,7 +19801,6 @@ Product
   line-height: 40px;
   left: -2px;
 }
-
 
 .shop-category {
   position: relative;
@@ -19609,7 +19858,7 @@ Product
   justify-content: center;
   width: 30px;
   background-color: var(--farmology-base);
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   content: "\e90f";
   opacity: 1;
   font-size: 12px;
@@ -19660,7 +19909,6 @@ Product
   background: var(--farmology-base);
 }
 
-
 .sidebar-rating-box {
   position: relative;
   display: block;
@@ -19677,11 +19925,11 @@ Product
   display: block;
 }
 
-.sidebar-rating-box ul li+li {
+.sidebar-rating-box ul li + li {
   margin-top: 30px;
 }
 
-.sidebar-rating-box ul li input[type=radio] {
+.sidebar-rating-box ul li input[type="radio"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -19705,7 +19953,7 @@ Product
   color: #dddbdb;
 }
 
-.sidebar-rating-box ul li input[type=radio]+label i {
+.sidebar-rating-box ul li input[type="radio"] + label i {
   position: absolute;
   top: 1px;
   left: 0;
@@ -19732,12 +19980,12 @@ Product
   transition-delay: 0.1s;
 }
 
-.sidebar-rating-box ul li input[type=radio]:checked+label i {
+.sidebar-rating-box ul li input[type="radio"]:checked + label i {
   border-color: var(--farmology-base);
 }
 
-.sidebar-rating-box ul li input[type=radio]:checked+label i::before {
-  transform: scale(1.0);
+.sidebar-rating-box ul li input[type="radio"]:checked + label i::before {
+  transform: scale(1);
 }
 
 .shop-product-recent-products {
@@ -19782,9 +20030,9 @@ Product
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  transition-delay: .1s;
+  transition-delay: 0.1s;
   transition-timing-function: ease-in-out;
-  transition-duration: .7s;
+  transition-duration: 0.7s;
   transition-property: all;
   background: rgba(var(--farmology-black-rgb), 0.5);
   opacity: 0;
@@ -19798,7 +20046,7 @@ Product
 
 .shop-product-recent-products ul li .img img {
   width: 100%;
-  transition: .5s ease;
+  transition: 0.5s ease;
   transform: scale(1.05);
 }
 
@@ -19885,7 +20133,7 @@ Product
   color: #dddbdb;
 }
 
-.shop-product-recent-products ul li .content .review i+i {
+.shop-product-recent-products ul li .content .review i + i {
   margin-left: 5px;
 }
 
@@ -19976,7 +20224,7 @@ Product
   cursor: pointer;
   border-radius: 3px;
   background-color: var(--farmology-white);
-  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, .2);
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2);
   transition: all 200ms linear;
   transition-delay: 0.1s;
 }
@@ -19986,7 +20234,7 @@ Product
   background-color: var(--farmology-base);
 }
 
-.product__all-tab-button ul li+li {
+.product__all-tab-button ul li + li {
   margin-left: 10px;
 }
 
@@ -20036,8 +20284,10 @@ Product
   transform-origin: top bottom;
 }
 
-.product__all-tab .tab-content-box-item.tab-content-box-item-active .product__all-tab-content-box-item {
-  opacity: 1.0;
+.product__all-tab
+  .tab-content-box-item.tab-content-box-item-active
+  .product__all-tab-content-box-item {
+  opacity: 1;
   transform: translateY(0px);
   transform-origin: bottom top;
 }
@@ -20051,7 +20301,7 @@ Product
   position: relative;
   display: block;
   margin-bottom: 30px;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   background-color: var(--farmology-white);
   padding: 0 0 30px;
   border-radius: var(--farmology-bdr-radius);
@@ -20068,7 +20318,7 @@ Product
   display: block;
   overflow: hidden;
   border-radius: var(--farmology-bdr-radius);
-  border-bottom: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-bottom: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   z-index: 1;
@@ -20127,7 +20377,7 @@ Product
   display: block;
 }
 
-.single-product-style1__overlay li+li {
+.single-product-style1__overlay li + li {
   margin-top: 8px;
 }
 
@@ -20138,7 +20388,7 @@ Product
   justify-content: center;
   width: 70px;
   background-color: var(--farmology-white);
-  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, .2);
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2);
   color: var(--farmology-base);
   line-height: 35px;
   font-weight: 600;
@@ -20169,7 +20419,7 @@ Product
   display: block;
 }
 
-.single-product-style1__info li+li {
+.single-product-style1__info li + li {
   margin-left: 8px;
 }
 
@@ -20182,7 +20432,7 @@ Product
   height: 35px;
   border-radius: 50%;
   background-color: var(--farmology-white);
-  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, .2);
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2);
   color: var(--farmology-base);
   font-size: 15px;
   line-height: 0;
@@ -20262,12 +20512,11 @@ Product
   font-weight: 500;
 }
 
-
 .single-product-style2 {
   position: relative;
   display: block;
   margin-bottom: 30px;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   background-color: var(--farmology-white);
   border-radius: var(--farmology-bdr-radius);
   transition: all 500ms ease;
@@ -20288,7 +20537,7 @@ Product
   display: block;
   overflow: hidden;
   border-radius: var(--farmology-bdr-radius);
-  border-right: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-right: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   z-index: 1;
@@ -20352,7 +20601,7 @@ Product
   font-size: 16px;
 }
 
-.single-product-style2__review i+i {
+.single-product-style2__review i + i {
   margin-left: 5px;
 }
 
@@ -20404,7 +20653,7 @@ Product
   display: block;
 }
 
-.single-product-style2__info li+li {
+.single-product-style2__info li + li {
   margin-left: 8px;
 }
 
@@ -20417,7 +20666,7 @@ Product
   height: 35px;
   border-radius: 50%;
   background-color: var(--farmology-white);
-  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, .2);
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2);
   color: var(--farmology-base);
   font-size: 15px;
   line-height: 0;
@@ -20429,8 +20678,6 @@ Product
   color: var(--farmology-white);
   background-color: var(--farmology-base);
 }
-
-
 
 /***
 =============================================
@@ -20464,11 +20711,11 @@ Product
   height: 40px;
   background: transparent;
   border-radius: 50%;
-  color: rgba(var(--farmology-gray-rgb), .50);
+  color: rgba(var(--farmology-gray-rgb), 0.5);
   font-size: 16px;
   line-height: 40px;
   font-weight: 600;
-  border: 1px solid rgba(var(--farmology-gray-rgb), .50);
+  border: 1px solid rgba(var(--farmology-gray-rgb), 0.5);
   text-align: center;
   transition: all 500ms ease;
   font-family: var(--farmology-font);
@@ -20492,7 +20739,7 @@ Product
 .styled-pagination li.prev a,
 .styled-pagination li.next a {
   border-radius: 50%;
-  color: rgba(var(--farmology-gray-rgb), .50);
+  color: rgba(var(--farmology-gray-rgb), 0.5);
 }
 
 .styled-pagination li.prev a:hover,
@@ -20503,7 +20750,7 @@ Product
 .styled-pagination li a span:before {
   position: relative;
   top: 0px;
-  color: rgba(var(--farmology-gray-rgb), .50);
+  color: rgba(var(--farmology-gray-rgb), 0.5);
   font-size: 14px;
   font-weight: 700;
   transition: all 200ms linear;
@@ -20514,9 +20761,6 @@ Product
 .styled-pagination li.active a span:before {
   color: var(--farmology-white);
 }
-
-
-
 
 /***
 =============================================
@@ -20529,7 +20773,6 @@ Product Details
   padding: 120px 0px 120px;
   z-index: 1;
 }
-
 
 .product-details__left {
   position: relative;
@@ -20560,7 +20803,7 @@ Product Details
   cursor: pointer;
   overflow: hidden;
   border-radius: 10px;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
 }
 
 .product-details__thumb-img img {
@@ -20580,8 +20823,9 @@ Product Details
   transition: all 500ms ease;
 }
 
-
-#shop-details-one__thumb .swiper-slide-thumb-active .product-details__thumb-img:before {
+#shop-details-one__thumb
+  .swiper-slide-thumb-active
+  .product-details__thumb-img:before {
   opacity: 1;
 }
 
@@ -20597,10 +20841,9 @@ Product Details
 
 .product-details__img img {
   width: 100%;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   border-radius: 15px;
 }
-
 
 .product-details__nav {
   position: absolute;
@@ -20637,7 +20880,6 @@ Product Details
   z-index: 100;
 }
 
-
 .product-details__nav .swiper-button-next:hover,
 .product-details__nav .swiper-button-prev:hover {
   color: var(--farmology-white);
@@ -20659,7 +20901,6 @@ Product Details
 .product-details__nav .swiper-button-prev::after {
   display: none;
 }
-
 
 .product-details__right {
   position: relative;
@@ -20697,7 +20938,7 @@ Product Details
   margin-top: 26px;
   padding-bottom: 37px;
   margin-bottom: 28px;
-  border-bottom: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-bottom: 1px solid rgba(var(--farmology-black-rgb), 0.1);
 }
 
 .product-details__reveiw i {
@@ -20705,7 +20946,7 @@ Product Details
   color: var(--farmology-base);
 }
 
-.product-details__reveiw i+i {
+.product-details__reveiw i + i {
   margin-left: 4px;
 }
 
@@ -20774,7 +21015,7 @@ Product Details
   height: 35px;
 }
 
-.product-details__select-size ul li input[type=radio] {
+.product-details__select-size ul li input[type="radio"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -20797,12 +21038,12 @@ Product Details
   transition-delay: 0.1s;
 }
 
-.product-details__select-size ul li input[type=radio]:checked+label {
+.product-details__select-size ul li input[type="radio"]:checked + label {
   color: var(--farmology-white);
   font-weight: 500;
 }
 
-.product-details__select-size ul li input[type=radio]+label i {
+.product-details__select-size ul li input[type="radio"] + label i {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -20833,15 +21074,19 @@ Product Details
   transition-delay: 0.1s;
 }
 
-.product-details__select-size ul li input[type=radio]:checked+label i {
+.product-details__select-size ul li input[type="radio"]:checked + label i {
   border-color: var(--farmology-base);
 }
 
-.product-details__select-size ul li input[type=radio]:checked+label i::before {
-  transform: scale(1.0);
+.product-details__select-size
+  ul
+  li
+  input[type="radio"]:checked
+  + label
+  i::before {
+  transform: scale(1);
   opacity: 1;
 }
-
 
 .product-details__inner {
   position: relative;
@@ -20876,7 +21121,7 @@ Product Details
   width: 98px;
   border-radius: 10px;
   height: 50px;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   font-family: var(--farmology-font);
@@ -20898,7 +21143,7 @@ Product Details
   right: 1px;
   background-color: #fff;
   border: none;
-  border-left: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-left: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   border-top-right-radius: 10px;
   display: flex;
   align-items: center;
@@ -20909,7 +21154,7 @@ Product Details
 .product-details__quantity .quantity-box button.sub {
   bottom: 1px;
   top: auto;
-  border-top: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-top: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   border-top-right-radius: 0px;
   border-bottom-right-radius: 10px;
 }
@@ -20971,7 +21216,7 @@ Product Details
   width: 45px;
 }
 
-.product-details__social-link a+a {
+.product-details__social-link a + a {
   margin-left: 10px;
 }
 
@@ -21086,7 +21331,7 @@ Product Description
   position: relative;
   display: block;
   padding: 40px 40px 50px;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
 }
 
 .product-details__description-content {
@@ -21170,13 +21415,12 @@ Product Description
   color: var(--farmology-extra);
 }
 
-
 .comments-area .comment-box {
   position: relative;
   display: block;
   margin-bottom: 40px;
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-bottom: 1px solid rgba(var(--farmology-black-rgb), 0.1);
 }
 
 .comments-area .comment {
@@ -21307,7 +21551,7 @@ Product Description
   color: var(--farmology-base);
 }
 
-.review-form-one__rate i+i {
+.review-form-one__rate i + i {
   margin-left: 5px;
 }
 
@@ -21327,7 +21571,7 @@ Product Description
   width: 100%;
   background-color: var(--farmology-white);
   padding: 20px 30px 30px;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   outline: none;
   margin-bottom: 0px;
   font-weight: 500;
@@ -21348,7 +21592,7 @@ Product Description
 .review-form-one__input-box input[type="email"] {
   height: 50px;
   width: 100%;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   background-color: var(--farmology-white);
   padding-left: 30px;
   padding-right: 30px;
@@ -21363,7 +21607,6 @@ Product Description
 .review-form-one__form .thm-btn {
   border: none;
 }
-
 
 /*--------------------------------------------------------------
   # Related Products
@@ -21382,7 +21625,7 @@ Product Description
 
 .related-products__title h3 {
   font-size: 40px;
-  line-height: 1.0em;
+  line-height: 1em;
   margin-bottom: 16px;
   font-weight: 700;
   text-transform: capitalize;
@@ -21396,7 +21639,6 @@ Product Description
 .single-product-style1.instyle--2 {
   margin-bottom: 0px;
 }
-
 
 /*--------------------------------------------------------------
   # Cart Page
@@ -21416,7 +21658,7 @@ Product Description
   -webkit-overflow-scrolling: touch;
 }
 
-@media(max-width: 1199px) {
+@media (max-width: 1199px) {
   .cart-table {
     min-width: 1170px;
   }
@@ -21445,15 +21687,15 @@ Product Description
 }
 
 .cart-table tbody tr:last-child {
-  border-bottom: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-bottom: 1px solid rgba(var(--farmology-black-rgb), 0.1);
 }
 
 .cart-table tbody td {
   font-size: 18px;
   color: var(--farmology-gray);
   vertical-align: middle;
-  border-top: 1px solid rgba(var(--farmology-black-rgb), .10);
-  border-bottom: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-top: 1px solid rgba(var(--farmology-black-rgb), 0.1);
+  border-bottom: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 0;
@@ -21480,7 +21722,7 @@ Product Description
 
 .cart-table .product-box .img-box img {
   width: 100%;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   border-radius: 10px;
 }
 
@@ -21512,7 +21754,7 @@ Product Description
   width: 98px;
   border-radius: 10px;
   height: 50px;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   font-family: var(--farmology-font);
@@ -21539,13 +21781,13 @@ Product Description
   justify-content: center;
   outline: none;
   border: none;
-  border-left: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-left: 1px solid rgba(var(--farmology-black-rgb), 0.1);
 }
 
 .cart-table .quantity-box button.sub {
   bottom: 1px;
   top: auto;
-  border-top: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-top: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   border-top-right-radius: 0px;
   border-bottom-right-radius: 10px;
 }
@@ -21625,8 +21867,8 @@ Product Description
   right: 20px;
 }
 
-.cart-page__shipping-input-box input[type=email],
-.cart-page__shipping-input-box input[type=text] {
+.cart-page__shipping-input-box input[type="email"],
+.cart-page__shipping-input-box input[type="text"] {
   width: 100%;
   height: 50px;
   background-color: var(--farmology-primary);
@@ -21654,8 +21896,8 @@ Product Description
 .cart-page__coupon-code {
   position: relative;
   display: block;
-  border-top: 1px solid rgba(var(--farmology-black-rgb), .10);
-  border-bottom: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-top: 1px solid rgba(var(--farmology-black-rgb), 0.1);
+  border-bottom: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   margin-top: 30px;
   margin-bottom: 20px;
   padding-top: 23px;
@@ -21680,8 +21922,8 @@ Product Description
   display: block;
 }
 
-.cart-page__coupon-code-form input[type=email],
-.cart-page__coupon-code-form input[type=text] {
+.cart-page__coupon-code-form input[type="email"],
+.cart-page__coupon-code-form input[type="text"] {
   width: 100%;
   height: 50px;
   background-color: var(--farmology-primary);
@@ -21719,7 +21961,7 @@ Product Description
   font-weight: 500;
 }
 
-.cart-total li+li {
+.cart-total li + li {
   margin-top: 15px;
 }
 
@@ -21755,7 +21997,6 @@ Product Description
   padding: 12px 20px 12px;
 }
 
-
 .cart-page__buttons-2 {
   position: relative;
   display: block;
@@ -21765,7 +22006,6 @@ Product Description
 .cart-page__buttons-2 .thm-btn {
   padding: 12px 20px 12px;
 }
-
 
 /*--------------------------------------------------------------
   # Checkout
@@ -21781,7 +22021,7 @@ Product Description
   position: relative;
   display: block;
   border-radius: 10px;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   padding: 53px 50px 60px;
 }
 
@@ -21837,7 +22077,7 @@ Product Description
 .billing_input_box input[type="tel"] {
   height: 60px;
   width: 100%;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   background-color: var(--farmology-white);
   padding-left: 30px;
   padding-right: 30px;
@@ -21856,7 +22096,7 @@ Product Description
   font-weight: 400;
   height: 140px;
   width: 100%;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   background-color: var(--farmology-white);
   padding-left: 30px;
   padding-right: 30px;
@@ -21867,7 +22107,7 @@ Product Description
 }
 
 .billing_input_box textarea:focus {
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
 }
 
 .billing_details .checked-box {
@@ -21895,7 +22135,7 @@ Product Description
   display: none;
 }
 
-.billing_details .checked-box input[type="checkbox"]+label span {
+.billing_details .checked-box input[type="checkbox"] + label span {
   position: absolute;
   top: 2px;
   left: 0;
@@ -21921,7 +22161,7 @@ Product Description
   display: block;
   border-bottom: 2px solid var(--farmology-white);
   border-right: 2px solid var(--farmology-white);
-  content: '';
+  content: "";
   width: 6px;
   height: 9px;
   pointer-events: none;
@@ -21936,16 +22176,20 @@ Product Description
   opacity: 0;
 }
 
-.billing_details.checked-box input[type="checkbox"]:checked+label span {
+.billing_details.checked-box input[type="checkbox"]:checked + label span {
   border-color: var(--farmology-white);
 }
 
-.billing_details .checked-box input[type="checkbox"]:checked+label span:before {
+.billing_details
+  .checked-box
+  input[type="checkbox"]:checked
+  + label
+  span:before {
   opacity: 1;
 }
 
 .billing_details_form .select-box .nice-select {
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   background-color: var(--farmology-white);
   border-radius: 10px;
   color: var(--farmology-gray);
@@ -21991,12 +22235,11 @@ Product Description
   border: none;
 }
 
-
 .sidebar-order-summary {
   position: relative;
   display: block;
   border-radius: 10px;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   padding: 37px 30px 45px;
   z-index: 1;
 }
@@ -22041,62 +22284,61 @@ Product Description
   display: block;
 }
 
-.sidebar-order-summary__list>li {
+.sidebar-order-summary__list > li {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-top: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   padding: 13px 0px 12px;
 }
 
-.sidebar-order-summary__list>li:last-child {
-  border-bottom: 1px solid rgba(var(--farmology-black-rgb), .10);
+.sidebar-order-summary__list > li:last-child {
+  border-bottom: 1px solid rgba(var(--farmology-black-rgb), 0.1);
 }
 
-.sidebar-order-summary__list>li>.left-text {
+.sidebar-order-summary__list > li > .left-text {
   position: relative;
   display: block;
 }
 
-.sidebar-order-summary__list>li>.left-text p {
+.sidebar-order-summary__list > li > .left-text p {
   font-size: 18px;
   margin: 0px;
 }
 
-.sidebar-order-summary__list>li>.right-text {
+.sidebar-order-summary__list > li > .right-text {
   position: relative;
   display: block;
 }
 
-.sidebar-order-summary__list>li>.right-text p {
+.sidebar-order-summary__list > li > .right-text p {
   font-size: 18px;
   margin: 0px;
 }
 
-
-.sidebar-order-summary__list>li>.right-text>ul {
+.sidebar-order-summary__list > li > .right-text > ul {
   position: relative;
   display: block;
 }
 
-.sidebar-order-summary__list>li>.right-text>ul>li {
+.sidebar-order-summary__list > li > .right-text > ul > li {
   position: relative;
   display: block;
 }
 
-.sidebar-order-summary__list>li>.right-text>ul>li+li {
+.sidebar-order-summary__list > li > .right-text > ul > li + li {
   margin-top: 5px;
 }
 
-.sidebar-order-summary__list>li>.right-text>ul>li input[type=radio] {
+.sidebar-order-summary__list > li > .right-text > ul > li input[type="radio"] {
   position: absolute;
   top: 0;
   right: 0;
   opacity: 0;
 }
 
-.sidebar-order-summary__list>li>.right-text>ul>li label {
+.sidebar-order-summary__list > li > .right-text > ul > li label {
   position: relative;
   display: block;
   padding-right: 24px;
@@ -22108,7 +22350,14 @@ Product Description
   transition-delay: 0.1s;
 }
 
-.sidebar-order-summary__list>li>.right-text>ul>li input[type=radio]+label i {
+.sidebar-order-summary__list
+  > li
+  > .right-text
+  > ul
+  > li
+  input[type="radio"]
+  + label
+  i {
   position: absolute;
   top: 6px;
   right: 0;
@@ -22121,7 +22370,7 @@ Product Description
   transition-delay: 0.1s;
 }
 
-.sidebar-order-summary__list>li>.right-text>ul>li label i::before {
+.sidebar-order-summary__list > li > .right-text > ul > li label i::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -22135,14 +22384,27 @@ Product Description
   transition-delay: 0.1s;
 }
 
-.sidebar-order-summary__list>li>.right-text>ul>li input[type=radio]:checked+label i {
+.sidebar-order-summary__list
+  > li
+  > .right-text
+  > ul
+  > li
+  input[type="radio"]:checked
+  + label
+  i {
   border-color: var(--farmology-base);
 }
 
-.sidebar-order-summary__list>li>.right-text>ul>li input[type=radio]:checked+label i::before {
-  transform: scale(1.0);
+.sidebar-order-summary__list
+  > li
+  > .right-text
+  > ul
+  > li
+  input[type="radio"]:checked
+  + label
+  i::before {
+  transform: scale(1);
 }
-
 
 .sidebar-order-summary__Payment {
   position: relative;
@@ -22155,7 +22417,7 @@ Product Description
   margin-bottom: 30px;
 }
 
-.checkout__payment__item+.checkout__payment__item {
+.checkout__payment__item + .checkout__payment__item {
   margin-top: 23px;
 }
 
@@ -22170,14 +22432,14 @@ Product Description
 }
 
 .checkout__payment__title::before {
-  content: '';
+  content: "";
   width: 20px;
   height: 20px;
   background-color: var(--farmology-white);
-  border: 2px solid rgba(var(--farmology-black-rgb), .10);
+  border: 2px solid rgba(var(--farmology-black-rgb), 0.1);
   border-radius: 50%;
   margin-right: 10px;
-  font-family: 'Font Awesome 5 Pro';
+  font-family: "Font Awesome 5 Pro";
   font-weight: 900;
   font-size: 10px;
   color: var(--farmology-white);
@@ -22193,7 +22455,7 @@ Product Description
 .checkout__payment__item--active .checkout__payment__title::before {
   background-color: var(--farmology-base);
   border-color: var(--farmology-base);
-  content: '\f00c';
+  content: "\f00c";
 }
 
 .checkout__payment__content {
@@ -22220,17 +22482,10 @@ Product Description
   text-decoration: underline;
 }
 
-
-
-
-
-
-
 .sidebar-order-summary__checked {
   position: relative;
   display: block;
   margin-top: 20px;
-  ;
 }
 
 .sidebar-order-summary__checked label {
@@ -22256,7 +22511,7 @@ Product Description
   display: none;
 }
 
-.sidebar-order-summary__checked input[type="checkbox"]+label span {
+.sidebar-order-summary__checked input[type="checkbox"] + label span {
   position: absolute;
   top: 3px;
   left: 0;
@@ -22282,7 +22537,7 @@ Product Description
   display: block;
   border-bottom: 2px solid var(--farmology-white);
   border-right: 2px solid var(--farmology-white);
-  content: '';
+  content: "";
   width: 6px;
   height: 9px;
   pointer-events: none;
@@ -22297,11 +22552,14 @@ Product Description
   opacity: 0;
 }
 
-.sidebar-order-summary__checked input[type="checkbox"]:checked+label span {
+.sidebar-order-summary__checked input[type="checkbox"]:checked + label span {
   border-color: var(--farmology-white);
 }
 
-.sidebar-order-summary__checked input[type="checkbox"]:checked+label span:before {
+.sidebar-order-summary__checked
+  input[type="checkbox"]:checked
+  + label
+  span:before {
   opacity: 1;
 }
 
@@ -22311,8 +22569,6 @@ Product Description
   margin-top: 27px;
   line-height: 0px;
 }
-
-
 
 /*--------------------------------------------------------------
 # Wishlist Page
@@ -22335,7 +22591,7 @@ Product Description
   -webkit-overflow-scrolling: touch;
 }
 
-@media(max-width: 1199px) {
+@media (max-width: 1199px) {
   .wishlist-table {
     min-width: 1170px;
   }
@@ -22352,7 +22608,7 @@ Product Description
   font-weight: 700;
   padding: 0;
   border: none;
-  border-top: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-top: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   padding-top: 22px;
   padding-bottom: 22px;
   text-align: center;
@@ -22363,15 +22619,15 @@ Product Description
 }
 
 .wishlist-table tbody tr:last-child {
-  border-bottom: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-bottom: 1px solid rgba(var(--farmology-black-rgb), 0.1);
 }
 
 .wishlist-table tbody td {
   font-size: 18px;
   color: var(--farmology-gray);
   vertical-align: middle;
-  border-top: 1px solid rgba(var(--farmology-black-rgb), .10);
-  border-bottom: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border-top: 1px solid rgba(var(--farmology-black-rgb), 0.1);
+  border-bottom: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 0;
@@ -22408,7 +22664,7 @@ Product Description
 
 .wishlist-table .product-box .img-box img {
   width: 100%;
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   border-radius: 10px;
 }
 
@@ -22428,7 +22684,6 @@ Product Description
 .wishlist-table h3 a:hover {
   color: var(--farmology-base);
 }
-
 
 .product-details__social.two {
   margin-top: 42px;
@@ -22462,7 +22717,7 @@ Product Description
 
 .sign-up-one__form .inner-title h2 {
   font-size: 60px;
-  line-height: 1.0em;
+  line-height: 1em;
   font-weight: 700;
   text-transform: capitalize;
 }
@@ -22492,7 +22747,7 @@ Product Description
   position: relative;
   display: block;
   border-radius: var(--farmology-bdr-radius);
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   background-color: var(--farmology-primary);
   width: 100%;
   height: 60px;
@@ -22582,7 +22837,7 @@ Product Description
   background-color: var(--farmology-white);
 }
 
-.sign-up-one__form form .google-facebook a+a {
+.sign-up-one__form form .google-facebook a + a {
   margin-left: 14px;
 }
 
@@ -22610,8 +22865,6 @@ Product Description
 .sign-up-one__form form .create-account p a:hover {
   color: var(--farmology-base);
 }
-
-
 
 /*--------------------------------------------------------------
 # Login One
@@ -22641,7 +22894,7 @@ Product Description
 
 .login-one__form .inner-title h2 {
   font-size: 60px;
-  line-height: 1.0em;
+  line-height: 1em;
   font-weight: 700;
   text-transform: capitalize;
 }
@@ -22671,7 +22924,7 @@ Product Description
   position: relative;
   display: block;
   border-radius: var(--farmology-bdr-radius);
-  border: 1px solid rgba(var(--farmology-black-rgb), .10);
+  border: 1px solid rgba(var(--farmology-black-rgb), 0.1);
   background-color: var(--farmology-primary);
   width: 100%;
   height: 60px;
@@ -22738,7 +22991,6 @@ Product Description
   padding-top: 24px;
 }
 
-
 .login-one__form form .checked-box1 {
   position: relative;
   display: block;
@@ -22761,7 +23013,7 @@ Product Description
   font-family: var(--farmology-font);
 }
 
-.login-one__form form .checked-box1 input[type="checkbox"]+label span {
+.login-one__form form .checked-box1 input[type="checkbox"] + label span {
   position: absolute;
   display: block;
   top: 5px;
@@ -22799,14 +23051,23 @@ Product Description
   transition: all 300ms ease;
 }
 
-.login-one__form form .checked-box1 input[type="checkbox"]:checked+label span {
+.login-one__form
+  form
+  .checked-box1
+  input[type="checkbox"]:checked
+  + label
+  span {
   border-color: var(--farmology-base);
 }
 
-.login-one__form form .checked-box1 input[type="checkbox"]:checked+label span:before {
-  transform: scale(1.0);
+.login-one__form
+  form
+  .checked-box1
+  input[type="checkbox"]:checked
+  + label
+  span:before {
+  transform: scale(1);
 }
-
 
 .login-one__form form .forget {
   position: relative;
@@ -22842,107 +23103,522 @@ Product Description
   font-weight: 500;
 }
 
-
 /* for ajax spinner start */
 .loader-container {
-    text-align: center;
-    margin-top: 15px;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .spinner {
-    width: 40px;
-    height: 40px;
-    border: 4px solid #e5e5e5;     /* Light grey */
-    border-top: 4px solid #000000; /* Black (you can change to theme color) */
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-    margin: 0 auto 10px auto;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e5e5e5;
+  /* Light grey */
+  border-top: 4px solid #000000;
+  /* Black (you can change to theme color) */
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 10px auto;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .loader-text {
-    font-size: 14px;
-    color: #555;
-    margin-top: -5px;
+  font-size: 14px;
+  color: #555;
+  margin-top: -5px;
 }
-
-
 
 /* Fullscreen overlay */
 .loader-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.45); /* semi-dark background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* high priority */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  /* semi-dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  /* high priority */
 }
 
 /* Centered box */
 .loader-box {
-    text-align: center;
-    background: #ffffff;
-    padding: 25px 40px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+  background: #ffffff;
+  padding: 25px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Spinner */
 .spinner {
-    width: 55px;
-    height: 55px;
-    border: 5px solid #dcdcdc;
-    border-top: 5px solid #000000; /* Change color if needed */
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-    margin: 0 auto 15px auto;
+  width: 55px;
+  height: 55px;
+  border: 5px solid #dcdcdc;
+  border-top: 5px solid #000000;
+  /* Change color if needed */
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 15px auto;
 }
 
 /* Animation */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Loader text */
 .loader-box p {
-    font-size: 16px;
-    margin: 0;
-    color: #333;
+  font-size: 16px;
+  margin: 0;
+  color: #333;
 }
 
 /* for ajax spinner end */
-
-
-
-
 
 /*--------------------------------------------------------------
 # End All Css
 --------------------------------------------------------------*/
 
-
-
 /* NEW CSS JEET */
 
-.services-two__icon-img{
+.services-two__icon-img {
   top: -10px;
-height: 40pX;
-width: 40pX;
+  height: 40px;
+  width: 40px;
 
-
-    position: relative;
-    display: inline-block;
-    top: -10px;
-    transition: all 500ms linear;
-    transition-delay: 0.1s;
+  position: relative;
+  display: inline-block;
+  top: -10px;
+  transition: all 500ms linear;
+  transition-delay: 0.1s;
 }
 
+.tab-box-one {
+  margin: 12px 0px;
+}
+
+.about-2-new {
+  background: linear-gradient(
+    180deg,
+    rgba(247, 243, 229, 1) 0%,
+    rgba(253, 187, 45, 0) 100%
+  );
+  padding: 80px 0 80px 0 !important;
+}
+
+/* New Style FOR FAQ section  */
+
+.faq-one {
+  position: relative;
+  display: block;
+  padding: 120px 0 0px;
+  z-index: 1;
+}
+
+.faq-one__left {
+  position: relative;
+  display: block;
+  margin-right: 50px;
+}
+
+.faq-one__contact-box {
+  position: relative;
+  display: block;
+  background-color: var(--farmology-white);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 48.51px 0.49px;
+  text-align: center;
+  padding: 60px 60px 60px;
+  border-radius: var(--farmology-bdr-radius);
+  z-index: 1;
+}
+
+.faq-one__contact-box-bg-shape {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  top: 15px;
+  opacity: 0.06;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--farmology-bdr-radius);
+  z-index: -1;
+}
+
+.faq-one__contact-box::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.2);
+  border-radius: var(--farmology-bdr-radius);
+  z-index: -1;
+}
+
+.faq-one__contact-shape-1 {
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  z-index: -1;
+}
+
+.faq-one__contact-shape-1 img {
+  width: auto;
+  animation: topBottom 3s ease-in-out infinite;
+}
+
+.faq-one__author-box-inner {
+  position: relative;
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.faq-one__author-box {
+  position: relative;
+  display: flex;
+  width: 150px;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--farmology-primary);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.faq-one__author-box::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.5);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.faq-one__author-shape-1 {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  z-index: -1;
+  transform: rotate(5deg);
+}
+
+.faq-one__author-shape-1 > img {
+  width: auto;
+}
+
+.faq-one__author-img {
+  position: relative;
+  display: block;
+  max-width: 60px;
+  width: 100%;
+}
+
+.faq-one__author-img img {
+  width: 100%;
+}
+
+.faq-one__author-name {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  text-transform: capitalize;
+  margin: 3px 0 0;
+}
+
+.faq-one__author-name a {
+  color: var(--farmology-black);
+}
+
+.faq-one__author-name a:hover {
+  color: var(--farmology-secondary);
+}
+
+.faq-one__author-sub-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--farmology-secondary);
+}
+
+.faq-one__contact-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+  margin: 35px 0 11px;
+  text-transform: capitalize;
+}
+
+.faq-one__contact-social {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0 10px;
+}
+
+.faq-one__contact-social a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: var(--farmology-primary);
+  border-radius: 50%;
+  font-size: 16px;
+  color: var(--farmology-extra);
+  border: 1px solid var(--farmology-base);
+}
+
+.faq-one__contact-social a:hover {
+  border: 1px solid var(--farmology-extra);
+  background-color: var(--farmology-extra);
+  color: var(--farmology-base);
+}
+
+.faq-one__contact-number {
+  position: relative;
+  display: inline-block;
+}
+
+.faq-one__contact-number a {
+  font-weight: 500;
+  color: var(--farmology-black);
+}
+
+.faq-one__contact-number a:hover {
+  color: var(--farmology-secondary);
+}
+
+.faq-one__contact-btn {
+  position: relative;
+  display: block;
+  margin-top: 20px;
+  line-height: 0;
+}
+
+.faq-one__right {
+  position: relative;
+  display: block;
+}
+
+.faq-one__right .faq-one-accordion .accordion {
+  position: relative;
+  display: block;
+  background: var(--farmology-primary);
+  border-radius: var(--farmology-bdr-radius);
+  overflow: hidden;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.faq-one__right .faq-one-accordion .accordion.active {
+  background: var(--farmology-primary);
+}
+
+.faq-one__right .faq-one-accordion .accordion-title {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 18px 30px 20px;
+  transition: all 200ms linear;
+  transition-delay: 0.1s;
+}
+
+.faq-one__right .faq-one-accordion .accordion-title h4 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 28px;
+  text-transform: capitalize;
+  color: var(--farmology-black);
+  /* position: relative; */
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.faq-one__right .faq-one-accordion .accordion + .accordion {
+  margin-top: 10px;
+}
+
+.faq-one__right .faq-one-accordion .accordion-title h4::before {
+  content: "\f105";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--farmology-white);
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  line-height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--farmology-extra);
+}
+
+.faq-one__right
+  .faq-one-accordion
+  .accordion.active
+  .accordion-title
+  h4::before {
+  content: "\f107";
+  color: var(--farmology-white);
+  background-color: #4a9c40;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-one__right .faq-one-accordion .accordion-content {
+  position: relative;
+  padding-bottom: 28px;
+  padding-left: 25px;
+  padding-right: 35px;
+  border-radius: var(--farmology-bdr-radius);
+  margin-top: -5px;
+}
+
+.faq-one__right .faq-one-accordion .accordion-content p {
+  margin: 0;
+}
+
+.author-one__text-box {
+  display: none;
+}
+
+.about-two__right .section-title {
+  margin-bottom: 0px !important;
+}
+
+/* Product-application code */
+.about-1-new {
+  position: relative;
+  display: block;
+  padding: 79px 0 0px !important;
+  background: linear-gradient(
+    0deg,
+    rgba(247, 243, 229, 1) 0%,
+    rgba(253, 187, 45, 0) 100%
+  );
+  z-index: 1;
+}
+
+.about-two__img-2_new img {
+  width: 100%;
+  border-radius: var(--farmology-bdr-radius);
+  height: 515px;
+}
+.about-two__img-2_new {
+  position: absolute;
+  bottom: -156px;
+  right: -145px;
+  border-top: 5px solid var(--farmology-white);
+  border-left: 5px solid var(--farmology-white);
+  border-radius: var(--farmology-bdr-radius);
+}
+
+/* Faq Page Code Responsive */
+@media (max-width: 800px) {
+  .faq-one__right .faq-one-accordion .accordion-title h4::before {
+    content: "\f105";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--farmology-white);
+    /* position: absolute; */
+    top: 62%;
+    right: 14px;
+    line-height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--farmology-extra);
+  }
+  .faq-one__right .faq-one-accordion .accordion-title h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: var(--farmology-black);
+    /* position: relative; */
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+}
+/* About page */
+.new_text.about-one__text {
+  text-align: justify;
+}
+.mission_image {
+  padding-bottom: 22px;
+}
+
+.new_about_mission.about-two__img-2 {
+  position: absolute;
+  bottom: -51px;
+  right: -166px;
+  border-top: 5px solid var(--farmology-white);
+  border-left: 5px solid var(--farmology-white);
+  border-radius: var(--farmology-bdr-radius);
+}
+@media (max-width: 700px) {
+  .new_about_mission.about-two__img-2 img {
+    display: none;
+  }
+  .about_side_icons.about-one__img-shape-1 {
+    display: none;
+  }
+  .about_shape_2.about-one__points-box-and-since {
+    align-items: center;
+
+  }
+
+}

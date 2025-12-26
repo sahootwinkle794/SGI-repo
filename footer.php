@@ -196,10 +196,10 @@
     </div>
     <!-- End Search Popup -->
 
-    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+    <!-- <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
         <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
         <span class="scroll-to-top__text"> Go Back Top</span>
-    </a>
+    </a> -->
 
 
     <script src="assets/js/jquery-latest.js"></script>
@@ -233,6 +233,25 @@
 
     <!-- template js -->
     <script src="assets/js/script.js"></script>
+    <script>
+        var btn = $('#button');
+
+            $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+            });
+
+            btn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '300');
+            });
+
+
+    </script>
+    
 </body>
 
 

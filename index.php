@@ -285,7 +285,7 @@
                         <li class="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="100ms">
                             <div class="process-one__single">
                                 <div class="process-one__icon">
-                                    <span class="icon-harvester"></span>
+                                    <span class="icon-harvester1"></span>
                                 </div>
                                 <div class="process-one__shape-1">
                                     <div class="process-one__shape-2">
@@ -330,7 +330,7 @@
                         <li class="col-xl-3 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="100ms">
                             <div class="process-one__single">
                                 <div class="process-one__icon">
-                                    <span class="icon-product"></span>
+                                    <span class="icon-product3"></span>
                                 </div>
                                 <div class="process-one__shape-1">
                                     <div class="process-one__shape-2">
