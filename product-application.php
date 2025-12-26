@@ -17,6 +17,7 @@
         </div>
     </div>
 </section>
+
 <!--Page Header End-->
 
 
@@ -127,7 +128,7 @@
 
 
 
-<section class="about-two">
+<section class="about-two about-1-new">
     <div class="about-two__shape-3 float-bob-x">
         <img src="assets/images/shapes/about-two-shape-3.png" alt="">
     </div>
@@ -139,8 +140,8 @@
                         <div class="about-two__img">
                             <img src="assets/images/resources/mission-4.svg" alt="">
                         </div>
-                        <div class="about-two__img-2">
-                            <img src="assets/images/resources/mission-2.png" alt="">
+                        <div class="new_product about-two__img-2">
+                            <img src="assets/images/resources/mission-4.png" alt="">
                         </div>
                         <div class="about-two__shape-1">
                             <!-- <img src="assets/images/shapes/about-two-shape-1.png" alt=""> -->
@@ -421,14 +422,8 @@
                         <div class="about-two__img">
                             <img src="assets/images/resources/mission-4.svg" alt="">
                         </div>
-                        <div class="about-two__img-2">
-                            <img src="assets/images/resources/mission-2.png" alt="">
-                        </div>
-                        <div class="about-two__shape-1">
-                            <!-- <img src="assets/images/shapes/about-two-shape-1.png" alt=""> -->
-                        </div>
-                        <div class="about-two__shape-2 float-bob-y">
-                            <!-- <img src="assets/images/shapes/about-two-shape-2.png" alt=""> -->
+                        <div class="new_product about-two__img-2">
+                            <img src="assets/images/resources/mission-4.png" alt="">
                         </div>
                         <div class="about-two__experience">
                             <div class="about-two__experience-count-box count-box">

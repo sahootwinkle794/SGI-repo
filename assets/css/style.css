@@ -75,6 +75,9 @@
   --farmology-bdr-radius: 5px;
 }
 
+/* p{
+  text-align: justify;
+} */
 .row {
   --bs-gutter-x: 30px;
 }
@@ -579,9 +582,11 @@ xs sidebar
 .xs-sidebar-group .content-inner .form-inner .form-group button.thm-btn:hover {
   color: var(--farmology-black);
 }
+
 .con-num {
   display: flex;
 }
+
 .sidebar-contact-info {
   position: relative;
   display: block;
@@ -5198,6 +5203,7 @@ xs sidebar
   font-weight: 400;
   margin-top: 20px;
   margin-bottom: 44px;
+  text-align: justify;
 }
 
 .banner-one__thm-and-other-btn-box {
@@ -5578,6 +5584,10 @@ About One
   padding: 90px 0 120px;
 }
 
+.about-one__text {
+  text-align: justify;
+}
+
 .about-one__left {
   position: relative;
   display: block;
@@ -5608,14 +5618,14 @@ About One
 
 .about-one__shape-1 {
   position: absolute;
-  bottom: -250px;
-  left: 77px;
+  bottom: -192px;
+  left: 15px;
   z-index: -1;
   transform: rotate(-25deg);
 }
 
 .about-one__shape-1 img {
-  width: auto;
+  width: 70%;
 }
 
 .about-one__field-box {
@@ -5768,9 +5778,11 @@ About One
   align-items: flex-start;
   gap: 10px;
 }
+
 .specific-p p {
   display: flex;
 }
+
 .about-one__points li .icon {
   position: relative;
   display: inline-block;
@@ -6868,12 +6880,15 @@ About One
   border-bottom-right-radius: var(--farmology-bdr-radius);
   transition: box-shadow 0.3s ease;
 }
+
 .products-one__single {
   transition: box-shadow 0.3s ease;
 }
+
 .products-one__single:hover {
   box-shadow: 0px 0px 48.51px 0.49px rgba(0, 0, 0, 0.308);
 }
+
 .products-one__icon-and-title {
   position: relative;
   display: block;
@@ -6963,6 +6978,10 @@ About One
   font-size: 24px;
   font-weight: 700;
   line-height: 34px;
+}
+
+.use-card .products-one__title {
+  font-size: 16px;
 }
 
 .products-one__title a {
@@ -7272,7 +7291,7 @@ About One
 }
 
 .why-choose-one__title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 28px;
   text-transform: capitalize;
@@ -7752,11 +7771,13 @@ About One
   top: 0px;
   left: -6px;
 }
+
 .do-and-donts__single-10,
 .do-and-donts__single-9,
 .do-and-donts__single-4 {
   display: none;
 }
+
 .do-and-donts__single-10 {
   position: absolute;
   bottom: 0;
@@ -9569,6 +9590,20 @@ Cta One
   border-radius: var(--farmology-bdr-radius);
 }
 
+/* .about-two__img-2 {
+  position: absolute;
+  bottom: -46px;
+  right: -165px;
+  border-top: 5px solid var(--farmology-white);
+  border-left: 5px solid var(--farmology-white);
+  border-radius: var(--farmology-bdr-radius);
+}
+
+.about-two__img-2 img {
+  width: auto;
+  border-radius: var(--farmology-bdr-radius);
+} */
+
 .about-two__img-2 {
   position: absolute;
   bottom: -156px;
@@ -9581,8 +9616,19 @@ Cta One
 .about-two__img-2 img {
   width: auto;
   border-radius: var(--farmology-bdr-radius);
+  /* height: 560px; */
 }
-
+.new_about_mission.about-two__img-2 img {
+  width: 10%8;
+  border-radius: var(--farmology-bdr-radius);
+  height: 520px;
+}
+/* Product-application */
+.new_product.about-two__img-2 img {
+  width: 100%;
+  border-radius: var(--farmology-bdr-radius);
+  height: 560px;
+}
 .about-two__shape-1 {
   position: absolute;
   right: -127px;
@@ -9692,7 +9738,9 @@ Cta One
   font-style: italic;
   color: var(--farmology-base);
 }
-
+.quote-text.about-two__text{
+  color: #4a9c40;
+}
 .about-two__text-2 {
   margin: 12px 0 20px;
 }
@@ -10899,7 +10947,7 @@ Cta One
 .testimonial-two__single-shape-1 {
   position: absolute;
   top: 0;
-  left: 60px;
+  left: 93px;
   bottom: 0;
   right: 100px;
   border: 2px solid var(--farmology-primary);
@@ -10969,11 +11017,14 @@ Cta One
 .testimonial-two__client-img {
   position: relative;
   display: block;
-  max-width: 120px;
+  max-width: 188px;
   width: 100%;
   border-radius: var(--farmology-bdr-radius);
 }
 
+/* .gamma-use .testimonial-two__client-img{
+  max-width: 188px !important;
+} */
 .testimonial-two__client-img img {
   width: 100%;
   border-radius: var(--farmology-bdr-radius);
@@ -12401,7 +12452,8 @@ Cta One
 .process-one__icon span {
   position: relative;
   display: inline-block;
-  font-size: 50px;
+  font-size: 20px;
+  font-weight: 800;
   color: var(--farmology-primary);
   transition: all 500ms linear;
   transition-delay: 0.1s;
@@ -12424,7 +12476,7 @@ Cta One
   border: 1px solid rgba(var(--farmology-extra-rgb), 0.5);
   border-radius: var(--farmology-bdr-radius);
   padding: 15px 20px 15px;
-  max-width: 230px;
+  /* max-width: 230px; */
   margin: 0 auto;
   width: 100%;
   margin-top: -1px;
@@ -12455,7 +12507,7 @@ Cta One
   font-weight: 600;
   color: var(--farmology-extra);
   counter-increment: count;
-  content: "0" counter(count);
+  /* content: "0" counter(count); */
   transition: all 200ms linear;
   transition-delay: 0.1s;
 }
@@ -12681,6 +12733,10 @@ Cta One
   right: -174px;
   transform: rotate(-90deg);
   z-index: 1;
+}
+
+.about-three__text {
+  text-align: justify;
 }
 
 .about-three__text-1 p {
@@ -15790,6 +15846,14 @@ Cta One
   justify-content: center;
 }
 
+.key-box.feature-two__img-box {
+  border: 5px solid white !important;
+}
+
+.key-img.feature-two__img {
+  padding: 14px !important;
+}
+
 .feature-two__img {
   position: relative;
   display: block;
@@ -15840,6 +15904,7 @@ Cta One
   display: block;
 }
 
+/* .key-feature */
 .feature-two__single-inner {
   position: relative;
   display: block;
@@ -15854,7 +15919,7 @@ Cta One
 }
 
 .feature-two__single-inner:hover {
-  background-color: var(--farmology-base);
+  background-color: #3e673a !important;
 }
 
 .feature-two__single {
@@ -15910,7 +15975,7 @@ Cta One
   position: relative;
   display: inline-block;
   font-size: 35px;
-  color: var(--farmology-base);
+  color: #198754;
 }
 
 .feature-two__title-box {
@@ -15974,6 +16039,10 @@ Cta One
   opacity: 0;
 }
 
+.feature-two__content ul li {
+  color: white;
+}
+
 .feature-two__single-inner:hover .feature-two__content {
   opacity: 1;
   transform: translateY(0);
@@ -15981,6 +16050,29 @@ Cta One
 
 .feature-two__content p {
   color: var(--farmology-white);
+}
+
+/* Card hover pop-up effect */
+.feature-two__single-inner-wrap {
+  position: relative;
+  transform: scale(1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  z-index: 1;
+}
+
+.feature-two__single-inner:hover {
+  background-color: var(--farmology-base);
+}
+
+.feature-two__single-inner-wrap:hover {
+  transform: scale(1.06);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* Ensure scaling does not get clipped */
+.feature-two {
+  overflow: visible;
 }
 
 /*==============================================
@@ -18213,6 +18305,7 @@ Site Footer
   width: 72px !important;
   height: 51px;
 }
+
 .site-footer-four {
   position: relative;
   display: block;
@@ -23019,8 +23112,10 @@ Product Description
 .spinner {
   width: 40px;
   height: 40px;
-  border: 4px solid #e5e5e5; /* Light grey */
-  border-top: 4px solid #000000; /* Black (you can change to theme color) */
+  border: 4px solid #e5e5e5;
+  /* Light grey */
+  border-top: 4px solid #000000;
+  /* Black (you can change to theme color) */
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
   margin: 0 auto 10px auto;
@@ -23030,6 +23125,7 @@ Product Description
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -23048,11 +23144,13 @@ Product Description
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45); /* semi-dark background */
+  background: rgba(0, 0, 0, 0.45);
+  /* semi-dark background */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* high priority */
+  z-index: 9999;
+  /* high priority */
 }
 
 /* Centered box */
@@ -23069,7 +23167,8 @@ Product Description
   width: 55px;
   height: 55px;
   border: 5px solid #dcdcdc;
-  border-top: 5px solid #000000; /* Change color if needed */
+  border-top: 5px solid #000000;
+  /* Change color if needed */
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
   margin: 0 auto 15px auto;
@@ -23080,6 +23179,7 @@ Product Description
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -23112,19 +23212,18 @@ Product Description
   transition-delay: 0.1s;
 }
 
-
-
-.tab-box-one{
-margin: 12px 0px;
+.tab-box-one {
+  margin: 12px 0px;
 }
 
-
-.about-2-new{
-background: linear-gradient(180deg, rgba(247, 243, 229, 1) 0%, rgba(253, 187, 45, 0) 100%);
+.about-2-new {
+  background: linear-gradient(
+    180deg,
+    rgba(247, 243, 229, 1) 0%,
+    rgba(253, 187, 45, 0) 100%
+  );
+  padding: 80px 0 80px 0 !important;
 }
-
-
-
 
 /* New Style FOR FAQ section  */
 
@@ -23173,7 +23272,7 @@ background: linear-gradient(180deg, rgba(247, 243, 229, 1) 0%, rgba(253, 187, 45
   left: 15px;
   right: 15px;
   bottom: 15px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .20);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.2);
   border-radius: var(--farmology-bdr-radius);
   z-index: -1;
 }
@@ -23218,7 +23317,7 @@ background: linear-gradient(180deg, rgba(247, 243, 229, 1) 0%, rgba(253, 187, 45
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .50);
+  border: 1px dashed rgba(var(--farmology-extra-rgb), 0.5);
   border-radius: 50%;
   z-index: -1;
 }
@@ -23231,7 +23330,7 @@ background: linear-gradient(180deg, rgba(247, 243, 229, 1) 0%, rgba(253, 187, 45
   transform: rotate(5deg);
 }
 
-.faq-one__author-shape-1>img {
+.faq-one__author-shape-1 > img {
   width: auto;
 }
 
@@ -23356,17 +23455,17 @@ background: linear-gradient(180deg, rgba(247, 243, 229, 1) 0%, rgba(253, 187, 45
 
 .faq-one__right .faq-one-accordion .accordion-title h4 {
   margin: 0;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 600;
   line-height: 28px;
   text-transform: capitalize;
   color: var(--farmology-black);
-  position: relative;
+  /* position: relative; */
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 
-.faq-one__right .faq-one-accordion .accordion+.accordion {
+.faq-one__right .faq-one-accordion .accordion + .accordion {
   margin-top: 10px;
 }
 
@@ -23374,11 +23473,11 @@ background: linear-gradient(180deg, rgba(247, 243, 229, 1) 0%, rgba(253, 187, 45
   content: "\f105";
   font-family: "Font Awesome 5 Pro";
   font-weight: 700;
-  font-size: 17px;
+  font-size: 16px;
   color: var(--farmology-white);
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 17px;
   line-height: 20px;
   border-radius: 50%;
   display: flex;
@@ -23391,13 +23490,17 @@ background: linear-gradient(180deg, rgba(247, 243, 229, 1) 0%, rgba(253, 187, 45
   text-align: center;
   width: 40px;
   height: 40px;
-  background-color: rgba(var(--farmology-extra-rgb), 1);
+  background-color: var(--farmology-extra);
 }
 
-.faq-one__right .faq-one-accordion .accordion.active .accordion-title h4::before {
+.faq-one__right
+  .faq-one-accordion
+  .accordion.active
+  .accordion-title
+  h4::before {
   content: "\f107";
   color: var(--farmology-white);
-  background-color: var(--farmology-base);
+  background-color: #4a9c40;
   border-radius: 50%;
   text-align: center;
   display: flex;
@@ -23418,3 +23521,104 @@ background: linear-gradient(180deg, rgba(247, 243, 229, 1) 0%, rgba(253, 187, 45
   margin: 0;
 }
 
+.author-one__text-box {
+  display: none;
+}
+
+.about-two__right .section-title {
+  margin-bottom: 0px !important;
+}
+
+/* Product-application code */
+.about-1-new {
+  position: relative;
+  display: block;
+  padding: 79px 0 0px !important;
+  background: linear-gradient(
+    0deg,
+    rgba(247, 243, 229, 1) 0%,
+    rgba(253, 187, 45, 0) 100%
+  );
+  z-index: 1;
+}
+
+.about-two__img-2_new img {
+  width: 100%;
+  border-radius: var(--farmology-bdr-radius);
+  height: 515px;
+}
+.about-two__img-2_new {
+  position: absolute;
+  bottom: -156px;
+  right: -145px;
+  border-top: 5px solid var(--farmology-white);
+  border-left: 5px solid var(--farmology-white);
+  border-radius: var(--farmology-bdr-radius);
+}
+
+/* Faq Page Code Responsive */
+@media (max-width: 800px) {
+  .faq-one__right .faq-one-accordion .accordion-title h4::before {
+    content: "\f105";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--farmology-white);
+    /* position: absolute; */
+    top: 62%;
+    right: 14px;
+    line-height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--farmology-extra);
+  }
+  .faq-one__right .faq-one-accordion .accordion-title h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: var(--farmology-black);
+    /* position: relative; */
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+}
+/* About page */
+.new_text.about-one__text {
+  text-align: justify;
+}
+.mission_image {
+  padding-bottom: 22px;
+}
+
+.new_about_mission.about-two__img-2 {
+  position: absolute;
+  bottom: -51px;
+  right: -166px;
+  border-top: 5px solid var(--farmology-white);
+  border-left: 5px solid var(--farmology-white);
+  border-radius: var(--farmology-bdr-radius);
+}
+@media (max-width: 700px) {
+  .new_about_mission.about-two__img-2 img {
+    display: none;
+  }
+  .about_side_icons.about-one__img-shape-1 {
+    display: none;
+  }
+  .about_shape_2.about-one__points-box-and-since {
+    align-items: center;
+
+  }
+
+}
