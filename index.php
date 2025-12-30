@@ -139,11 +139,11 @@
                                     <div class="about-one__crop-harvest-icon">
                                         <span class="icon-tractor"></span>
                                     </div>
-                                    <h3 class="about-one__crop-harvest-title">Crops<br> Harvested</h3>
-                                    <div class="about-one__crop-harvest-count count-box">
+                                    <h3 class="about-one__crop-harvest-title">Gamma <br>Irradiated<br> Crops</h3>
+                                    <!-- <div class="about-one__crop-harvest-count count-box">
                                         <h3 class="count-text" data-stop="6.9" data-speed="1500"></h3>
                                         <span>M+</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="about-one__img-shape-1 float-bob-y">
                                     <img src="assets/images/shapes/about-one-img-shape-1.png"
@@ -443,13 +443,6 @@
                                                 <span class="fas fa-wheat"></span>
                                             </div>
                                             <p>Extends shelf life
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <span class="fas fa-wheat"></span>
-                                            </div>
-                                            <p>Ensures export compliance
                                             </p>
                                         </li>
                                     </ul>

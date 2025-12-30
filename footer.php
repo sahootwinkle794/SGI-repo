@@ -9,7 +9,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                 <div class="footer-widget__about">
                                     <div class="footer-widget__about-logo">
-                                        <a href="index.html"><img src="assets/images/resources/logo-2.svg" alt=""></a>
+                                        <a href="index"><img src="assets/images/resources/logo-2.svg" alt=""></a>
                                     </div>
                                     <p class="footer-widget__about-text">Gamma irradiation is a highly reliable,
                                         internationally accepted sterilization and decontamination process that uses
@@ -119,7 +119,7 @@
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
                                 <div class="site-footer__copyright">
-                                    <p class="site-footer__copyright-text">Copyright@ 2025 <a href="index.html">Sukshma
+                                    <p class="site-footer__copyright-text">Copyright@ 2025 <a href="index">Sukshma
                                             Gamma</a>. All Rights Reserved.</p>
                                 </div>
                                 <div class="site-footer__bottom-menu-box">
@@ -150,7 +150,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-2.svg" width="150"
+                <a href="index" aria-label="logo image"><img src="assets/images/resources/logo-2.svg" width="150"
                         alt="" /></a>
             </div>
             <!-- /.logo-box -->
@@ -255,6 +255,6 @@
 </body>
 
 
-<!-- Mirrored from dreamlayout.mnsithub.com/html/sukshmagamma/main-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Dec 2025 10:25:41 GMT -->
+<!-- Mirrored from dreamlayout.mnsithub.com/html/sukshmagamma/main-html/index by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Dec 2025 10:25:41 GMT -->
 
 </html>

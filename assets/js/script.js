@@ -1027,7 +1027,7 @@ if ($(".accordion-grp").length) {
 
 
   function dynamicCurrentMenuClass(selector) {
-    let fileName = window.location.pathname.split("/").pop() || ""; // Default to index.html if no file name
+    let fileName = window.location.pathname.split("/").pop() || ""; // Default to index if no file name
 
 
     // Remove existing 'current' classes to avoid duplicates

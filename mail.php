@@ -97,8 +97,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //     exit;
     // }
     
-    if (!preg_match("/^[6-8][0-9]{9}$/", $number)) {
-        echo json_encode(["status" => "error", "message" => "Invalid mobile number. Use 10 digits starting with 6, 7, or 8."]);
+    if (!preg_match("/^[6-9][0-9]{9}$/", $number)) {
+        echo json_encode(["status" => "error", "message" => "Invalid mobile number. Use 10 digits starting with 6, 7, 8, or 9."]);
         exit;
     }
 
@@ -129,13 +129,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'abhijitdas2264@gmail.com';
-        $mail->Password   = 'ycgigigauisdmnit'; // Gmail App Password         
+        $mail->Username   = 'dipshikhamishra30094@gmail.com';
+        $mail->Password   = 'gwmezmobupccqpkc'; // Gmail App Password         
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
         // SEND MAIL TO ADMIN
-        $mail->setFrom('abhijitdas2264@gmail.com', 'Website Contact Form');
+        $mail->setFrom('dipshikhamishra30094@gmail.com', 'Website Contact Form');
         //$mail->addAddress('prabhas.khamari@stlindia.com');
         $mail->addAddress('ankita.sahoo@silicontechlab.com');
 

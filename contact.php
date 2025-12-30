@@ -9,7 +9,7 @@
                     <h3>Contact </h3>
                     <div class="thm-breadcrumb__inner">
                         <ul class="thm-breadcrumb list-unstyled">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index">Home</a></li>
                             <li><span class="fas fa-angle-right"></span></li>
                             <li>Contact </li>
                         </ul>
@@ -371,21 +371,26 @@
                         });
                     });
 
-                    // short robust scroll to the newly added alert
                     setTimeout(function () {
-                        const container = $(".page-wrapper");
-                        const alertBox = $(".contact-form .alert").first();
-                        if (!container.length || !alertBox.length) return;
+                        const alertBox = document.querySelector(".contact-form .alert");
+                        if (!alertBox) return;
 
-                        const cRect = container[0].getBoundingClientRect();
-                        const aRect = alertBox[0].getBoundingClientRect();
+                        // Step 1: bring alert into view
+                        alertBox.scrollIntoView({
+                            behavior: "instant",
+                            block: "start"
+                        });
 
-                        const target = Math.max(0, Math.round(container.scrollTop() + (aRect.top - cRect.top) - 20));
+                        // Step 2: adjust for sticky header
+                        const header = document.querySelector("header, .main-header, .sticky-header");
+                        const headerHeight = header ? header.offsetHeight : 0;
 
-                        container.stop(true, true).animate({ scrollTop: target }, 450);
-                        // quick re-scroll to defeat other scripts that may run right after
-                        setTimeout(() => container.stop(true, true).animate({ scrollTop: target }, 300), 300);
-                    }, 200);
+                        window.scrollBy({
+                            top: -headerHeight - 20,
+                            behavior: "smooth"
+                        });
+
+                    }, 600);
 
                     // remove alert after 20 seconds
                     setTimeout(() => {

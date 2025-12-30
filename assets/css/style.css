@@ -5974,12 +5974,19 @@ About One
   counter-reset: count;
   z-index: 1;
 }
+.infa.author-one{
+  padding: 30px;
+}
 
 .author-one__img-box {
   position: relative;
   display: block;
   margin-left: -32px;
   margin-right: -32px;
+}
+.infa_new_img.author-one__img-box {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
 .author-one__img {
@@ -5990,6 +5997,11 @@ About One
 
 .author-one__img img {
   width: 100%;
+}
+.infa_new.author-one__img img {
+  width: 90%;
+  height: 505px;
+  border-radius: 20px;
 }
 
 .author-one__text-box {
@@ -9738,7 +9750,7 @@ Cta One
   font-style: italic;
   color: var(--farmology-base);
 }
-.quote-text.about-two__text{
+.quote-text.about-two__text {
   color: #4a9c40;
 }
 .about-two__text-2 {
@@ -9754,7 +9766,7 @@ Cta One
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   text-align: center;
   gap: 10px;
   margin-bottom: 24px;
@@ -23618,7 +23630,13 @@ Product Description
   }
   .about_shape_2.about-one__points-box-and-since {
     align-items: center;
-
   }
+}
 
+/* Infrastructure Page */
+.infa_new.about-two__right {
+  display: flex !important;
+}
+.infa_new_1.author-one__Vission-mission {
+  margin-top: 0px !important;
 }

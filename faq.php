@@ -82,13 +82,25 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <!-- <div class="accordion wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                                 <div class="accordion-title">
                                     <h4>6. What is the difference between irradiation and chemical fumigation?</h4>
                                 </div>
                                 <div class="accordion-content">
                                     <div class="inner">
                                         <p>Irradiation is residue-free and eco-friendly, whereas chemical fumigation may leave harmful residues.
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="accordion wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="accordion-title">
+                                    <h4>6. Are irradiated products labelled?</h4>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="inner">
+                                        <p>
+                                            Yes. Labelling is done as per FSSAI and international regulatory requirements where applicable.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -165,13 +177,11 @@
                             </div>
                             <div class="accordion wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                                 <div class="accordion-title">
-                                    <h4>12. Does irradiation replace refrigeration or freezing?</h4>
+                                    <h4>12. What is the difference between irradiation and chemical fumigation?</h4>
                                 </div>
                                 <div class="accordion-content">
                                     <div class="inner">
-                                        <p>
-                                            No. It complements cold storage and IQF by enhancing safety and extending shelf life.
-                                        </p>
+                                        <p>Irradiation is residue-free and eco-friendly, whereas chemical fumigation may leave harmful residues.
                                     </div>
                                 </div>
                             </div>
