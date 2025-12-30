@@ -258,7 +258,7 @@
             <div class="col-xl-6 mission_image">
                 <div class="about-two__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
                     <div class="about-two__img-box">
-                        <div class="about-two__img">
+                        <div class="infa_new_img_3 about-two__img">
                             <img src="assets/images/resources/mission-4.png" alt="">
                         </div>
                         <div class="new_about_mission about-two__img-2">
@@ -360,6 +360,19 @@
                                                 </div>
                                                 <p>Continuously invest in technology, skilled talent, and process excellence to drive sustainable, long-term value creation.</p>
                                             </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="fas fa-check"></span>
+                                                </div>
+                                                <p>Strengthen India’s agri-export ecosystem by enabling global market access through internationally accepted irradiation and processing standards.</p>
+                                            </li>
+                                            <li>
+                                                <div class="icon">
+                                                    <span class="fas fa-check"></span>
+                                                </div>
+                                                <p>Support sustainable agriculture and food systems by reducing waste, improving traceability, and promoting environmentally responsible technologies.</p>
+                                            </li>
+                                          
                                         </ul>
                                     </div>
                                 </div>
@@ -677,7 +690,7 @@
                 </div>
             </div>   
             <div class="col-xl-6">
-                <div class="about-two__left wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms">
+                <div class="infa_new_img2 about-two__left wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms">
                     <div class="about-two__img-box">
                         <div class="about-two__img">
                             <img src="assets/images/resources/image 20.png" alt="">
