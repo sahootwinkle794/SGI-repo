@@ -9430,7 +9430,8 @@ Cta One
 }
 
 .services-two__title a:hover {
-  color: var(--farmology-base);
+  /* color: var(--farmology-base); */
+  color: #4a9c40;
 }
 
 .services-two__read-more {
@@ -9678,7 +9679,9 @@ Cta One
   width: auto;
   display: none;
 }
-
+iframe {
+    width: 100%;
+}
 .about-two__experience {
   position: absolute;
   bottom: -108px;
@@ -9748,7 +9751,8 @@ Cta One
   font-size: 18px;
   font-weight: 600;
   font-style: italic;
-  color: var(--farmology-base);
+  /* color: var(--farmology-base); */
+  color: #4a9c40;
 }
 .quote-text.about-two__text {
   color: #4a9c40;
@@ -15997,7 +16001,7 @@ Cta One
 }
 
 .feature-two__title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 26px;
   color: var(--farmology-extra);
@@ -23640,3 +23644,4 @@ Product Description
 .infa_new_1.author-one__Vission-mission {
   margin-top: 0px !important;
 }
+

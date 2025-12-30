@@ -1198,6 +1198,12 @@
 
 /* Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) {
+    .custom-cursor__cursor{
+        display: none;
+    }
+    .custom-cursor__cursor-two{
+        display: none;
+    }
     .section-title__title {
         font-size: 28px;
     }
