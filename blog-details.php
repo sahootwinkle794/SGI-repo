@@ -9,7 +9,7 @@
                     <h3>Blog Details</h3>
                     <div class="thm-breadcrumb__inner">
                         <ul class="thm-breadcrumb list-unstyled">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index">Home</a></li>
                             <li><span class="fas fa-angle-right"></span></li>
                             <li>Blog Details</li>
                         </ul>
@@ -193,12 +193,7 @@
                     <div class="col-xl-4 col-lg-5">
                         <div class="sidebar">
                             <!--Start Sidebar Single-->
-                            <div class="sidebar__single sidebar__search wow fadeInUp" data-wow-delay=".1s">
-                                <form action="#" class="sidebar__search-form">
-                                    <input type="search" placeholder="Search...">
-                                    <button type="submit"><i class="fa fa-search"></i></button>
-                                </form>
-                            </div>
+                            
                             <!--End Sidebar Single-->
 
 

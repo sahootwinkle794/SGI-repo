@@ -9,7 +9,7 @@
                     <h3>Services </h3>
                     <div class="thm-breadcrumb__inner">
                         <ul class="thm-breadcrumb list-unstyled">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index">Home</a></li>
                             <li><span class="fas fa-angle-right"></span></li>
                             <li>Services </li>
                         </ul>

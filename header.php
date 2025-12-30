@@ -128,6 +128,13 @@
     </div>
     <!--End Preloader-->
 
+    <div id="pageLoader" class="loader-overlay" style="display:none;">
+        <div class="loader-box">
+            <div class="spinner"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+
     <a id="button"></a>
 
     <div class="chat-icon"><button type="button" class="chat-toggler"><i class="fa fa-comment"></i></button></div>
