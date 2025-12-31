@@ -11,7 +11,7 @@
                 <ul class="thm-breadcrumb list-unstyled">
                     <li><a href="index">Home</a></li>
                     <li><span class="fas fa-angle-right"></span></li>
-                    <li>Product and Application</li>
+                    <li>Product and Applications</li>
                 </ul>
             </div>
         </div>
@@ -225,6 +225,7 @@
                                                 </div>
                                                 <p>Disinfests grains and pulses from insects.
                                                 </p>
+
                                             </li>
                                             <li>
                                                 <div class="icon">
