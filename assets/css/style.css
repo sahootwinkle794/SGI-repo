@@ -9082,7 +9082,7 @@ Cta One
 .footer-widget__contact {
   position: relative;
   display: block;
-  margin-left: -24px;
+  /* margin-left: -24px; */
 }
 
 .footer-widget__contact-list {
@@ -9130,7 +9130,8 @@ Cta One
 
 .footer-widget__contact-list li p {
   position: relative;
-  display: block;
+  /* display: block; */
+  display: grid;
   flex: 1;
   color: rgba(var(--farmology-white-rgb), 0.7);
 }
@@ -9573,7 +9574,7 @@ Cta One
 .about-two {
   position: relative;
   display: block;
-  padding: 79px 0 120px;
+  padding: 60px 0 60px;
   background: linear-gradient(
     0deg,
     rgba(247, 243, 229, 1) 0%,
@@ -18327,6 +18328,12 @@ Site Footer
   height: 51px;
 }
 
+
+
+
+
+
+
 .site-footer-four {
   position: relative;
   display: block;
@@ -23653,3 +23660,203 @@ Product Description
 .infa_new_img_3.about-two__img {
   width: 80% !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Jeet Logo header text  */
+.logo-text{
+  color: #198754;
+  font-size: 13px;
+  padding-left: 12px;
+
+}
+.main-menu__logo{
+display: flex !important;
+padding: 10px 0 !important;
+
+}
+
+img.logo-img {
+    width: 218px;
+}
+
+@media (min-width: 200px) and (max-width: 1200px) {
+  .main-menu__right{
+  display: none;
+}
+.main-menu__wrapper-inner{
+justify-content: space-between;
+}
+
+.main-menu__wrapper-inner{
+padding: 0 60px !important;
+}
+}
+
+@media (min-width: 200px) and (max-width: 580px){
+
+  .main-menu__wrapper-inner {
+        padding: 0 20px !important;
+    }
+
+}
+.main-menu__list{
+  align-items: center !important;
+}
+
+
+.language-switcher a{
+  color: var(--farmology-black) !important;
+}
+
+.language-switcher a:active {
+  color: yellow !important;
+}
+
+/* Test Dropdown for language */
+
+/* Wrapper */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: inherit;
+}
+
+/* Button */
+.dropbtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 14px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.dropbtn:hover {
+    color: #000;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    min-width: 150px;
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+    z-index: 1000;
+}
+
+/* Links */
+.dropdown-content a {
+    display: block;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+/* Hover effect */
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+    padding-left: 20px;
+}
+
+/* Show dropdown */
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.section-title__title1{
+  font-family: "Mukta", sans-serif !important;
+}
+
+
+/*  */
+
+
+
+.add-icon-1{
+  display: none !important;
+}
+
+
+#button{
+    display: inline-block;
+    background-color: #FF9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 0px !important;
+    right: 0px !important;
+    transition: background-color .3s,
+                opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+
+@media (max-width: 1200px) {
+.icon.add-icon {
+  width: 47px !important;
+  height: 51px;
+}
+}
+
+@media (min-width: 450px) and (max-width: 800px) {
+    .custom-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1100px) {
+.contact-numbers span{
+display: grid;
+}
+}
+
+@media (min-width: 400px) and (max-width: 470px) {
+.footer-widget__links{
+padding-top: 40px;
+}
+}
+
+
+
+
+@media (min-width: 470px) and (max-width: 780px){
+    .footer-widget__contact {
+        margin-left: 0;
+        margin-top: 33px;
+    }
+
+    .footer-widget__links {
+        margin-top: 41px;
+        margin-bottom: 33px;
+    }
+  }

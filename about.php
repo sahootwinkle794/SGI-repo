@@ -7,12 +7,12 @@
     </div>
     <div class="container">
         <div class="page-header__inner">
-            <h3>About</h3>
+            <h3>About Us</h3>
             <div class="thm-breadcrumb__inner">
                 <ul class="thm-breadcrumb list-unstyled">
                     <li><a href="index">Home</a></li>
                     <li><span class="fas fa-angle-right"></span></li>
-                    <li>About</li>
+                    <li>About Us</li>
                 </ul>
             </div>
         </div>
@@ -56,7 +56,7 @@
                             <div class="about-one__crop-harvest-icon">
                                 <span class="icon-tractor"></span>
                             </div>
-                            <h3 class="about-one__crop-harvest-title">Produce <br> Irradiated</h3>
+                            <h3 class="about-one__crop-harvest-title">Product <br> Irradiated</h3>
                             <div class="about-one__crop-harvest-count count-box">
                                 <h3 class="count-text" data-stop="6.9" data-speed="1500"></h3>
                                 <span>M+</span>
@@ -96,8 +96,8 @@
                         <h3 class="section-title__title title-animation">Gamma-Enabled Agricultural Growth
                         </h3>
                     </div>
-                    <p class="new_text about-one__text">SUKSHMA GAMMA Food Processing Facility will be the first of its kind in Andhra Pradesh, combining a Gamma Irradiation Facility with a Pack House to enhance food safety, open new markets, and create additional income opportunities for farmers and exporters. Andhra Pradesh, known as the “Rice Bowl of India,” is a leading agricultural state where agriculture is the primary livelihood for nearly 60% of the population and rice remains the major staple and export crop.</p>
-                    <h4 class="about-one__title-1">Commitment to Farmer and Exporter Growth</h4>
+                    <p class="new_text about-one__text">SUKSHMA GAMMA Food Processing Facility will be the first of its kind in India (Andhra Pradesh), combining a Gamma Irradiation Facility with a Pack House to enhance food safety, open new markets, and create additional income opportunities for farmers and exporters.India (Andhra Pradesh), known as the “Rice Bowl of India,” is a leading agricultural state where agriculture is the primary livelihood for nearly 60% of the population and rice remains the major staple and export crop.</p>
+                    <h4 class="about-one__title-1">Commitment to Farmer's and Exporter's Growth</h4>
                     <div class="about_shape_2 about-one__points-box-and-since">
                         <ul class="about-one__points list-unstyled">
                             <li>
@@ -476,101 +476,6 @@
 </section>
 
 <!-- Infrastructutre page -->
-<section class="infa author-one">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-3">
-                <div class="author-one__Vission-mission">
-                    <h4 class="author-one__Vission-mission-title">Mango Line</h4>
-                    <ul class="author-one__Vission-mission-point list-unstyled">
-                        <li>
-                            <p>De-Sapping Conveyor </p>
-                        </li>
-                        <li>
-                            <p>Weight Grading </p>
-                        </li>
-                        <li>
-                            <p>Continuous Hot Water Treatment </p>
-                        </li>
-                        <li>
-                            <p>Brush Polishing </p>
-                        </li>
-                        <li>
-                            <p>Air Drying 22 </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-xl-6">
-                <div class="infa_new_img author-one__img-box">
-                    <div class=" infa_new author-one__img">
-                        <img src="assets/images/resources/image _infa.png" alt="author-one-img-1">
-                    </div>
-                    <div class="author-one__text-box">
-                        <!-- <div class="author-one__text-box-shape-1">
-                            <img src="assets/images/shapes/author-one-text-box-shape-1.png"
-                                alt="author-one-text-box-shape-1">
-                        </div>
-                        <p class="author-one__text">Empowering Farmers for a Sustainable Future</p>
-                        <div class="author-one__info">
-                            <h4>Joseph C. Jensen</h4>
-                            <p>Founder</p>
-                        </div> -->
-                        <div class="author-one__sign">
-                            <img src="assets/images/resources/author-one-sign.png" alt="author-one-sign">
-                        </div>
-                    </div>
-                    <!-- <div class="author-one__img-shape">
-                        <img src="assets/images/shapes/author-one-img-shape.png" alt="author-one-img-shape">
-                    </div> -->
-                    <!-- <div class="author-one__ratting-box">
-                        <div class="author-one__ratting-box-shape float-bob-x">
-                            <img src="assets/images/shapes/author-one-ratting-box-shape.png"
-                                alt="author-one-ratting-box-shape">
-                        </div>
-                        <div class="author-one__ratting-box-content">
-                            <span class="author-one__ratting-title">Top Rated</span>
-                            <div class="author-one__ratting">
-                                <span class="icon-pointed-star"></span>
-                                <span class="icon-pointed-star"></span>
-                                <span class="icon-pointed-star"></span>
-                                <span class="icon-pointed-star"></span>
-                                <span class="icon-pointed-star"></span>
-                            </div>
-                            <p class="author-one__ratting-text count-box">From <span class="count-text"
-                                    data-stop="2.5" data-speed="1500"></span>Million<br> Customers</p>
-                            <div class="author-one__ratting-text-two">
-                                <span>4.9 out of 5</span>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-xl-3">
-                <div class="author-one__Vission-mission">
-                    <h4 class="author-one__Vission-mission-title">Vegetable Line</h4>
-                    <ul class="author-one__Vission-mission-point list-unstyled">
-                        <li>
-                            <p>Root Washer </p>
-                        </li>
-                        <li>
-                            <p>Inspection</p>
-                        </li>
-                        <li>
-                            <p>Bubble Wash </p>
-                        </li>
-                        <li>
-                            <p>Ozone Wash </p>
-                        </li>
-                        <li>
-                            <p>De-watering Screens 23 </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="about-two about-2-new">
     <div class="about-two__shape-3 float-bob-x">
@@ -581,19 +486,19 @@
 
             <div class="col-xl-6">
                 <div class="about-two__right">
-                    <!-- <div class="section-title text-left sec-title-animation animation-style2">
+                    <div class="section-title text-left sec-title-animation animation-style2">
                         <div class="section-title__tagline-box">
                             <div class="section-title__shape-1">
                                 <img src="assets/images/resources/section-title-shape-1.png" alt="">
                             </div>
-                            <h6 class="section-title__tagline"> INFRASTRUCTURE</h6>
+                            <h6 class="section-title__tagline"> Integrated Cold Storage Facilities</h6>
                             <div class="section-title__shape-1">
                                 <img src="assets/images/resources/section-title-shape-2.png" alt="">
                             </div>
                         </div>
                         <h3 class="section-title__title title-animation">INFRASTRUCTURE
                         </h3>
-                    </div> -->
+                    </div>
                     <!-- <p class="about-two__text">"An advanced freezing process designed to preserve the natural quality of food products".
                     </p> -->
                     <!-- <p class="about-two__text-2">IQF rapidly freezes individual food items to maintain freshness, texture, nutrition, and appearance,

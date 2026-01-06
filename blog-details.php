@@ -26,9 +26,9 @@
                     <div class="col-xl-8 col-lg-7">
                         <div class="blog-details__left">
                             <div class="blog-details__img">
-                                <img src="assets/images/products/products-1-5.png" alt="">
+                                 <img src="assets/images/blog/ster.png" alt="">
                                 <div class="blog-details__tag-1">
-                                    <a href="javascript:void(0);">AgriTech</a>
+                                    <a href="javascript:void(0);"> Medical Sterilization</a>
                                 </div>
                                 <div class="blog-details__date">
                                     <p>13 <span>Aug</span></p>
@@ -48,44 +48,83 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="blog-details__title">Living in Harmony with Nature for a Sustainable Future
+                                <h3 class="blog-details__title">How Technology Is Changing the Sterilization of Surgical Instruments?
+
                                 </h3>
-                                <p class="blog-details__text-1">Out enigma ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute inure dolor in
-                                    the reprehenderit in voluptate velit esse cillum dolore eu fugiat null pariatur.
-                                    Excepteur snit occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                    mollit anim id est laborum.</p>
-                                <p class="blog-details__text-2">The wise man therefore always holds in these matters to
-                                    this principle of selection. He rejects pleasures to secure other greater pleasures,
-                                    or else he endures pains to avoid worse pains to the selection point.</p>
-                                <!-- <div class="blog-details__author-box">
-                                    <h4 class="blog-details__author-text">“Sed do eiusmod tempor incididunt labore et
-                                        dolore magna aliqua. Uther enim minim veniam, quis nostrud exercitation ullamco
-                                        laboris nisi aliquip commodo consequat. Duis aute irure dolor in reprehenderit
-                                        in voluptate”</h4>
-                                    <p class="blog-details__author-name">Kane Williamson<span> / CEO</span></p>
-                                </div> -->
-                                <h3 class="blog-details__title-2">Nurturing Livestock with Honesty, Care, and Love</h3>
-                                <p class="blog-details__text-3">Out enigma ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute inure dolor in
-                                    the reprehenderit in voluptate velit esse cillum dolore eu fugiat null pariatur.
-                                    Excepteur snit occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                    mollit anim id est laborum.</p>
-                                <div class="blog-details__img-box">
-                                    <div class="row">
-                                        <div class="col-xl-6">
-                                            <div class="blog-details__img-box-img">
-                                                <img src="assets/images/products/products-1-5.png" alt="">
+                                <p class="blog-details__text-1">Sterilization has always been a critical component of
+                                     surgical safety, but advancements in technology are rapidly transforming how healthcare
+                                      facilities ensure instrument sterility. From automation and data-driven monitoring to
+                                       advanced low-temperature and radiation-based methods, modern sterilization technologies
+                                        are making surgical procedures safer, faster, and more reliable than ever before.</p>
+                                <p class="blog-details__text-2">This blog explores how technology is reshaping surgical instrument
+                                     sterilization and what it means for the future of healthcare.</p>
+                                
+                                <h3 class="blog-details__title-2">The Evolution of Surgical Sterilization</h3>
+                                <p class="blog-details__text-3">Traditional sterilization methods such as steam autoclaving and dry
+                                     heat remain essential, but they are increasingly being supported—and in some
+                                      cases enhanced—by advanced technologies. The growing complexity of surgical
+                                       instruments, including minimally invasive and robotic tools, has driven the need
+                                        for more precise and adaptable sterilization solutions.
+                                </p>
+                                <h3 class="blog-details__title-2">Automation and Smart Sterilization Systems</h3>
+                                <p class="blog-details__text-3">Modern sterilization units now integrate <b>automation and smart controls</b> to reduce human error and improve consistency. These systems can:
+                                </p>
+                               <ul class="about-one__points list-unstyled specific-p">
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-wheat"></span>
                                             </div>
-                                        </div>
-                                        <div class="col-xl-6">
-                                            <div class="blog-details__img-box-img">
-                                                <img src="assets/images/products/products-1-5.png" alt="">
+                                            <p>Automatically adjust cycle parameters such as temperature, pressure, and exposure time
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-wheat"></span>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog-details__tag-and-share">
+                                            <p>Non-toxic and safeTrack instrument loads digitally
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-wheat"></span>
+                                            </div>
+                                            <p>Generate real-time alerts and reports
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <p>Automation improves operational efficiency while ensuring validated and repeatable sterilization outcomes.
+                                    </p>
+                                     <h3 class="blog-details__title-2">Low-Temperature Sterilization Technologies
+                                        </h3>
+                                <p class="blog-details__text-3">Many modern surgical instruments are sensitive to heat and moisture. To address this, healthcare facilities increasingly rely on low-temperature sterilization methods, including:
+                                </p>
+                               <ul class="about-one__points list-unstyled specific-p">
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-wheat"></span>
+                                            </div>
+                                            <p>Hydrogen peroxide plasma
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-wheat"></span>
+                                            </div>
+                                            <p>Ethylene oxide (EtO) gas
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-wheat"></span>
+                                            </div>
+                                            <p>Generate real-time alerts and Ozone-based systems
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <p>These technologies enable effective sterilization without damaging delicate materials, extending instrument lifespan and reducing replacement costs.
+                                    </p>
+                                    
+                                <!-- <div class="blog-details__tag-and-share">
                                     <div class="blog-details__tag">
                                         <h3 class="blog-details__tag-title">Tags :</h3>
                                         <ul class="blog-details__tag-list list-unstyled">
@@ -109,7 +148,7 @@
                                             <a href="#"><span class="fab fa-instagram"></span></a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- <div class="comment-one">
                                     <div class="comment-one__single">
                                         <div class="comment-one__image">
@@ -201,17 +240,15 @@
                             <div class="sidebar__single sidebar__category wow fadeInUp" data-wow-delay=".1s">
                                 <h3 class="sidebar__title">Categories</h3>
                                 <ul class="sidebar__category-list list-unstyled">
-                                    <li><a href="#">
-                                            Crop Cultivation <span>(12)</span></a></li>
-                                    <li class="active"><a href="#">Tips & Tricks
+                                    <li class="active"><a href="#">
+                                            Medical Sterilization <span>(12)</span></a></li>
+                                    <li ><a href="#">Regulatory Compliance
                                             <span>(15)</span></a></li>
-                                    <li><a href="#">Technology <span>(08)</span></a></li>
+                                    <li><a href="#">Food Irradiation <span>(08)</span></a></li>
                                     <li><a href="#">
-                                            Success Stories <span>(20)</span></a></li>
+                                            Instrument Sterilization <span>(20)</span></a></li>
                                     <li><a href="#">
-                                            Livestock Farm <span>(14)</span></a></li>
-                                    <li><a href="#">
-                                            Natural & Organic <span>(05)</span></a></li>
+                                            Food Preservation <span>(14)</span></a></li>
                                 </ul>
                             </div>
                             <!--End Sidebar Single-->
@@ -240,7 +277,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="sidebar__post-single">
+                                    <!-- <div class="sidebar__post-single">
                                         <div class="sidebar-post__img">
                                             <img src="assets/images/products/products-1-5.png" alt="">
                                         </div>
@@ -248,7 +285,7 @@
                                             <h3><a href="#">Empowering Farmers Through Smart and Sustainable
                                                     Practices.</a></h3>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <!--End Sidebar Single-->

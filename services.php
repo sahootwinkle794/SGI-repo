@@ -34,7 +34,7 @@
                     </div>
                     <div class="services-two__content">
                         <div class="services-two__content-bg-shape"
-                            style="background-image: url(assets/images/product-application/farm-to-freezer.png);">
+                            style="background-image: url(assets/images/shapes/services-two-content-bg-shape.png);">
                         </div>
                         <!-- <div class="services-two__icon">
                                     <span class="icon-hen-1"></span>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="services-two__content">
                         <div class="services-two__content-bg-shape"
-                            style="background-image: url(assets/images/product-application/farm-to-freezer.png);">
+                            style="background-image: url(assets/images/shapes/services-two-content-bg-shape.png);">
                         </div>
                         <!-- <div class="services-two__icon">
                                     <span class="icon-cow"></span>

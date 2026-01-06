@@ -67,8 +67,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $name    = trim($_POST['name'] ?? '');
     $email   = trim($_POST['email'] ?? '');
-    $number  = trim($_POST['number'] ?? '');
-    $company  = trim($_POST['company'] ?? '');
+    //$number  = trim($_POST['number'] ?? '');
+    //$company  = trim($_POST['company'] ?? '');
     $message = trim($_POST['message'] ?? '');    
     // $captcha_input = trim($_POST['captcha_input'] ?? '');
 
@@ -87,30 +87,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode(["status" => "error", "message" => "Invalid name. Only letters & spaces allowed."]);
         exit;
     }
-
-    // if (!preg_match("/^[0-9]{10}$/", $number)) {
-    //     echo json_encode(["status" => "error", "message" => "Mobile number must be exactly 10 digits"]);
-    //     exit;
-    // }
-    // if (!preg_match("/^[6-9]/", $number)) {
-    //     echo json_encode(["status" => "error", "message" => "Indian mobile numbers must start with 6, 7, 8, or 9"]);
-    //     exit;
-    // }
     
-    if (!preg_match("/^[6-9][0-9]{9}$/", $number)) {
-        echo json_encode(["status" => "error", "message" => "Invalid mobile number. Use 10 digits starting with 6, 7, 8, or 9."]);
-        exit;
-    }
+    // if (!preg_match("/^[6-9][0-9]{9}$/", $number)) {
+    //     echo json_encode(["status" => "error", "message" => "Invalid mobile number. Use 10 digits starting with 6, 7, 8, or 9."]);
+    //     exit;
+    // }
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo json_encode(["status" => "error", "message" => "Invalid email address"]);
         exit;
     }
 
-    if (!preg_match("/^[A-Za-z ]{3,80}$/", $company)) {
-        echo json_encode(["status" => "error", "message" => "Invalid Company name. Only letters & spaces allowed."]);
-        exit;
-    }
+    // if (!preg_match("/^[A-Za-z ]{3,80}$/", $company)) {
+    //     echo json_encode(["status" => "error", "message" => "Invalid Company name. Only letters & spaces allowed."]);
+    //     exit;
+    // }
 
     if (strlen($message) < 10 || strlen($message) > 1000) {
         echo json_encode(["status" => "error", "message" => "Message must be 10-1000 characters"]);
@@ -135,22 +126,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port       = 587;
 
         // SEND MAIL TO ADMIN
-        $mail->setFrom('dipshikhamishra30094@gmail.com', 'Website Contact Form');
+        $mail->setFrom('dipshikhamishra30094@gmail.com', 'Website Chat');
         //$mail->addAddress('prabhas.khamari@stlindia.com');
         $mail->addAddress('ankita.sahoo@silicontechlab.com');
 
         $mail->isHTML(true);
-        $mail->Subject = "New Contact Form Submission - Sukshma Gamma";
+        $mail->Subject = "New Chat Submission - Sukshma Gamma";
         $mail->Body = "
             <p>Dear Sir/madam,</p>
-            <p>You have received a new message via the website contact form.</p>
+            <p>You have received a new message via the website Chat.</p>
 
             <h3 style='margin-top:20px;'>User Details:</h3>
             <p><strong>Name:</strong> $name</p>
             <p><strong>Email:</strong> $email</p>
-            <p><strong>Mobile:</strong> $number</p>
-            <p><strong>Company:</strong> $company</p>
-
             <h3 style='margin-top:20px;'>Message:</h3>
             <p style='white-space:pre-line;'>$message</p>
         ";        

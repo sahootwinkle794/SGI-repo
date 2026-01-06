@@ -681,6 +681,19 @@
 
 /* Tablet Layout: 768px. */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .banner-one__happy-customer,
+    .banner-one__client-review,.about-one__img-shape-1,.about-one__crop-harvest,
+    .about-one__field-box,.about-three__img-shape-2 img{
+        display: none !important;
+    }
+    .about-one,.process-one,.products-one,.why-choose-one,.about-three {
+     padding: 50px 0 50px !important;
+    }
+    
+    section.banner-one {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
     .feature-one {
         padding: 120px 0 0;
     }
@@ -1003,10 +1016,6 @@
         margin: 50px auto 0;
     }
 
-
-
-
-
     .error-page__img img {
         width: 100%;
     }
@@ -1130,16 +1139,6 @@
         margin-top: 40px;
     }
 
-
-
-
-
-
-
-
-
-
-
     .product__showing-sort {
         max-width: 300px;
     }
@@ -1188,7 +1187,24 @@
 
 
 
-
+/* @media  (min-width: 300px) and (max-width: 500px) {
+     #button {
+        display: inline-block;
+        background-color: #FF9800;
+        width: 52px !important;
+        height: 50px;
+        text-align: center;
+        border-radius: 4px;
+        position: fixed;
+        bottom: 102px !important;
+        right: 27px !important;
+        transition: background-color .3s, 
+                opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+    }
+} */
 
 
 
@@ -1198,6 +1214,18 @@
 
 /* Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) {
+    section.banner-one {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .about-one,.process-one,.products-one,.video-one,.why-choose-one,.about-three {
+    padding: 50px 0 50px !important;
+    }
+    .about-one__img-shape-1.float-bob-y img,.about-one__crop-harvest,
+    .about-one__since-box,.about-one__video-box,.process-one__shape-four,.about-three__img-shape-2 img{
+        display: none !important;
+    }
+   
     .custom-cursor__cursor{
         display: none;
     }
@@ -1588,13 +1616,8 @@
         margin-left: 0;
     }
 
-    .footer-widget__contact {
-        margin-left: 0;
-        margin-top: 33px;
-    }
-
-    .footer-widget__links {
-        margin-top: 41px;
+    .footer-widget__services{
+         margin-top: 41px;
         margin-bottom: 33px;
     }
 
@@ -2486,7 +2509,7 @@
     }
 
     .faq-page {
-        padding: 80px 0 80px;
+        padding: 0px 0 80px;
     }
 
     .history-page__line {

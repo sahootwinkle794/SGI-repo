@@ -533,9 +533,32 @@
                                     <div class="products-one__text-and-read-more-bg"
                                         style="background-image: url(assets/images/shapes/products-one-text-bg.png);">
                                     </div>
-                                    <p class="products-one__text">Ensures sterile<br> packing for food<br> and pharma
+                                    <ul class="about-one__points list-unstyled specific-p">
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-wheat"></span>
+                                            </div>
+                                            <p>Must be radiation-stable
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-wheat"></span>
+                                            </div>
+                                            <p>Non-toxic and safe
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="fas fa-wheat"></span>
+                                            </div>
+                                            <p>Maintain strength and seal
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <!-- <p class="products-one__text">Ensures sterile<br> packing for food<br> and pharma
                                         industries
-                                    </p>
+                                    </p> -->
                                     <!-- <div class="products-one__read-more">
                                         <a href="product-details.html">Read More<span
                                                 class="fas fa-arrow-right"></span></a>
