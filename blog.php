@@ -41,7 +41,7 @@
                                             <a href="blog-details"><i class="fas fa-plus"></i></a>
                                         </div>
                                         <div class="blog-one__tag">
-                                            <a href="blog-details">Organic</a>
+                                            <a href="blog-details">Sterilization</a>
                                         </div>
                                     </div>
                                     <div class="blog-one__date">
@@ -81,12 +81,12 @@
                             <div class="blog-one__single-inner">
                                 <div class="blog-one__img-box">
                                     <div class="blog-one__img">
-                                        <img src="assets/images/products/products-1-5.png" alt="">
+                                        <img src="assets/images/blog/blog-2.png" alt="">
                                         <div class="blog-one__plus">
                                             <a href="blog-details"><i class="fas fa-plus"></i></a>
                                         </div>
                                         <div class="blog-one__tag">
-                                            <a href="blog-details">FreshProduce</a>
+                                            <a href="blog-details">Gamma Irradiation</a>
                                         </div>
                                     </div>
                                     <div class="blog-one__date">
@@ -131,7 +131,7 @@
                                             <a href="blog-details"><i class="fas fa-plus"></i></a>
                                         </div>
                                         <div class="blog-one__tag">
-                                            <a href="blog-details">AgriTech</a>
+                                            <a href="blog-details">Food Security</a>
                                         </div>
                                     </div>
                                     <div class="blog-one__date">
@@ -154,8 +154,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <h3 class="blog-one__title"><a href="blog-details">How Technology is Changing
-                                            Farming</a></h3>
+                                    <h3 class="blog-one__title"><a href="blog-details">Future of Food Security: Food Irradiation & Make in India</a></h3>
                                     <p class="blog-one__text">Learn how organic vegetables benefit your health and the
                                         planet at the same time.</p>
                                 </div>
@@ -200,8 +199,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <h3 class="blog-one__title"><a href="blog-details">A Green Promise for the Next
-                                            Generation</a></h3>
+                                    <h3 class="blog-one__title"><a href="blog-details">Sterilization of Surgical Instruments: Methods & Why It Matters</a></h3>
                                     <p class="blog-one__text">Learn how organic vegetables benefit your health and the
                                         planet at the same time.</p>
                                 </div>
@@ -246,8 +244,8 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <h3 class="blog-one__title"><a href="blog-details">Healthy Livestock, Safer
-                                            Food for the Future</a></h3>
+                                    <h3 class="blog-one__title"><a href="blog-details">Exploring the Science Behind Irradiation for Food Preservation
+                                    </a></h3>
                                     <p class="blog-one__text">Learn how organic vegetables benefit your health and the
                                         planet at the same time.</p>
                                 </div>

@@ -1,8 +1,5 @@
-<?php include_once 'lang.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 
 
 <!-- Mirrored from dreamlayout.mnsithub.com/html/sukshmagamma/main-html/index by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Dec 2025 10:25:01 GMT -->
@@ -43,12 +40,6 @@
     <link rel="stylesheet" href="assets/css/aos.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
-    <!-- New added jeet -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 
 
 
@@ -57,89 +48,81 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <style>
         #button {
-            display: inline-block;
-            background-color: #FF9800;
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            border-radius: 4px;
-            position: fixed;
-            bottom: 78px;
-            right: 0px;
-            transition: background-color .3s,
-                opacity .5s, visibility .5s;
-            opacity: 0;
-            visibility: hidden;
-            z-index: 1000;
+        display: inline-block;
+        background-color: #FF9800;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 4px;
+        position: fixed;
+        bottom: 78px;
+        right: 0px;
+        transition: background-color .3s, 
+            opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
         }
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
 
-        #button::after {
-            content: "\f077";
-            font-family: FontAwesome;
-            font-weight: normal;
-            font-style: normal;
-            font-size: 2em;
-            line-height: 50px;
-            color: #fff;
-        }
+/* Styles for the content section */
 
-        #button:hover {
-            cursor: pointer;
-            background-color: #333;
-        }
+.content {
+  width: 77%;
+  margin: 50px auto;
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
+  color: #6c767a;
+  line-height: 1.9;
+}
+@media (min-width: 500px) {
+  .content {
+    width: 43%;
+  }
+  #button {
+    margin: 30px;
+  }
+}
+.content h1 {
+  margin-bottom: -10px;
+  color: #03a9f4;
+  line-height: 1.5;
+}
+.content h3 {
+  font-style: italic;
+  color: #96a2a7;
+}
+#chatForm .result {
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
 
-        #button:active {
-            background-color: #555;
-        }
+#chatForm .alert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        #button.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Styles for the content section */
-
-        .content {
-            width: 77%;
-            margin: 50px auto;
-            font-family: 'Merriweather', serif;
-            font-size: 17px;
-            color: #6c767a;
-            line-height: 1.9;
-        }
-
-        @media (min-width: 500px) {
-            .content {
-                width: 43%;
-            }
-
-            #button {
-                margin: 30px;
-            }
-        }
-
-        .content h1 {
-            margin-bottom: -10px;
-            color: #03a9f4;
-            line-height: 1.5;
-        }
-
-        .content h3 {
-            font-style: italic;
-            color: #96a2a7;
-        }
-
-        #chatForm .result {
-            margin-top: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        #chatForm .alert {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
     </style>
 </head>
 
@@ -199,7 +182,7 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Start sidebar widget content -->
     <div class="xs-sidebar-group info-group info-sidebar">
         <div class="xs-overlay xs-bg-black"></div>
@@ -211,11 +194,8 @@
                 <div class="sidebar-textwidget">
                     <div class="sidebar-info-contents">
                         <div class="content-inner">
-                            <div class="main-menu__logo">
-                                <a href="index"><img src="assets/images/resources/logo-2.svg" alt="" class="logo-img">
-                                    <p class="logo-text">Your Trusted Irradiation Partner</p>
-                                </a>
-
+                            <div class="logo">
+                                <a href="index"><img src="assets/images/resources/logo-1.png" alt="" /></a>
                             </div>
                             <div class="content-box">
                                 <h4>About Us</h4>
@@ -232,7 +212,7 @@
                                     <ul class="list-unstyled">
                                         <li>
                                             <span class="icon-pin"></span>Registered Office: 73-1-10, Thotavari Street,
-                                            Patamata Vijayawada,Andhra Pradesh
+                                                    Patamata Vijayawada,Andhra Pradesh
                                             <!-- <div class="side-add">
                                                 <h6 class="text-white">Registered Office:<br>
                                                     Sukshma Gamma LLP
@@ -286,7 +266,7 @@
 
     <div class="page-wrapper">
         <header class="main-header">
-            <!-- <div class="main-menu__top">
+            <div class="main-menu__top">
                 <div class="main-menu__top-inner">
                     <ul class="list-unstyled main-menu__contact-list">
                         <li>
@@ -310,86 +290,52 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <nav class="main-menu">
                 <div class="main-menu__wrapper">
                     <div class="main-menu__wrapper-inner">
                         <div class="main-menu__left">
                             <div class="main-menu__logo">
-                                <a href="index"><img src="assets/images/resources/logo-2.svg" alt="" class="logo-img">
-                                    <!-- <p class="logo-text">Your Trusted Irradiation Partner</p> -->
-                                    <p class="logo-text"><?= $lang['logo_tagline']; ?></p>
-                                </a>
-
+                                <a href="index"><img src="assets/images/resources/logo-2.svg" alt=""></a>
                             </div>
                         </div>
                         <div class="main-menu__main-menu-box">
                             <a href="javascript:void(0);" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                             <ul class="main-menu__list">
                                 <li>
-                                    <a href="index"><?= $lang['home']; ?></a>
+                                    <a href="index">Home </a>
 
                                 </li>
                                 <li>
-                                    <a href="about"><?= $lang['about']; ?></a>
+                                    <a href="about">About Us</a>
                                 </li>
                                 <li>
-                                    <a href="gamma-irradiation"><?= $lang['gamma-irradiation']; ?></a>
+                                    <a href="gamma-irradiation">Gamma Irradiation</a>
                                 </li>
                                 <li>
-                                    <a href="process-line"><?= $lang['process-line']; ?></a>
+                                    <a href="javascript:void(0);">Process Line</a>
                                 </li>
                                 <li>
-                                    <a href="product-application"><?= $lang['product-application']; ?></a>
+                                    <a href="product-application">Products & Applications</a>
                                 </li>
                                 <!-- <li>
                                     <a href="javascript:void(0);">Request Facility Tour</a>
                                 </li> -->
                                 <li>
-                                    <a href="services"><?= $lang['Our Services']; ?></a>
+                                    <a href="services">Our Services</a>
                                 </li>
 
                                 <li>
-                                    <a href="blog"><?= $lang['Blog']; ?></a>
+                                    <a href="blog">Blog</a>
                                 </li>
                                 <li>
-                                    <a href="faq"><?= $lang['FAQ']; ?></a>
+                                    <a href="faq">FAQ</a>
                                 </li>
                                 <li>
-                                    <a href="contact"><?= $lang['Contact']; ?></a>
+                                    <a href="contact">Contact</a>
                                 </li>
                             </ul>
                         </div>
-
-                        <!-- <div class="main-menu__main-menu-box">
-                            <a href="javascript:void(0);" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
-                            <ul class="main-menu__list">
-                                <li>
-                                    <a href="?lang=en">EN</a>
-
-                                </li>
-                                <li>
-                                    <a href="?lang=hi">HI</a>
-                                </li>
-                            </ul>
-                           
-                        </div> -->
-                        <!-- <div class="main-menu__list">
-                            <a href="?lang=en">EN</a> |
-                            <a href="?lang=hi">HI</a>
-                        </div> -->
-                        <div class="dropdown">
-                            <button class="dropbtn">
-                                Language
-                                <span class="arrow">▾</span>
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="?lang=en">English</a>
-                                <a href="?lang=hi">Hindi</a>
-                                <a href="?lang=ta">Tamil</a>
-                            </div>
-                        </div>
-
                         <div class="main-menu__right">
                             <div class="main-menu__nav-sidebar-icon">
                                 <a class="navSidebar-button" href="javascript:void(0);">
@@ -407,91 +353,91 @@
         <div class="stricky-header stricked-menu main-menu">
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
         </div><!-- /.stricky-header -->
-        <script src="assets/js/jquery-latest.js"></script>
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/jarallax.min.js"></script>
-        <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-        <script src="assets/js/jquery.appear.min.js"></script>
-        <script src="assets/js/swiper.min.js"></script>
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/jquery.validate.min.js"></script>
-        <script src="assets/js/odometer.min.js"></script>
-        <script src="assets/js/wNumb.min.js"></script>
-        <script src="assets/js/wow.js"></script>
-        <script src="assets/js/isotope.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/jquery-ui.js"></script>
-        <script src="assets/js/jquery.circleType.js"></script>
-        <script src="assets/js/jquery.lettering.min.js"></script>
-        <script src="assets/js/jquery.fittext.js"></script>
-        <script src="assets/js/jquery.nice-select.min.js"></script>
-        <script src="assets/js/marquee.min.js"></script>
-        <script src="assets/js/jquery-sidebar-content.js"></script>
-        <script src="assets/js/jquery.event.move.js"></script>
-        <script src="assets/js/aos.js"></script>
-        <script src="assets/js/gsap/gsap.js"></script>
-        <script src="assets/js/gsap/ScrollTrigger.js"></script>
-        <script src="assets/js/gsap/SplitText.js"></script>
+<script src="assets/js/jquery-latest.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jarallax.min.js"></script>
+<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="assets/js/jquery.appear.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/odometer.min.js"></script>
+<script src="assets/js/wNumb.min.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/isotope.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/jquery.circleType.js"></script>
+<script src="assets/js/jquery.lettering.min.js"></script>
+<script src="assets/js/jquery.fittext.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/marquee.min.js"></script>
+<script src="assets/js/jquery-sidebar-content.js"></script>
+<script src="assets/js/jquery.event.move.js"></script>
+<script src="assets/js/aos.js"></script>
+<script src="assets/js/gsap/gsap.js"></script>
+<script src="assets/js/gsap/ScrollTrigger.js"></script>
+<script src="assets/js/gsap/SplitText.js"></script>
 
-        <!-- template js -->
-        <script src="assets/js/script.js"></script>
-        <script>
-            $(document).ready(function() {
+<!-- template js -->
+<script src="assets/js/script.js"></script>
+<script>
+$(document).ready(function () {
 
-                // ==============================
-                // LIVE VALIDATION (CHAT FORM)
-                // ==============================
+    // ==============================
+    // LIVE VALIDATION (CHAT FORM)
+    // ==============================
 
-                $("#chatForm input[name='name']").on("input", function() {
-                    let val = $(this).val().trim();
-                    if (/^[A-Za-z ]{3,80}$/.test(val)) {
-                        $(".error-name").text("");
-                        $(this).removeClass("is-invalid");
-                    } else {
-                        $(".error-name").text("Name must be 3-80 characters");
-                        $(this).addClass("is-invalid");
-                    }
-                });
+    $("#chatForm input[name='name']").on("input", function () {
+        let val = $(this).val().trim();
+        if (/^[A-Za-z ]{3,80}$/.test(val)) {
+            $(".error-name").text("");
+            $(this).removeClass("is-invalid");
+        } else {
+            $(".error-name").text("Name must be 3-80 characters");
+            $(this).addClass("is-invalid");
+        }
+    });
 
-                $("#chatForm input[name='email']").on("input", function() {
-                    let val = $(this).val().trim();
-                    if (/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/.test(val)) {
-                        $(".error-email").text("");
-                        $(this).removeClass("is-invalid");
-                    } else {
-                        $(".error-email").text("Enter a valid email address");
-                        $(this).addClass("is-invalid");
-                    }
-                });
+    $("#chatForm input[name='email']").on("input", function () {
+        let val = $(this).val().trim();
+        if (/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/.test(val)) {
+            $(".error-email").text("");
+            $(this).removeClass("is-invalid");
+        } else {
+            $(".error-email").text("Enter a valid email address");
+            $(this).addClass("is-invalid");
+        }
+    });
 
-                $("#chatForm textarea[name='message']").on("input", function() {
-                    let val = $(this).val().trim();
-                    if (val.length >= 10) {
-                        $(".error-message").text("");
-                        $(this).removeClass("is-invalid");
-                    } else {
-                        $(".error-message").text("Message must be at least 10 characters");
-                        $(this).addClass("is-invalid");
-                    }
-                });
+    $("#chatForm textarea[name='message']").on("input", function () {
+        let val = $(this).val().trim();
+        if (val.length >= 10) {
+            $(".error-message").text("");
+            $(this).removeClass("is-invalid");
+        } else {
+            $(".error-message").text("Message must be at least 10 characters");
+            $(this).addClass("is-invalid");
+        }
+    });
 
-                // ==============================
-                // RESULT ALERT HANDLER
-                // ==============================
+    // ==============================
+    // RESULT ALERT HANDLER
+    // ==============================
 
-                let resultTimer; // global
+    let resultTimer; // global
 
-                function showResult(type, message) {
+    function showResult(type, message) {
 
-                    clearTimeout(resultTimer); // stop previous timer
+        clearTimeout(resultTimer); // stop previous timer
 
-                    // const alertHtml = `
-                    //     <div class="alert alert-${type} alert-dismissible fade show" role="alert">
-                    //         ${message}
-                    //         <button type="button" class="btn-close close-alert" aria-label="Close"></button>
-                    //     </div>
-                    // `;
-                    const alertHtml = `
+        // const alertHtml = `
+        //     <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+        //         ${message}
+        //         <button type="button" class="btn-close close-alert" aria-label="Close"></button>
+        //     </div>
+        // `;
+        const alertHtml = `
             <div class="alert alert-success" role="alert">
                 <span>${message}</span>
                 <span class="close-alert" style="cursor:pointer; font-size:20px;">&times;</span>
@@ -499,53 +445,56 @@
         `;
 
 
-                    const resultBox = $("#chatForm .result");
+        const resultBox = $("#chatForm .result");
 
-                    resultBox
-                        .stop(true, true) // stop animations
-                        .show() // force show
-                        .html(alertHtml);
+        resultBox
+            .stop(true, true)   // stop animations
+            .show()             // force show
+            .html(alertHtml);
 
-                    resultTimer = setTimeout(function() {
-                        resultBox.fadeOut();
-                    }, 20000);
-                }
+        resultTimer = setTimeout(function () {
+            resultBox.fadeOut();
+        }, 20000);
+    }
 
-                // Manual close
-                $(document).on("click", ".close-alert", function() {
-                    $(this).closest(".alert").fadeOut();
-                });
+    // Manual close
+    $(document).on("click", ".close-alert", function () {
+        $(this).closest(".alert").fadeOut();
+    });
 
-                // ==============================
-                // FORM SUBMIT (CHAT FORM)
-                // ==============================
-                $("#chatForm").on("submit", function(e) {
-                    e.preventDefault();
+    // ==============================
+    // FORM SUBMIT (CHAT FORM)
+    // ==============================
+    $("#chatForm").on("submit", function (e) {
+        e.preventDefault();
 
-                    $.ajax({
-                        url: "chat_mail.php",
-                        type: "POST",
-                        data: $(this).serialize(),
-                        beforeSend: function() {
-                            $("#chatForm .result").html("").show();
-                            $("#chatForm button")
-                                .prop("disabled", true)
-                                .html(`<span class="spinner-border spinner-border-sm"></span> Sending...`);
-                        },
-                        success: function() {
-                            showResult("success", "✔ Message sent successfully");
-                            $("#chatForm")[0].reset();
-                        },
-                        error: function() {
-                            showResult("danger", "❌ Something went wrong");
-                        },
-                        complete: function() {
-                            $("#chatForm button")
-                                .prop("disabled", false)
-                                .text("Submit Now");
-                        }
-                    });
-                });
+        $.ajax({
+            url: "chat_mail.php",
+            type: "POST",
+            data: $(this).serialize(),
+            beforeSend: function () {
+                $("#chatForm .result").html("").show();
+                $("#chatForm button")
+                    .prop("disabled", true)
+                    .html(`<span class="spinner-border spinner-border-sm"></span> Sending...`);
+            },
+            success: function () {
+                showResult("success", "✔ Message sent successfully");
+                $("#chatForm")[0].reset();
+            },
+            error: function () {
+                showResult("danger", "❌ Something went wrong");
+            },
+            complete: function () {
+                $("#chatForm button")
+                    .prop("disabled", false)
+                    .text("Submit Now");
+            }
+        });
+    });
 
-            });
-        </script>
+});
+</script>
+
+
+

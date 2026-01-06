@@ -6,12 +6,12 @@
     </div>
     <div class="container">
         <div class="page-header__inner">
-            <h3>Product and Applications</h3>
+            <h3><?= $lang['product-application']; ?></h3>
             <div class="thm-breadcrumb__inner">
                 <ul class="thm-breadcrumb list-unstyled">
-                    <li><a href="index">Home</a></li>
+                    <li><a href="index"><?= $lang['home']; ?></a></li>
                     <li><span class="fas fa-angle-right"></span></li>
-                    <li>Product and Applications</li>
+                    <li><?= $lang['product-application']; ?></li>
                 </ul>
             </div>
         </div>
@@ -120,7 +120,6 @@
                                                 </div>
                                                 <p>Disinfests grains and pulses from insects.
                                                 </p>
-
                                             </li>
                                             <li>
                                                 <div class="icon">
@@ -226,7 +225,7 @@
                             <div class="section-title__shape-1">
                                 <img src="assets/images/resources/section-title-shape-1.png" alt="">
                             </div>
-                            <h6 class="section-title__tagline">Food Irradiation</h6>
+                            <h6 class="section-title__tagline"><?= $lang['FoodIrradiation-title']; ?></h6>
                             <div class="section-title__shape-1">
                                 <img src="assets/images/resources/section-title-shape-2.png" alt="">
                             </div>
@@ -234,10 +233,12 @@
                         <h3 class="section-title__title title-animation">Food Irradiation for Safer,
                             Longer-Lasting Foods
                         </h3>
+                        <!-- <h3 class="section-title__title1 title-animation"><?= $lang['FoodIrradiation-maintitle']; ?>
+                        </h3> -->
                     </div>
-                    <p class="quote-text about-two__text">A scientifically validated process using controlled gamma radiation to improve food safety.
+                    <p class="quote-text about-two__text"><?= $lang['FoodIrradiation-subtitle']; ?>
                     </p>
-                    <p class="about-two__text-2">Food irradiation extends shelf life, reduces food losses, and eliminates harmful microorganisms such as bacteria, parasites, and insects without compromising food quality.
+                    <p class="about-two__text-2"><?= $lang['FoodIrradiation-desc']; ?>
                     </p>
                     <div class="about-two__tab tab-box">
                         <ul class="tabs-button-box list-unstyled clearfix">

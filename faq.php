@@ -29,11 +29,11 @@
                     <div class="faq-one__right faq-page__left">
                         <div class="faq-one-accordion accordion-grp" data-grp-name="faq-one-accordion">
                             <div class="accordion wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                <div class="accordion-title">
+                                <div class="accordion-title ">
                                     <h4>1. What is Gamma Irradiation?</h4>
                                 </div>
                                 <div class="accordion-content">
-                                    <div class="inner">
+                                    <div class="inner ">
                                         <p>
                                             Gamma irradiation is a cold, non-chemical process that uses controlled gamma rays to eliminate harmful microorganisms, insects, and parasites from products.
                                     </div>
@@ -64,7 +64,7 @@
                             </div>
                             <div class="accordion wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                                 <div class="accordion-title">
-                                               <h4>4. What products can be irradiated at Sukshma Gamma Irradiation?</h4>
+                                    <h4>4. What products can be irradiated at Sukshma Gamma Irradiation?</h4>
                                 </div>
                                 <div class="accordion-content">
                                     <div class="inner">
@@ -219,7 +219,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
 
                         </div>
 
