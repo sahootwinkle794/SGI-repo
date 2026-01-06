@@ -11,7 +11,11 @@
                 <ul class="thm-breadcrumb list-unstyled">
                     <li><a href="index"><?= $lang['home']; ?></a></li>
                     <li><span class="fas fa-angle-right"></span></li>
+<<<<<<< HEAD
                     <li><?= $lang['product-application']; ?></li>
+=======
+                    <li>Product and Applications</li>
+>>>>>>> b0e2dcdb673ecba772dc67c101aa1e87e2772f91
                 </ul>
             </div>
         </div>
@@ -120,6 +124,7 @@
                                                 </div>
                                                 <p>Disinfests grains and pulses from insects.
                                                 </p>
+
                                             </li>
                                             <li>
                                                 <div class="icon">
