@@ -471,8 +471,8 @@
                                         </a>
                                     </h3>
                                     <div class="products-one__icon">
-                                        <span class="icon-healthy-food"></span>
-                                    </div>
+                                        <img class="unpacking" src="assets/images/icon/chemical.png" alt="Healthy Food Icon">
+                                    </div>  
                                 </div>
                                 <div class="products-one__text-and-read-more">
                                     <div class="products-one__text-and-read-more-bg"
@@ -526,7 +526,7 @@
                                         </a>
                                     </h3>
                                     <div class="products-one__icon">
-                                        <span class="icon-healthy-food"></span>
+                                        <img class="unpacking" src="assets/images/icon/unpacking.png" alt="icon-healthy-food">
                                     </div>
                                 </div>
                                 <div class="products-one__text-and-read-more">
@@ -690,7 +690,7 @@
                                     style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
                                 </div>
                                 <div class="why-choose-one__icon">
-                                    <span class="icon-satisfication"></span>
+                                    <img class="chooseus_icon" src="assets/images/icon/safety.png" alt="safety icon">
                                 </div>
                                 <h4 class="why-choose-one__title">Safe, fast,<br> and highly effective</h4>
                                 <!-- <p class="why-choose-one__text">Dedicated to every stage of farming excellence
@@ -705,7 +705,7 @@
                                     style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
                                 </div>
                                 <div class="why-choose-one__icon">
-                                    <span class="icon-sustainable"></span>
+                                 <img class="chooseus_icon" src="assets/images/icon/lunch-bag.png" alt="lunch icon">
                                 </div>
                                 <h4 class="why-choose-one__title">Suitable for packed,<br> bulk, & palletized materials
                                 </h4>
@@ -721,7 +721,8 @@
                                     style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
                                 </div>
                                 <div class="why-choose-one__icon">
-                                    <span class="icon-farmer"></span>
+                                    
+                                    <img class="chooseus_icon" src="assets/images/icon/distribution.png" alt="icon-farmer">
                                 </div>
                                 <h4 class="why-choose-one__title">Uniform dose<br> distribution</h4>
                                 <!-- <p class="why-choose-one__text">Dedicated to every stage of farming excellence
@@ -736,7 +737,9 @@
                                     style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
                                 </div>
                                 <div class="why-choose-one__icon">
-                                    <span class="icon-guarantee"></span>
+                                   
+                                    <img class="chooseus_icon" src="assets/images/icon/forbidden.png" alt="icon-guarantee">
+
                                 </div>
                                 <h4 class="why-choose-one__title">No <br>temperature rise</h4>
                                 <!-- <p class="why-choose-one__text">Dedicated to every stage of farming excellence
@@ -751,7 +754,8 @@
                                     style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
                                 </div>
                                 <div class="why-choose-one__icon">
-                                    <span class="icon-product"></span>
+                                    
+                                    <img class="chooseus_icon" src="assets/images/icon/rejected.png" alt="icon-product">
                                 </div>
                                 <h4 class="why-choose-one__title">No need to open<br> or repack items</h4>
                                 <!-- <p class="why-choose-one__text">Dedicated to every stage of farming excellence
@@ -766,7 +770,8 @@
                                     style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
                                 </div>
                                 <div class="why-choose-one__icon">
-                                    <span class="icon-trusted"></span>
+                                                                       
+                                    <img class="chooseus_icon" src="assets/images/icon/feather.png" alt="icon-trusted">
                                 </div>
                                 <h4 class="why-choose-one__title">Ideal for <br>sensitive materials</h4>
                                 <!-- <p class="why-choose-one__text">Dedicated to every stage of farming excellence

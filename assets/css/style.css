@@ -6949,6 +6949,17 @@ About One
   border-bottom-right-radius: 50px;
   z-index: 2;
 }
+.unpacking{
+ width: 40%;
+    height: 75%;
+    margin-bottom: 20px !important;
+}
+.chooseus_icon{
+      width: 52%;
+    height: 55%;
+    margin-bottom: 0px !important; 
+}
+
 
 .products-one__icon::before {
   content: "";
