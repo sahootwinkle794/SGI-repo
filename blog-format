@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": "blog-001",
+      "slug": "technology-changing-sterilization",
+      "date": "2026-01-12",
+      "image": "sterilization-tech.jpg",
+      "category": "Healthcare Technology",
+      "author": {
+        "name": "Admin",
+        "role": "auth_admin"
+      },
+      "title": "How Technology Is Changing the Sterilization of Surgical Instruments",
+      "short_description": "Modern equipment is improving surgical outcomes significantly by enhancing precision, safety, and efficiency across healthcare facilities.",
+      "content": {
+        "introduction": "Sterilization has always been a critical component of surgical safety, but advancements in technology are rapidly transforming how healthcare facilities ensure instrument sterility.",
+        "sections": [
+          {
+            "heading": "Automation and Smart Sterilization Systems",
+            "paragraphs": [
+              "Modern sterilization units integrate automation and smart controls to reduce human error.",
+              "These systems ensure consistent and validated sterilization outcomes."
+            ],
+            "list": [
+              "Automatic cycle adjustments",
+              "Digital load tracking",
+              "Real-time alerts"
+            ]
+          },
+          {
+            "heading": "Digital Monitoring and Data Traceability",
+            "paragraphs": [
+              "Digital technologies have transformed how sterilization processes are monitored and documented.",
+              "Real-time visibility improves compliance and patient safety."
+            ],
+            "list": [
+              "Real-time cycle monitoring",
+              "Electronic audit records",
+              "Hospital system integration"
+            ]
+          }
+        ],
+        "conclusion": "Technology is redefining surgical instrument sterilization, making it more precise, reliable, and adaptable to modern healthcare needs."
+      }
+    },
+    {
+      "id": "blog-002",
+      "slug": "low-temperature-sterilization-methods",
+      "date": "2026-01-08",
+      "image": "low-temp-sterilization.jpg",
+      "category": "Medical Innovation",
+      "author": {
+        "name": "Editor",
+        "role": "auth_editor"
+      },
+      "title": "Low-Temperature Sterilization Methods in Modern Healthcare",
+      "short_description": "Low-temperature sterilization techniques are enabling safe processing of heat-sensitive surgical instruments without compromising effectiveness.",
+      "content": {
+        "introduction": "As surgical instruments become more complex, traditional high-heat sterilization methods are no longer sufficient for all medical devices.",
+        "sections": [
+          {
+            "heading": "Why Low-Temperature Sterilization Is Needed",
+            "paragraphs": [
+              "Many modern medical instruments are made from materials that cannot withstand high temperatures.",
+              "Low-temperature sterilization protects device integrity while maintaining sterility."
+            ],
+            "list": [
+              "Prevents material damage",
+              "Extends instrument lifespan",
+              "Supports advanced surgical tools"
+            ]
+          },
+          {
+            "heading": "Common Low-Temperature Sterilization Technologies",
+            "paragraphs": [
+              "Healthcare facilities now use a variety of low-temperature sterilization technologies.",
+              "Each method offers specific benefits depending on instrument type."
+            ],
+            "list": [
+              "Hydrogen peroxide plasma",
+              "Ethylene oxide (EtO) gas",
+              "Ozone-based sterilization"
+            ]
+          }
+        ],
+        "conclusion": "Low-temperature sterilization methods are essential for ensuring safety, efficiency, and longevity of modern surgical instruments."
+      }
+    }
+  ]
+}

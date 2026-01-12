@@ -23,9 +23,11 @@
         <section class="blog-details">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-8 col-lg-7">
-                        <div class="blog-details__left">
-                            <div class="blog-details__img">
+                    <!-- <div class="col-xl-8 col-lg-7"> -->
+                        <div class="col-xl-8 col-lg-7 blog-details__left"  id="blog-details-container">
+                            <p>Loading blog details...</p>
+
+                            <!-- <div class="blog-details__img">
                                  <img src="assets/images/blog/ster.png" alt="">
                                 <div class="blog-details__tag-1">
                                     <a href="javascript:void(0);"> Medical Sterilization</a>
@@ -124,109 +126,10 @@
                                     <p>These technologies enable effective sterilization without damaging delicate materials, extending instrument lifespan and reducing replacement costs.
                                     </p>
                                     
-                                <!-- <div class="blog-details__tag-and-share">
-                                    <div class="blog-details__tag">
-                                        <h3 class="blog-details__tag-title">Tags :</h3>
-                                        <ul class="blog-details__tag-list list-unstyled">
-                                            <li>
-                                                <a href="#">Aggrotech</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Sustainability</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Organic</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="blog-details__share-box">
-                                        <h3 class="blog-details__share-title">Share :</h3>
-                                        <div class="blog-details__share">
-                                            <a href="#"><span class="fab fa-facebook-f"></span></a>
-                                            <a href="#"><span class="fab fa-twitter"></span></a>
-                                            <a href="#"><span class="fab fa-pinterest-p"></span></a>
-                                            <a href="#"><span class="fab fa-instagram"></span></a>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- <div class="comment-one">
-                                    <div class="comment-one__single">
-                                        <div class="comment-one__image">
-                                            <img src="assets/images/blog/comment-1-1.jpg" alt="">
-                                        </div>
-                                        <div class="comment-one__content">
-                                            <h3>Theresa Webb</h3>
-                                            <span>02 June 2024 at 03:30 pm</span>
-                                            <p>The wise man therefore always holds in these matters to this principle of
-                                                selection. He rejects pleasures to secure other greater pleasures, or
-                                                else he endures pains to avoid worse pains to the selection point. But
-                                                in certain to all this circumstances</p>
-                                            <div class="comment-one__btn-box">
-                                                <a href="blog-details.html" class="comment-one__btn"><span
-                                                        class="fas fa-share"></span>Reply</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="comment-one__single">
-                                        <div class="comment-one__image">
-                                            <img src="assets/images/blog/comment-1-2.jpg" alt="">
-                                        </div>
-                                        <div class="comment-one__content">
-                                            <h3>Cameron Williamson</h3>
-                                            <span>02 June 2024 at 03:30 pm</span>
-                                            <p>The wise man therefore always holds in these matters to this principle of
-                                                selection. He rejects pleasures to secure other greater pleasures, or
-                                                else he endures pains to avoid worse pains to the selection point. But
-                                                in certain to all this circumstances</p>
-                                            <div class="comment-one__btn-box">
-                                                <a href="blog-details.html" class="comment-one__btn"><span
-                                                        class="fas fa-share"></span>Reply
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment-form">
-                                    <h3 class="comment-form__title">Leave A Comment</h3>
-                                    <p class="comment-form__text">By using form u agree with the message sorage, you can
-                                        contact us directly now</p>
-                                    <form
-                                        action="https://dreamlayout.mnsithub.com/html/farmology/main-html/assets/inc/sendemail.php"
-                                        class="comment-one__form contact-form-validated" novalidate="novalidate">
-                                        <div class="row">
-                                            <div class="col-xl-6">
-                                                <div class="comment-form__input-box">
-                                                    <input type="text" placeholder="Your Name" name="name">
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-6">
-                                                <div class="comment-form__input-box">
-                                                    <input type="email" placeholder="Your Email" name="email">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xl-12">
-                                                <div class="comment-form__input-box text-message-box">
-                                                    <textarea name="message"
-                                                        placeholder="Write your messege"></textarea>
-                                                </div>
-                                                <div class="comment-form__btn-box">
-                                                    <button type="submit" class="thm-btn comment-form__btn">submit
-                                                        now <i class="fal fa-long-arrow-right"></i>
-                                                        <span class="hover-btn hover-bx"></span>
-                                                        <span class="hover-btn hover-bx2"></span>
-                                                        <span class="hover-btn hover-bx3"></span>
-                                                        <span class="hover-btn hover-bx4"></span></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <div class="result"></div>
-                                </div> -->
-                            </div>
+                               
+                            </div> -->
                         </div>
-                    </div>
+                    <!-- </div> -->
 
                     <!--Start Sidebar-->
                     <div class="col-xl-4 col-lg-5">
@@ -314,5 +217,91 @@
             </div>
         </section>
         <!--Blog Details End-->
+ <script>
+
+        // Function to get query parameter from URL
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  async function loadBlogDetails() {
+    const blogId = getQueryParam("id");
+    if (!blogId) {
+      document.getElementById("blog-details-container").innerHTML = "<p class='text-danger'>No blog selected.</p>";
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost/SGI-Web/Trunk/blog-api.json");
+      if (!response.ok) throw new Error("Failed to fetch blog data");
+
+      const blogs = await response.json();
+      const blog = blogs.find(b => b.id == blogId);
+
+      if (!blog) {
+        document.getElementById("blog-details-container").innerHTML = "<p class='text-danger'>Blog not found.</p>";
+        return;
+      }
+
+      const dateObj = new Date(blog.date);
+      const day = dateObj.getDate();
+      const month = dateObj.toLocaleString("default", { month: "short" });
+
+      document.getElementById("blog-details-container").innerHTML = `
+        <div class="blog-details__img">
+          <img src="${blog.image}" alt="${blog.title}">
+          <div class="blog-details__tag-1">
+            <a href="javascript:void(0);">${blog.category}</a>
+          </div>
+          <div class="blog-details__date">
+            <p>${day} <span>${month}</span></p>
+          </div>
+        </div>
+
+        <div class="blog-details__content">
+          <div class="blog-details__user-and-meta">
+            <div class="blog-details__user">
+              <p><span class="icon-user"></span>By Admin</p>
+            </div>
+            <ul class="blog-details__meta list-unstyled">
+              <li><a href="#"><span class="fas fa-comments"></span>Visitors (05)</a></li>
+              <li><a href="#"><span class="fas fa-clock"></span>4 Min Read</a></li>
+            </ul>
+          </div>
+
+          <h3 class="blog-details__title">${blog.title}</h3>
+          <p class="blog-details__text-1">${blog.description}</p>
+          <p class="blog-details__text-2">This blog explores more details about ${blog.category} and its impact.</p>
+
+          <h3 class="blog-details__title-2">Detailed Insights</h3>
+          <p class="blog-details__text-3">Here you can add further details, explanations, or steps related to "${blog.title}".</p>
+
+          <h3 class="blog-details__title-2">Key Points</h3>
+          <ul class="about-one__points list-unstyled specific-p">
+            <li>
+              <div class="icon"><span class="fas fa-check"></span></div>
+              <p>Point 1 related to the blog topic.</p>
+            </li>
+            <li>
+              <div class="icon"><span class="fas fa-check"></span></div>
+              <p>Point 2 with additional explanation.</p>
+            </li>
+            <li>
+              <div class="icon"><span class="fas fa-check"></span></div>
+              <p>Point 3 to highlight important aspects.</p>
+            </li>
+          </ul>
+        </div>
+      `;
+    } catch (error) {
+      console.error("Error loading blog details:", error);
+      document.getElementById("blog-details-container").innerHTML = "<p class='text-danger'>Failed to load blog details.</p>";
+    }
+  }
+
+  // Load blog details on page load
+  loadBlogDetails();
+</script>
 
 <?php include 'footer.php'; ?>
