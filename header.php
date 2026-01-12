@@ -141,6 +141,18 @@
             align-items: center;
             justify-content: space-between;
         }
+
+        .blog-one__text {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #6e6e6e;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;   /* 👈 limit to 3 lines */
+        overflow: hidden;
+        }
+
     </style>
 </head>
 

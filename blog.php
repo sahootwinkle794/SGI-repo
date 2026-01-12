@@ -308,61 +308,82 @@
         </section>
         <!--Blog Page End-->
 
-  <script>
-                                // Fetch local JSON API
-                                fetch("http://localhost/SGI-Web/Trunk/blog-api.json")
-                                    .then(response => response.json())
-                                    .then(data => {
-                                    const container = document.getElementById("blog-container");
+<script>
+fetch("http://localhost/SGI-Web/Trunk/blog-api.json")
+  .then(response => response.json())
+  .then(blogs => {
 
-                                    data.forEach(blog => {
-                                        // Convert date to day + month
-                                        const dateObj = new Date(blog.date);
-                                        const day = dateObj.getDate();
-                                        const month = dateObj.toLocaleString('default', { month: 'short' });
+    const container = document.getElementById("blog-container");
+    container.innerHTML = ""; // clear static content
 
-                                        container.innerHTML += `
-                                         
-                                                <div class="blog-one__single">
-                                                    <div class="blog-one__single-inner">
-                                                    <div class="blog-one__img-box">
-                                                        <div class="blog-one__img">
-                                                        <img src="${blog.image}" alt="${blog.title}">
-                                                        <div class="blog-one__plus">
-                                                            <a href="blog-details?id=${blog.id}"><i class="fas fa-plus"></i></a>
-                                                        </div>
-                                                        <div class="blog-one__tag">
-                                                            <a href="blog-details">${blog.category}</a>
-                                                        </div>
-                                                        </div>
-                                                        <div class="blog-one__date">
-                                                        <p>${day} <span>${month}</span></p>
-                                                        </div>
-                                                    </div>
+    blogs.forEach(blog => {
+      const dateObj = new Date(blog.date);
+      const day = dateObj.getDate();
+      const month = dateObj.toLocaleString("default", { month: "short" });
 
-                                                    <div class="blog-one__content">
-                                                        <div class="blog-one__content-bg-shape"
-                                                            style="background-image: url(assets/images/shapes/blog-one-content-bg-shape.png);">
-                                                        </div>
-                                                        <ul class="blog-one__meta list-unstyled">
-                                                        <li><a href="blog-details"><span class="fas fa-user"></span> Admin</a></li>
-                                                        <li><a href="blog-details"><span class="fas fa-comments"></span> Visitors</a></li>
-                                                        </ul>
-                                                        <h3 class="blog-one__title">
-                                                        <a href="blog-details?id=${blog.id}">${blog.title}</a>
-                                                        </h3>
-                                                        <p class="blog-one__text">${blog.description}</p>
-                                                    </div>
+      const card = document.createElement("div");
+      card.className = "col-lg-4 col-md-6";
 
-                                                    <div class="blog-one__read-more">
-                                                        <a href="blog-details?id=${blog.id}">Read More <span class="fas fa-arrow-right"></span></a>
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                        `;
-                                    });
-                                    })
-                                    .catch(error => console.error("Error loading blogs:", error));
-                                </script>
+      card.innerHTML = `
+        <div class="blog-one__single">
+          <div class="blog-one__single-inner">
+            <div class="blog-one__img-box">
+              <div class="blog-one__img">
+                <img src="${blog.image}" alt="${blog.title}">
+                <div class="blog-one__plus">
+                  <a href="blog-details?id=${blog.id}">
+                    <i class="fas fa-plus"></i>
+                  </a>
+                </div>
+                <div class="blog-one__tag">
+                  <a href="blog-details?id=${blog.id}">
+                    ${blog.category}
+                  </a>
+                </div>
+              </div>
+              <div class="blog-one__date">
+                <p>${day} <span>${month}</span></p>
+              </div>
+            </div>
+
+            <div class="blog-one__content">
+              <div class="blog-one__content-bg-shape"
+                style="background-image:url(assets/images/shapes/blog-one-content-bg-shape.png);">
+              </div>
+
+              <ul class="blog-one__meta list-unstyled">
+                <li>
+                  <a href="blog-details?id=${blog.id}">
+                    <span class="fas fa-user"></span>${blog.author}
+                  </a>
+                </li>
+                 <li><a href="#"><span class="fas fa-clock"></span>4 Min Read</a></li>
+              </ul>
+
+              <h3 class="blog-one__title">
+                <a href="blog-details?id=${blog.id}">
+                  ${blog.title}
+                </a>
+              </h3>
+
+              <p class="blog-one__text">
+                ${blog.description}
+              </p>
+            </div>
+
+            <div class="blog-one__read-more">
+              <a href="blog-details?id=${blog.id}">
+                Read More <span class="fas fa-arrow-right"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(card);
+    });
+  })
+  .catch(error => console.error("Blog load error:", error));
+</script>
+
 <?php include 'footer.php'; ?>

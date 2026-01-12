@@ -1,50 +1,30 @@
 [
   {
     "id": 1,
-    "title": "Technology Transforming Surgical Sterilization",
-    "description": "Sterilization has always been a critical component of surgical safety...",
+    "title": "How Technology Is Changing the Sterilization of Surgical Instruments?",
+    "author":"Twinkle",
     "image": "https://gov.silicontechlab.com/sgi/assets/images/blog/ster.png",
     "date": "2026-01-09",
-    "category": "Medical Sterilization"
+    "category": "Medical Sterilization",
+    "description": "Sterilization has always been a critical component of surgical safety, but advancements in technology are rapidly transforming how healthcare facilities ensure instrument sterility. From automation and data-driven monitoring to advanced low-temperature and radiation-based methods, modern sterilization technologies are making surgical procedures safer, faster, and more reliable than ever before."
   },
   {
     "id": 2,
-    "title": "New Advances in Medical Equipment",
-    "description": "Modern equipment is improving surgical outcomes significantly...",
+    "title": "How Gamma Irradiation Services Can Help You Meet Regulatory Requirements?",
+    "author":"Twinkle",
     "image": "https://gov.silicontechlab.com/sgi/assets/images/blog/ster.png",
-    "date": "2026-01-08",
-    "category": "Medical Equipment"
+    "date": "2026-01-05",
+    "category": "Regulatory Compliance",
+    "description": "Meeting regulatory requirements in healthcare, pharmaceuticals, and medical device manufacturing is non-negotiable. Regulatory authorities across the globe demand stringent sterilization, safety, and quality assurance standards to protect patients and end users. Gamma irradiation services play a vital role in helping organizations achieve and maintain these regulatory expectations with confidence."
   },
    {
     "id": 3,
-    "title": "Technology Transforming Surgical Sterilization",
-    "description": "Sterilization has always been a critical component of surgical safety...",
+    "title": "Future of Food Security: How Irradiation Method of Food Preservation Supports Make in India Initiative?",
+    "author":"Twinkle",
     "image": "https://gov.silicontechlab.com/sgi/assets/images/blog/ster.png",
-    "date": "2026-01-07",
-    "category": "Medical Sterilization"
-  },
-  {
-    "id": 4,
-    "title": "New Advances in Medical Equipment",
-    "description": "Modern equipment is improving surgical outcomes significantly...",
-    "image": "https://gov.silicontechlab.com/sgi/assets/images/blog/ster.png",
-    "date": "2026-01-06",
-    "category": "Medical Equipment"
-  }, {
-    "id": 5,
-    "title": "Technology Transforming Surgical Sterilization",
-    "description": "Sterilization has always been a critical component of surgical safety...",
-    "image": "https://gov.silicontechlab.com/sgi/assets/images/blog/ster.png",
-    "date": "2026-01-10",
-    "category": "Medical Sterilization"
-  },
-  {
-    "id": 6,
-    "title": "New Advances in Medical Equipment",
-    "description": "Modern equipment is improving surgical outcomes significantly...",
-    "image": "https://gov.silicontechlab.com/sgi/assets/images/blog/ster.png",
-    "date": "2026-01-05",
-    "category": "Medical Equipment"
+    "date": "2026-01-08",
+    "category": "Food Irradiation",
+    "description": "India stands at a critical crossroads where food security, agricultural sustainability, and global competitiveness must advance together. As the country strives to feed a growing population while reducing post-harvest losses, food irradiation has emerged as a powerful preservation technology—one that directly supports the goals of the Make in India initiative."
   }
 ]
 

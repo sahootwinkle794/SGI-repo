@@ -217,91 +217,83 @@
             </div>
         </section>
         <!--Blog Details End-->
- <script>
+<script>
+function getBlogId() {
+  return new URLSearchParams(window.location.search).get("id");
+}
 
-        // Function to get query parameter from URL
-  function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
+function calculateReadingTime(html) {
+  const text = html.replace(/<[^>]*>/g, "");
+  const words = text.length / 5;
+  return Math.max(1, Math.ceil(words / 200));
+}
+
+async function loadBlogDetails() {
+  const blogId = getBlogId();
+  const container = document.getElementById("blog-details-container");
+
+  if (!blogId) {
+    container.innerHTML = "<p>No blog selected.</p>";
+    return;
   }
 
-  async function loadBlogDetails() {
-    const blogId = getQueryParam("id");
-    if (!blogId) {
-      document.getElementById("blog-details-container").innerHTML = "<p class='text-danger'>No blog selected.</p>";
+  try {
+    const response = await fetch("http://localhost/SGI-Web/Trunk/blog-api.json");
+    if (!response.ok) throw new Error("API error");
+
+    const blogs = await response.json(); // ✅ ARRAY
+    const blog = blogs.find(b => b.id == blogId);
+
+    if (!blog) {
+      container.innerHTML = "<p>Blog not found.</p>";
       return;
     }
 
-    try {
-      const response = await fetch("http://localhost/SGI-Web/Trunk/blog-api.json");
-      if (!response.ok) throw new Error("Failed to fetch blog data");
+    const date = new Date(blog.date);
+    const day = date.getDate();
+    const month = date.toLocaleString("default", { month: "short" });
+    const readTime = calculateReadingTime(blog.description || "");
 
-      const blogs = await response.json();
-      const blog = blogs.find(b => b.id == blogId);
-
-      if (!blog) {
-        document.getElementById("blog-details-container").innerHTML = "<p class='text-danger'>Blog not found.</p>";
-        return;
-      }
-
-      const dateObj = new Date(blog.date);
-      const day = dateObj.getDate();
-      const month = dateObj.toLocaleString("default", { month: "short" });
-
-      document.getElementById("blog-details-container").innerHTML = `
-        <div class="blog-details__img">
-          <img src="${blog.image}" alt="${blog.title}">
-          <div class="blog-details__tag-1">
-            <a href="javascript:void(0);">${blog.category}</a>
-          </div>
-          <div class="blog-details__date">
-            <p>${day} <span>${month}</span></p>
-          </div>
+    container.innerHTML = `
+      <div class="blog-details__img">
+        <img src="${blog.image}" alt="${blog.title}">
+        <div class="blog-details__tag-1">
+          <a href="#">${blog.category}</a>
         </div>
+        <div class="blog-details__date">
+          <p>${day} <span>${month}</span></p>
+        </div>
+      </div>
 
-        <div class="blog-details__content">
-          <div class="blog-details__user-and-meta">
-            <div class="blog-details__user">
-              <p><span class="icon-user"></span>By Admin</p>
-            </div>
-            <ul class="blog-details__meta list-unstyled">
-              <li><a href="#"><span class="fas fa-comments"></span>Visitors (05)</a></li>
-              <li><a href="#"><span class="fas fa-clock"></span>4 Min Read</a></li>
-            </ul>
+      <div class="blog-details__content">
+        <div class="blog-details__user-and-meta">
+          <div class="blog-details__user">
+            <p><span class="icon-user"></span>By ${blog.author}</p>
           </div>
-
-          <h3 class="blog-details__title">${blog.title}</h3>
-          <p class="blog-details__text-1">${blog.description}</p>
-          <p class="blog-details__text-2">This blog explores more details about ${blog.category} and its impact.</p>
-
-          <h3 class="blog-details__title-2">Detailed Insights</h3>
-          <p class="blog-details__text-3">Here you can add further details, explanations, or steps related to "${blog.title}".</p>
-
-          <h3 class="blog-details__title-2">Key Points</h3>
-          <ul class="about-one__points list-unstyled specific-p">
+          <ul class="blog-details__meta list-unstyled">
+           
             <li>
-              <div class="icon"><span class="fas fa-check"></span></div>
-              <p>Point 1 related to the blog topic.</p>
-            </li>
-            <li>
-              <div class="icon"><span class="fas fa-check"></span></div>
-              <p>Point 2 with additional explanation.</p>
-            </li>
-            <li>
-              <div class="icon"><span class="fas fa-check"></span></div>
-              <p>Point 3 to highlight important aspects.</p>
+              <a href="#"><span class="fas fa-clock"></span>${readTime} Min Read</a>
             </li>
           </ul>
         </div>
-      `;
-    } catch (error) {
-      console.error("Error loading blog details:", error);
-      document.getElementById("blog-details-container").innerHTML = "<p class='text-danger'>Failed to load blog details.</p>";
-    }
-  }
 
-  // Load blog details on page load
-  loadBlogDetails();
+        <h3 class="blog-details__title">${blog.title}</h3>
+
+        <p class="blog-details__text-1">
+          ${blog.description}
+        </p>
+      </div>
+    `;
+  } catch (error) {
+    console.error("BLOG ERROR:", error);
+    container.innerHTML = "<p>Error loading blog details.</p>";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadBlogDetails);
 </script>
+
+
 
 <?php include 'footer.php'; ?>
