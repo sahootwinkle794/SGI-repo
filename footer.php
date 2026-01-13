@@ -253,8 +253,51 @@
      });
  </script>
                            
-                               
-  
+<!-- Search script start-->
+<script>
+let allBlogs = [];
+
+async function loadBlogs() {
+  const res = await fetch("https://gov.silicontechlab.com/sgi_web/api/blogs");
+  const data = await res.json();
+  allBlogs = data.data || [];
+  renderBlogs(allBlogs);
+}
+
+function renderBlogs(blogs) {
+  const wrapper = document.getElementById("blog-container-wrapper");
+  wrapper.innerHTML = "";
+
+  blogs.forEach(blog => {
+    wrapper.innerHTML += `
+      <div class="blog-one__single">
+        <h3>${blog.blog_head}</h3>
+        <p>${stripHTML(blog.blog_details).slice(0,150)}...</p>
+      </div>
+    `;
+  });
+}
+
+function stripHTML(html) {
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  return div.textContent || div.innerText || "";
+}
+
+document.getElementById("searchInput").addEventListener("input", e => {
+  const keyword = e.target.value.toLowerCase();
+
+  const filtered = allBlogs.filter(blog =>
+    blog.blog_head.toLowerCase().includes(keyword) ||
+    stripHTML(blog.blog_details).toLowerCase().includes(keyword)
+  );
+
+  renderBlogs(filtered);
+});
+
+document.addEventListener("DOMContentLoaded", loadBlogs);
+</script>
+
 
  </body>
 

@@ -25,7 +25,7 @@
             <div class="container">
                 <div class="sidebar__single sidebar__search wow fadeInUp mb-4"  data-wow-delay=".1s">
                                 <form action="#" class="sidebar__search-form">
-                                    <input type="search" placeholder="Search...">
+                                    <input type="search" placeholder="Search..." id="searchInput" >
                                     <button type="submit"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>

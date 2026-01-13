@@ -188,7 +188,7 @@
                             <!--End Sidebar Single-->
 
                             <!--Start Sidebar Single-->
-                            <div class="sidebar__single sidebar__post wow fadeInUp" data-wow-delay=".1s">
+                            <!-- <div class="sidebar__single sidebar__post wow fadeInUp" data-wow-delay=".1s">
                                 <h3 class="sidebar__title">Recent Post</h3>
                                 <div class="sidebar__post-box">
                                     <div class="sidebar__post-single">
@@ -210,36 +210,19 @@
                                             </h3>
                                         </div>
                                     </div>
-
-                                    <!-- <div class="sidebar__post-single">
-                                        <div class="sidebar-post__img">
-                                            <img src="assets/images/products/products-1-5.png" alt="">
-                                        </div>
-                                        <div class="sidebar__post-content-box">
-                                            <h3><a href="#">Empowering Farmers Through Smart and Sustainable
-                                                    Practices.</a></h3>
-                                        </div>
-                                    </div> -->
+                                </div>
+                            </div> -->
+                            <div class="sidebar__single sidebar__post wow fadeInUp" data-wow-delay=".1s">
+                                <h3 class="sidebar__title">Recent Post</h3>
+                                <div class="sidebar__post-box" id="recent-posts">
+                                    <!-- Recent posts will load here -->
                                 </div>
                             </div>
+
+
                             <!--End Sidebar Single-->
 
-                            <!--Start Sidebar Single-->
-                            <!-- <div class="sidebar__single sidebar__tags wow fadeInUp" data-wow-delay=".1s">
-                                <h3 class="sidebar__title">Tags Cloud</h3>
-                                <ul class="sidebar__tags-list clearfix list-unstyled">
-                                    <li><a href="#">Sustainability</a></li>
-                                    <li><a href="#">Organic</a></li>
-                                    <li><a href="#">Crop</a></li>
-                                    <li><a href="#">Grain</a></li>
-                                    <li><a href="#">Agro</a></li>
-                                    <li><a href="#">Cultivation</a></li>
-                                    <li><a href="#">EcoFarm</a></li>
-                                    <li><a href="#">AnimalCare</a></li>
-                                    <li><a href="#">AgriLife</a></li>
-                                </ul>
-                            </div> -->
-                            <!--End Sidebar Single-->
+                            
 
                         </div>
                     </div>
@@ -248,6 +231,20 @@
             </div>
         </section>
         <!--Blog Details End-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- blog details api used  -->
 <script>
 const apiUrl = "https://gov.silicontechlab.com/sgi_web/api/blogs";
 
@@ -317,5 +314,78 @@ async function loadBlogDetails() {
 
 document.addEventListener("DOMContentLoaded", loadBlogDetails);
 </script>
+
+
+<!-- recent blog api used -->
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+
+    const BLOG_API = "https://gov.silicontechlab.com/sgi_web/api/blogs";
+    const postsBox = document.getElementById("recent-posts");
+
+    if (!postsBox) {
+        console.error("Sidebar container not found!");
+        return;
+    }
+
+    // Get current blog_id from URL
+    const params = new URLSearchParams(window.location.search);
+    const currentBlogId = params.get("blog_id");
+    console.log("Current Blog ID:", currentBlogId);
+
+    try {
+        const res = await fetch(BLOG_API);
+        const result = await res.json();
+        console.log("API Result:", result);
+
+        if (!result.status || !Array.isArray(result.data)) {
+            console.error("No blog data available");
+            postsBox.innerHTML = "<p>No recent posts available</p>";
+            return;
+        }
+
+        // Sort blogs by date descending
+        const sortedBlogs = result.data.sort((a, b) => {
+            const dateA = new Date(`${a.year}-${a.month}-${a.day}`);
+            const dateB = new Date(`${b.year}-${b.month}-${b.day}`);
+            return dateB - dateA;
+        });
+
+        // Exclude current blog
+        const filteredBlogs = sortedBlogs.filter(blog => String(blog.blog_id) !== String(currentBlogId));
+
+        // Take top 2
+        const recentBlogs = filteredBlogs.slice(0, 2);
+
+        if (recentBlogs.length === 0) {
+            postsBox.innerHTML = "<p>No recent posts available</p>";
+            return;
+        }
+
+        // Render
+        recentBlogs.forEach(blog => {
+            const html = `
+                <div class="sidebar__post-single">
+                    <div class="sidebar-post__img">
+                        <img src="${blog.photo_path}" alt="${blog.blog_head}" />
+                    </div>
+                    <div class="sidebar__post-content-box">
+                        <h3>
+                            <a href="blog-details?blog_id=${blog.blog_id}">${blog.blog_head}</a>
+                        </h3>
+                    </div>
+                </div>
+            `;
+            postsBox.insertAdjacentHTML("beforeend", html);
+        });
+
+    } catch (err) {
+        console.error("Error loading recent posts:", err);
+        postsBox.innerHTML = "<p>Error loading recent posts</p>";
+    }
+
+});
+</script>
+
 
 <?php include 'footer.php'; ?>
