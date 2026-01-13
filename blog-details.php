@@ -25,7 +25,38 @@
                 <div class="row">
                     <!-- <div class="col-xl-8 col-lg-7"> -->
                         <div class="col-xl-8 col-lg-7 blog-details__left"  id="blog-details-container">
-                            <p>Loading blog details...</p>
+                            <div class="blog-details__img">
+                                <img id="blog-image" src="" alt="">
+                                <div class="blog-details__tag-1">
+                                    <a href="javascript:void(0);" id="blog-category"></a>
+                                </div>
+                                <div class="blog-details__date">
+                                    <p id="blog-date"></p>
+                                </div>
+                            </div>
+
+                            <div class="blog-details__content">
+                                <div class="blog-details__user-and-meta">
+                                    <div class="blog-details__user">
+                                        <p><span class="icon-user"></span>By <span id="blog-author"></span></p>
+                                    </div>
+                                    <ul class="blog-details__meta list-unstyled">
+                                        <li>
+                                            <a href="#"><span class="fas fa-comments"></span>Visitors (05)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fas fa-clock"></span>4 Min Read</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <h3 class="blog-details__title" id="blog-title"></h3>
+
+                                <!-- FULL BLOG CONTENT -->
+                                <div id="blog-content"></div>
+                            </div>
+
+                            <!-- <p>Loading blog details...</p> -->
 
                             <!-- <div class="blog-details__img">
                                  <img src="assets/images/blog/ster.png" alt="">
@@ -218,82 +249,43 @@
         </section>
         <!--Blog Details End-->
 <script>
-function getBlogId() {
-  return new URLSearchParams(window.location.search).get("id");
-}
+const apiUrl = "https://gov.silicontechlab.com/sgi_web/api/blogs";
 
-function calculateReadingTime(html) {
-  const text = html.replace(/<[^>]*>/g, "");
-  const words = text.length / 5;
-  return Math.max(1, Math.ceil(words / 200));
-}
+// Get blog_id from URL
+const params = new URLSearchParams(window.location.search);
+const blogId = params.get("blog_id");
 
 async function loadBlogDetails() {
-  const blogId = getBlogId();
-  const container = document.getElementById("blog-details-container");
+    try {
+        const response = await fetch(apiUrl);
+        const result = await response.json();
 
-  if (!blogId) {
-    container.innerHTML = "<p>No blog selected.</p>";
-    return;
-  }
+        if (!result.status) return;
 
-  try {
-    const response = await fetch("http://localhost/SGI-Web/Trunk/blog-api.json");
-    if (!response.ok) throw new Error("API error");
+        const blog = result.data.find(item => item.blog_id == blogId);
+        if (!blog) return;
 
-    const blogs = await response.json(); // ✅ ARRAY
-    const blog = blogs.find(b => b.id == blogId);
+        // Month name
+        const monthName = new Date(`${blog.year}-${blog.month}-01`)
+            .toLocaleString("default", { month: "short" });
 
-    if (!blog) {
-      container.innerHTML = "<p>Blog not found.</p>";
-      return;
+        // Bind data
+        document.getElementById("blog-image").src = blog.photo_path;
+        document.getElementById("blog-category").innerText = blog.cat_name;
+        document.getElementById("blog-date").innerHTML = `${blog.day} <span>${monthName}</span>`;
+        document.getElementById("blog-author").innerText = blog.blog_auther;
+        document.getElementById("blog-title").innerText = blog.blog_head;
+
+        // Blog content (API already sends HTML)
+        document.getElementById("blog-content").innerHTML = blog.blog_details;
+
+    } catch (error) {
+        console.error("Blog Details Error:", error);
     }
-
-    const date = new Date(blog.date);
-    const day = date.getDate();
-    const month = date.toLocaleString("default", { month: "short" });
-    const readTime = calculateReadingTime(blog.description || "");
-
-    container.innerHTML = `
-      <div class="blog-details__img">
-        <img src="${blog.image}" alt="${blog.title}">
-        <div class="blog-details__tag-1">
-          <a href="#">${blog.category}</a>
-        </div>
-        <div class="blog-details__date">
-          <p>${day} <span>${month}</span></p>
-        </div>
-      </div>
-
-      <div class="blog-details__content">
-        <div class="blog-details__user-and-meta">
-          <div class="blog-details__user">
-            <p><span class="icon-user"></span>By ${blog.author}</p>
-          </div>
-          <ul class="blog-details__meta list-unstyled">
-           
-            <li>
-              <a href="#"><span class="fas fa-clock"></span>${readTime} Min Read</a>
-            </li>
-          </ul>
-        </div>
-
-        <h3 class="blog-details__title">${blog.title}</h3>
-
-        <p class="blog-details__text-1">
-          ${blog.description}
-        </p>
-      </div>
-    `;
-  } catch (error) {
-    console.error("BLOG ERROR:", error);
-    container.innerHTML = "<p>Error loading blog details.</p>";
-  }
 }
 
 document.addEventListener("DOMContentLoaded", loadBlogDetails);
 </script>
-
 
 
 <?php include 'footer.php'; ?>

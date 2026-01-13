@@ -11,7 +11,7 @@
   {
     "id": 2,
     "title": "How Gamma Irradiation Services Can Help You Meet Regulatory Requirements?",
-    "author":"Twinkle",
+    "author":"Jeet",
     "image": "https://gov.silicontechlab.com/sgi/assets/images/blog/ster.png",
     "date": "2026-01-05",
     "category": "Regulatory Compliance",
@@ -20,7 +20,7 @@
    {
     "id": 3,
     "title": "Future of Food Security: How Irradiation Method of Food Preservation Supports Make in India Initiative?",
-    "author":"Twinkle",
+    "author":"Trupti",
     "image": "https://gov.silicontechlab.com/sgi/assets/images/blog/ster.png",
     "date": "2026-01-08",
     "category": "Food Irradiation",
@@ -29,3 +29,4 @@
 ]
 
 
+// https://gov.silicontechlab.com/sgi_web/api/blogs

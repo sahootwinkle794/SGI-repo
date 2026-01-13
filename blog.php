@@ -29,7 +29,7 @@
                                     <button type="submit"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
-                <div class="row row-cols-3" id="blog-container" >
+                <div class="row row-cols-3" id="blog-container-wrapper" >
                     <!--Blog One Single Start-->
                         <!-- <div class="blog-one__single" id="blog-container">
                             <div class="blog-one__single-inner">
@@ -309,81 +309,90 @@
         <!--Blog Page End-->
 
 <script>
-fetch("http://localhost/SGI-Web/Trunk/blog-api.json")
-  .then(response => response.json())
-  .then(blogs => {
+  // API endpoint
+  const blogApiUrl = "https://gov.silicontechlab.com/sgi_web/api/blogs";
 
-    const container = document.getElementById("blog-container");
-    container.innerHTML = ""; // clear static content
+  async function loadBlogs() {
+    try {
+      const response = await fetch(blogApiUrl);
+      const result = await response.json();
 
-    blogs.forEach(blog => {
-      const dateObj = new Date(blog.date);
-      const day = dateObj.getDate();
-      const month = dateObj.toLocaleString("default", { month: "short" });
+      if (result.status && Array.isArray(result.data)) {
+        const blogWrapper = document.getElementById("blog-container-wrapper");
+        blogWrapper.innerHTML = ""; // clear
 
-      const card = document.createElement("div");
-      card.className = "col-lg-4 col-md-6";
+        result.data.forEach(blog => {
+          const { blog_id, blog_auther, blog_head, blog_details, cat_name, photo_path, year, month, day } = blog;
 
-      card.innerHTML = `
-        <div class="blog-one__single">
-          <div class="blog-one__single-inner">
-            <div class="blog-one__img-box">
-              <div class="blog-one__img">
-                <img src="${blog.image}" alt="${blog.title}">
-                <div class="blog-one__plus">
-                  <a href="blog-details?id=${blog.id}">
-                    <i class="fas fa-plus"></i>
+          const blogHtml = `
+            <div class="blog-one__single" id="blog-${blog_id}">
+              <div class="blog-one__single-inner">
+                
+                <!-- Image & Date -->
+                <div class="blog-one__img-box">
+                  <div class="blog-one__img">
+                    <img src="${photo_path}" alt="${blog_head}">
+                    <div class="blog-one__plus">
+                      <a href="blog-details?blog_id=${blog_id}">
+                        <i class="fas fa-plus"></i>
+                      </a>
+                    </div>
+                    <div class="blog-one__tag">
+                      <a href="blog-details?blog_id=${blog_id}">
+                        ${cat_name}
+                      </a>
+                    </div>
+                  </div>
+                  <div class="blog-one__date">
+                    <p>${day} <span>${new Date(`${year}-${month}-01`).toLocaleString('default', { month: 'short' })}</span></p>
+                  </div>
+                </div>
+
+                <!-- Content -->
+                <div class="blog-one__content">
+                  <div class="blog-one__content-bg-shape"
+                       style="background-image: url(assets/images/shapes/blog-one-content-bg-shape.png);">
+                  </div>
+                  <ul class="blog-one__meta list-unstyled">
+                    <li>
+                      <a href="blog-details?blog_id=${blog_id}">
+                        <span class="fas fa-user"></span>${blog_auther}
+                      </a>
+                    </li>
+                    <li>
+                      <a href="blog-details?blog_id=${blog_id}">
+                        <span class="fas fa-comments"></span>0 Visitors
+                      </a>
+                    </li>
+                  </ul>
+                  <h3 class="blog-one__title">
+                    <a href="blog-details?blog_id=${blog_id}">${blog_head}</a>
+                  </h3>
+                  <p class="blog-one__text">${blog_details.substring(0, 150).replace(/(<([^>]+)>)/gi, "")}...</p>
+                </div>
+
+                <!-- Read More -->
+                <div class="blog-one__read-more">
+                  <a href="blog-details?blog_id=${blog_id}">
+                    Read More<span class="fas fa-arrow-right"></span>
                   </a>
                 </div>
-                <div class="blog-one__tag">
-                  <a href="blog-details?id=${blog.id}">
-                    ${blog.category}
-                  </a>
-                </div>
-              </div>
-              <div class="blog-one__date">
-                <p>${day} <span>${month}</span></p>
+
               </div>
             </div>
+          `;
 
-            <div class="blog-one__content">
-              <div class="blog-one__content-bg-shape"
-                style="background-image:url(assets/images/shapes/blog-one-content-bg-shape.png);">
-              </div>
+          blogWrapper.insertAdjacentHTML("beforeend", blogHtml);
+        });
+      }
+    } catch (error) {
+      console.error("Error loading blogs:", error);
+    }
+  }
 
-              <ul class="blog-one__meta list-unstyled">
-                <li>
-                  <a href="blog-details?id=${blog.id}">
-                    <span class="fas fa-user"></span>${blog.author}
-                  </a>
-                </li>
-                 <li><a href="#"><span class="fas fa-clock"></span>4 Min Read</a></li>
-              </ul>
-
-              <h3 class="blog-one__title">
-                <a href="blog-details?id=${blog.id}">
-                  ${blog.title}
-                </a>
-              </h3>
-
-              <p class="blog-one__text">
-                ${blog.description}
-              </p>
-            </div>
-
-            <div class="blog-one__read-more">
-              <a href="blog-details?id=${blog.id}">
-                Read More <span class="fas fa-arrow-right"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      `;
-
-      container.appendChild(card);
-    });
-  })
-  .catch(error => console.error("Blog load error:", error));
+  // Load blogs on page load
+  window.addEventListener("DOMContentLoaded", loadBlogs);
 </script>
+
 
 <?php include 'footer.php'; ?>
