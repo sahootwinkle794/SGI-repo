@@ -173,6 +173,13 @@
                             <!--Start Sidebar Single-->
                             <div class="sidebar__single sidebar__category wow fadeInUp" data-wow-delay=".1s">
                                 <h3 class="sidebar__title">Categories</h3>
+                                <ul class="sidebar__category-list list-unstyled" id="category-list">
+                                    <!-- Categories will be populated here -->
+                                </ul>
+                            </div>
+
+                            <!-- <div class="sidebar__single sidebar__category wow fadeInUp" data-wow-delay=".1s">
+                                <h3 class="sidebar__title">Categories</h3>
                                 <ul class="sidebar__category-list list-unstyled">
                                     <li class="active"><a href="#">
                                             Medical Sterilization <span>(12)</span></a></li>
@@ -184,7 +191,7 @@
                                     <li><a href="#">
                                             Food Preservation <span>(14)</span></a></li>
                                 </ul>
-                            </div>
+                            </div> -->
                             <!--End Sidebar Single-->
 
                             <!--Start Sidebar Single-->
@@ -387,5 +394,74 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 </script>
 
+<!-- blog category api used -->
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+
+    const BLOG_API = "https://gov.silicontechlab.com/sgi_web/api/blogs";
+    const categoryList = document.getElementById("category-list");
+
+    if (!categoryList) {
+        console.error("Category list container not found!");
+        return;
+    }
+
+    // Get current blog_id from URL (?blog_id=123)
+    const params = new URLSearchParams(window.location.search);
+    const blogId = params.get("blog_id");
+
+    try {
+        const res = await fetch(BLOG_API);
+        const result = await res.json();
+
+        if (!result.status || !Array.isArray(result.data)) {
+            categoryList.innerHTML = "<li>No categories available</li>";
+            return;
+        }
+
+        // Get current blog to detect active category
+        let activeCategory = null;
+        if (blogId) {
+            const currentBlog = result.data.find(blog => blog.blog_id == blogId);
+            if (currentBlog) activeCategory = currentBlog.cat_name;
+        }
+
+        // Count blogs per category
+        const counts = {};
+        result.data.forEach(blog => {
+            const cat = blog.cat_name || "Uncategorized";
+            counts[cat] = (counts[cat] || 0) + 1;
+        });
+
+        // Sort categories alphabetically (optional)
+        const sortedCategories = Object.keys(counts).sort();
+
+        // Render categories
+        categoryList.innerHTML = "";
+        sortedCategories.forEach(catName => {
+            const count = counts[catName];
+            const li = document.createElement("li");
+
+            // Highlight active category
+            if (activeCategory && catName === activeCategory) {
+                li.classList.add("active"); // CSS can style .active differently
+            }
+
+            li.innerHTML = `
+                <a href="blog-page.html?category=${encodeURIComponent(catName)}">
+                    ${catName} <span>(${count})</span>
+                </a>
+            `;
+            categoryList.appendChild(li);
+        });
+
+    } catch (err) {
+        console.error("Error loading categories:", err);
+        categoryList.innerHTML = "<li>Error loading categories</li>";
+    }
+
+});
+</script>
 
 <?php include 'footer.php'; ?>
