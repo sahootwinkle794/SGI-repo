@@ -8495,6 +8495,8 @@ About One
   display: block;
   overflow: hidden;
   z-index: 1;
+  width: 100%;
+  height: 250px;
 }
 
 .blog-one__img:before {
