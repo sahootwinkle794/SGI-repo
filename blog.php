@@ -307,91 +307,91 @@
             </div>
         </section>
         <!--Blog Page End-->
-
 <script>
-  // API endpoint
-  const blogApiUrl = "https://gov.silicontechlab.com/sgi_web/api/blogs";
+const blogApiUrl = "https://gov.silicontechlab.com/sgi_web/api/blogs";
 
-  async function loadBlogs() {
-    try {
-      const response = await fetch(blogApiUrl);
-      const result = await response.json();
+// Strip HTML safely
+function stripHTML(html = "") {
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  return div.textContent || div.innerText || "";
+}
 
-      if (result.status && Array.isArray(result.data)) {
-        const blogWrapper = document.getElementById("blog-container-wrapper");
-        blogWrapper.innerHTML = ""; // clear
+// Calculate reading time
+function getReadingTime(html = "") {
+  const words = stripHTML(html).trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 200));
+}
 
-        result.data.forEach(blog => {
-          const { blog_id, blog_auther, blog_head, blog_details, cat_name, photo_path, year, month, day } = blog;
+async function loadBlogs() {
+  try {
+    const res = await fetch(blogApiUrl);
+    const result = await res.json();
+    console.log("BLOG API DATA:", result); // Check console
 
-          const blogHtml = `
-            <div class="blog-one__single" id="blog-${blog_id}">
-              <div class="blog-one__single-inner">
-                
-                <!-- Image & Date -->
-                <div class="blog-one__img-box">
-                  <div class="blog-one__img">
-                    <img src="${photo_path}" alt="${blog_head}">
-                    <div class="blog-one__plus">
-                      <a href="blog-details?blog_id=${blog_id}">
-                        <i class="fas fa-plus"></i>
-                      </a>
-                    </div>
-                    <div class="blog-one__tag">
-                      <a href="blog-details?blog_id=${blog_id}">
-                        ${cat_name}
-                      </a>
-                    </div>
+    if (!result.status || !Array.isArray(result.data)) return;
+
+    const container = document.getElementById("blog-container-wrapper");
+    container.innerHTML = "";
+
+    result.data.forEach(blog => {
+      const plainText = stripHTML(blog.blog_details);
+      const minutes = getReadingTime(blog.blog_details);
+
+      const blogHtml = `
+        <div class="col-xl-4 col-lg-4 col-md-6">
+          <div class="blog-one__single">
+            <div class="blog-one__single-inner">
+
+              <!-- Image & Date -->
+              <div class="blog-one__img-box">
+                <div class="blog-one__img">
+                  <img src="${blog.photo_path}" alt="${blog.blog_head}">
+                  <div class="blog-one__plus">
+                    <a href="blog-details?blog_id=${blog.blog_id}">
+                      <i class="fas fa-plus"></i>
+                    </a>
                   </div>
-                  <div class="blog-one__date">
-                    <p>${day} <span>${new Date(`${year}-${month}-01`).toLocaleString('default', { month: 'short' })}</span></p>
+                  <div class="blog-one__tag">
+                    <a href="blog-details?blog_id=${blog.blog_id}">${blog.cat_name}</a>
                   </div>
                 </div>
-
-                <!-- Content -->
-                <div class="blog-one__content">
-                  <div class="blog-one__content-bg-shape"
-                       style="background-image: url(assets/images/shapes/blog-one-content-bg-shape.png);">
-                  </div>
-                  <ul class="blog-one__meta list-unstyled">
-                    <li>
-                      <a href="blog-details?blog_id=${blog_id}">
-                        <span class="fas fa-user"></span>${blog_auther}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="blog-details?blog_id=${blog_id}">
-                        <span class="fas fa-comments"></span>0 Visitors
-                      </a>
-                    </li>
-                  </ul>
-                  <h3 class="blog-one__title">
-                    <a href="blog-details?blog_id=${blog_id}">${blog_head}</a>
-                  </h3>
-                  <p class="blog-one__text">${blog_details.substring(0, 150).replace(/(<([^>]+)>)/gi, "")}...</p>
+                <div class="blog-one__date">
+                  <p>${blog.day} <span>${new Date(`${blog.year}-${blog.month}-01`).toLocaleString('default', { month: 'short' })}</span></p>
                 </div>
-
-                <!-- Read More -->
-                <div class="blog-one__read-more">
-                  <a href="blog-details?blog_id=${blog_id}">
-                    Read More<span class="fas fa-arrow-right"></span>
-                  </a>
-                </div>
-
               </div>
+
+              <!-- Content -->
+              <div class="blog-one__content">
+                <ul class="blog-one__meta list-unstyled">
+                  <li><span class="fas fa-user"></span> ${blog.blog_auther}</li>
+                  <li><span class="fas fa-clock"></span> ${minutes} Min Read</li>
+                </ul>
+                <h3 class="blog-one__title">
+                  <a href="blog-details?blog_id=${blog.blog_id}">${blog.blog_head}</a>
+                </h3>
+                <!-- Description inside blog-one__text -->
+                <div class="blog-one__text">${plainText}</div>
+              </div>
+
+              <!-- Read More -->
+              <div class="blog-one__read-more">
+                <a href="blog-details?blog_id=${blog.blog_id}">Read More <span class="fas fa-arrow-right"></span></a>
+              </div>
+
             </div>
-          `;
+          </div>
+        </div>
+      `;
+      container.insertAdjacentHTML("beforeend", blogHtml);
+    });
 
-          blogWrapper.insertAdjacentHTML("beforeend", blogHtml);
-        });
-      }
-    } catch (error) {
-      console.error("Error loading blogs:", error);
-    }
+  } catch (err) {
+    console.error("Error loading blogs:", err);
   }
+}
 
-  // Load blogs on page load
-  window.addEventListener("DOMContentLoaded", loadBlogs);
+window.addEventListener("DOMContentLoaded", loadBlogs);
 </script>
 
 

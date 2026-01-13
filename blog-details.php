@@ -41,9 +41,9 @@
                                         <p><span class="icon-user"></span>By <span id="blog-author"></span></p>
                                     </div>
                                     <ul class="blog-details__meta list-unstyled">
-                                        <li>
+                                        <!-- <li>
                                             <a href="#"><span class="fas fa-comments"></span>Visitors (05)</a>
-                                        </li>
+                                        </li> -->
                                         <li>
                                             <a href="#"><span class="fas fa-clock"></span>4 Min Read</a>
                                         </li>
@@ -251,41 +251,71 @@
 <script>
 const apiUrl = "https://gov.silicontechlab.com/sgi_web/api/blogs";
 
+// Helper to decode HTML entities
+function decodeHTML(html) {
+  const txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
+}
+
+// Helper to strip HTML for reading time
+function stripHTML(html = "") {
+  const div = document.createElement("div");
+  div.innerHTML = decodeHTML(html);
+  return div.textContent || div.innerText || "";
+}
+
+// Calculate reading time
+function getReadingTime(html = "") {
+  const words = stripHTML(html).trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 200));
+}
+
 // Get blog_id from URL
 const params = new URLSearchParams(window.location.search);
 const blogId = params.get("blog_id");
 
 async function loadBlogDetails() {
-    try {
-        const response = await fetch(apiUrl);
-        const result = await response.json();
+  try {
+    const response = await fetch(apiUrl);
+    const result = await response.json();
+    console.log("BLOG DETAILS DATA:", result);
 
-        if (!result.status) return;
+    if (!result.status || !Array.isArray(result.data)) return;
 
-        const blog = result.data.find(item => item.blog_id == blogId);
-        if (!blog) return;
+    const blog = result.data.find(b => String(b.blog_id) === String(blogId));
+    if (!blog) return;
 
-        // Month name
-        const monthName = new Date(`${blog.year}-${blog.month}-01`)
-            .toLocaleString("default", { month: "short" });
+    // Decode HTML content
+    const decodedContent = decodeHTML(blog.blog_details || "");
 
-        // Bind data
-        document.getElementById("blog-image").src = blog.photo_path;
-        document.getElementById("blog-category").innerText = blog.cat_name;
-        document.getElementById("blog-date").innerHTML = `${blog.day} <span>${monthName}</span>`;
-        document.getElementById("blog-author").innerText = blog.blog_auther;
-        document.getElementById("blog-title").innerText = blog.blog_head;
+    // Month name
+    const monthName = new Date(`${blog.year}-${blog.month}-01`)
+      .toLocaleString("default", { month: "short" });
 
-        // Blog content (API already sends HTML)
-        document.getElementById("blog-content").innerHTML = blog.blog_details;
+    // Bind data
+    document.getElementById("blog-image").src = blog.photo_path || "assets/images/blog/default.png";
+    document.getElementById("blog-category").innerText = blog.cat_name || "";
+    document.getElementById("blog-date").innerHTML = `${blog.day} <span>${monthName}</span>`;
+    document.getElementById("blog-author").innerText = blog.blog_auther || "Admin";
+    document.getElementById("blog-title").innerText = blog.blog_head || "";
 
-    } catch (error) {
-        console.error("Blog Details Error:", error);
+    // Update reading time
+    const minutes = getReadingTime(blog.blog_details);
+    const clockMeta = document.querySelector(".blog-details__meta li a .fas.fa-clock")?.parentElement;
+    if (clockMeta) {
+      clockMeta.innerHTML = `<span class="fas fa-clock"></span> ${minutes} Min Read`;
     }
+
+    // Render decoded HTML content
+    document.getElementById("blog-content").innerHTML = decodedContent;
+
+  } catch (error) {
+    console.error("Blog Details Error:", error);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", loadBlogDetails);
 </script>
-
 
 <?php include 'footer.php'; ?>
