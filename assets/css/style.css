@@ -8462,6 +8462,44 @@ About One
 /*--------------------------------------------------------------
 # Blog One
 --------------------------------------------------------------*/
+#blog-content{
+  height: 500px;
+  overflow-y: scroll;
+}
+#blog-content p span{
+  font-size: 17px !important;
+}
+#blog-content li  span{
+  font-size: 17px !important;
+}
+#blog-content ul {
+    padding-left: 0;
+}
+
+#blog-content li {
+    list-style: none !important;
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 10px;
+}
+#blog-content h3 span strong{
+  color: var(--farmology-extra) !important;
+  font-size: 30px !important;
+}
+#blog-content h3{
+  margin: 20px 0px !important;
+}
+#blog-content li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(135deg, #429d04f6, #0aedf6e8);
+    border-radius: 10%;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
 .blog-one {
   position: relative;
   display: block;
@@ -9636,7 +9674,7 @@ Cta One
 
 .about-two__img-2 {
   position: absolute;
-  bottom: -156px;
+  bottom: 46px;
   right: -145px;
   border-top: 5px solid var(--farmology-white);
   border-left: 5px solid var(--farmology-white);
@@ -23859,10 +23897,25 @@ padding-top: 40px;
 }
 }
 
+@media (min-width:300px) and (max-width:800px){
+ div#blog-content {
+    height: auto !important;
+    overflow-y: visible !important;
+}
+  .sidebar__single.sidebar__category.wow.fadeInUp.blog-cat.animated {
+    display: none !important;
+}
+.blog-details__user-and-meta {
+    flex-direction: row !important;
+    gap: 20px;
+    justify-content: space-between !important;
+}
+}
 
 
 
 @media (min-width: 470px) and (max-width: 780px){
+ 
     .footer-widget__contact {
         margin-left: 0;
         margin-top: 33px;

@@ -26,10 +26,15 @@
                 <div class="sidebar__single sidebar__search wow fadeInUp mb-4"  data-wow-delay=".1s">
                                 <form action="#" class="sidebar__search-form">
                                     <input type="search" placeholder="Search..." id="searchInput" >
-                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                    <button type="submit" id="searchBtn"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
-                <div class="row row-cols-3" id="blog-container-wrapper" >
+                <div class="row row-cols-md-3" id="blog-container-wrapper" >
+                            <div class="col-xl-4 col-lg-4 col-md-6 skeleton-card"></div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 skeleton-card"></div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 skeleton-card"></div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 skeleton-card"></div>
+
                     <!--Blog One Single Start-->
                         <!-- <div class="blog-one__single" id="blog-container">
                             <div class="blog-one__single-inner">

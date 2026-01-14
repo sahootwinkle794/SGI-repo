@@ -171,8 +171,8 @@
 
 
                             <!--Start Sidebar Single-->
-                            <div class="sidebar__single sidebar__category wow fadeInUp" data-wow-delay=".1s">
-                                <h3 class="sidebar__title">Categories</h3>
+                            <div class="sidebar__single sidebar__category wow fadeInUp blog-cat" data-wow-delay=".1s">
+                                <h3 class="sidebar__title ">Categories</h3>
                                 <ul class="sidebar__category-list list-unstyled" id="category-list">
                                     <!-- Categories will be populated here -->
                                 </ul>
@@ -449,7 +449,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
             li.innerHTML = `
-                <a href="blog-page.html?category=${encodeURIComponent(catName)}">
+                <a href="blog?category=${encodeURIComponent(catName)}">
                     ${catName} <span>(${count})</span>
                 </a>
             `;

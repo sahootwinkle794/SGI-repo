@@ -257,16 +257,27 @@
 <script>
 let allBlogs = [];
 
+// 🔹 Load blogs from API
 async function loadBlogs() {
-  const res = await fetch("https://gov.silicontechlab.com/sgi_web/api/blogs");
-  const data = await res.json();
-  allBlogs = data.data || [];
-  renderBlogs(allBlogs);
+  try {
+    const res = await fetch("https://gov.silicontechlab.com/sgi_web/api/blogs");
+    const data = await res.json();
+    allBlogs = data.data || [];
+    renderBlogs(allBlogs);
+  } catch (err) {
+    console.error("Blog loading failed", err);
+  }
 }
 
+// 🔹 Render blogs
 function renderBlogs(blogs) {
   const wrapper = document.getElementById("blog-container-wrapper");
   wrapper.innerHTML = "";
+
+  if (!blogs.length) {
+    wrapper.innerHTML = "<p>No blogs found.</p>";
+    return;
+  }
 
   blogs.forEach(blog => {
     wrapper.innerHTML += `
@@ -278,14 +289,26 @@ function renderBlogs(blogs) {
   });
 }
 
+// 🔹 Strip HTML tags
 function stripHTML(html) {
   const div = document.createElement("div");
   div.innerHTML = html;
   return div.textContent || div.innerText || "";
 }
 
-document.getElementById("searchInput").addEventListener("input", e => {
-  const keyword = e.target.value.toLowerCase();
+// 🔍 Unified search logic
+function searchBlogs() {
+  const keyword = searchInput.value.toLowerCase().trim();
+
+  // 🔄 When search is cleared (❌ icon)
+  if (!keyword) {
+    const wrapper = document.getElementById("blog-container-wrapper");
+    wrapper.innerHTML = "";          // force DOM reset
+    setTimeout(() => {
+      renderBlogs(allBlogs);         // clean refresh
+    }, 0);
+    return;
+  }
 
   const filtered = allBlogs.filter(blog =>
     blog.blog_head.toLowerCase().includes(keyword) ||
@@ -293,11 +316,62 @@ document.getElementById("searchInput").addEventListener("input", e => {
   );
 
   renderBlogs(filtered);
+}
+
+// 🔹 Elements
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+
+// 🔹 Typing search + ❌ clear icon
+searchInput.addEventListener("input", searchBlogs);
+
+// 🔹 ENTER key
+searchInput.addEventListener("keydown", e => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    searchBlogs();
+  }
 });
 
+// 🔹 Button click
+searchBtn.addEventListener("click", e => {
+  e.preventDefault();
+  searchBlogs();
+});
+
+// 🔹 Load blogs on page load
 document.addEventListener("DOMContentLoaded", loadBlogs);
 </script>
 
+<!-- header active menu script  -->
+
+<script>
+    const currentPath = window.location.pathname.split("/").pop();
+
+    const menuLinks = document.querySelectorAll(".main-menu__list li a");
+    let hasMatch = false;
+
+    menuLinks.forEach(link => {
+        const href = link.getAttribute("href");
+
+        if (
+            href === currentPath ||
+            (currentPath === "" && href === "index")
+        ) {
+            link.parentElement.classList.add("current");
+            hasMatch = true;
+        } else {
+            link.parentElement.classList.remove("current");
+        }
+    });
+
+    // If page doesn't belong to any nav item → remove all 'current'
+    if (!hasMatch) {
+        document
+            .querySelectorAll(".main-menu__list li.current")
+            .forEach(li => li.classList.remove("current"));
+    }
+</script>
 
  </body>
 

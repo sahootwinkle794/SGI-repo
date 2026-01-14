@@ -849,13 +849,13 @@
                         <div class="about-two__shape-2 float-bob-y">
                             <img src="assets/images/shapes/about-two-shape-2.png" alt="">
                         </div>
-                        <div class="about-two__experience">
+                        <!-- <div class="about-two__experience">
                             <div class="about-two__experience-count-box count-box">
                                 <h3 class="count-text" data-stop="25" data-speed="1500"></h3>
                                 <span>+</span>
                             </div>
                             <p class="about-two__experience-count-text">Years of<br> Experience</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
