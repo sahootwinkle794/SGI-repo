@@ -3,10 +3,10 @@
      <div class="site-footer__bg" style="background-image: url(assets/images/backgrounds/site-footer-bg.jpg);">
      </div>
      <div class="site-footer__top">
-         <div class="container">
+         <div class="container-fluid">
              <div class="site-footer__top-inner">
                  <div class="row">
-                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                     <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                          <div class="footer-widget__about">
                              <div class="main-menu__logo">
                                  <a href="index"><img src="assets/images/resources/logo-2.svg" alt="" class="logo-img">
@@ -55,15 +55,23 @@
                              </ul>
                          </div>
                      </div>
-                     <div class="col-xl-3 col-lg-6 col-md-6 custom-col wow fadeInUp" data-wow-delay="300ms">
-                         <div class="footer-widget__services">
+                     <div class="col-xl-4 col-lg-6 col-md-6 custom-col wow fadeInUp" data-wow-delay="300ms">
+                         <div class="footer-widget__services services-li">
                              <h4 class="footer-widget__title">Our Services</h4>
                              <ul class="footer-widget__links-list list-unstyled">
                                  <li><span class="fas fa-wheat"></span><a href="services">Shrimp Irradiation</a></li>
-                                 <li><span class="fas fa-wheat"></span><a href="services">Vegetable Processing</a></li>
-                                 <li><span class="fas fa-wheat"></span><a href="services">Fruits Processing</a></li>
                                  <li><span class="fas fa-wheat"></span><a href="services">Frozen Seafoods</a></li>
+                                 <li><span class="fas fa-wheat"></span><a href="services">Fruits Processing</a></li>
                                  <li><span class="fas fa-wheat"></span><a href="services">Meat & Poultry</a></li>
+                                 <li><span class="fas fa-wheat"></span><a href="services">Vegetable Processing</a></li>
+                                 <li><span class="fas fa-wheat"></span><a href="services">Spices</a></li>
+                                 <li><span class="fas fa-wheat"></span><a href="services">Rice & Pulses</a></li>
+                                 <li><span class="fas fa-wheat"></span><a href="services">Onion, Ginger & Garlic</a></li>
+                                 <li><span class="fas fa-wheat"></span><a href="services">Ayurvedic Medicine</a></li>
+                                 <li><span class="fas fa-wheat"></span><a href="services">Pharma</a></li>
+                                 <li><span class="fas fa-wheat"></span><a href="services">Pet Food</a></li>
+                                 <li><span class="fas fa-wheat"></span><a href="services">Leather Goods</a></li>
+                                 
                              </ul>
                          </div>
                      </div>
@@ -113,14 +121,17 @@
          </div>
      </div>
      <div class="site-footer__bottom">
-         <div class="container">
+         <div class="container-fluid">
              <div class="row">
                  <div class="col-xl-12">
                      <div class="site-footer__bottom-inner">
                          <div class="site-footer__copyright">
-                             <p class="site-footer__copyright-text">Copyright@ 2025 <a href="index">Sukshma
-                                     Gamma</a>. All Rights Reserved.</p>
-                         </div>
+                            <p class="site-footer__copyright-text">
+                               Copyright © <span id="currentYear"></span>
+                                <a href="index">Sukshma Gamma</a>. All Rights Reserved.
+                            </p>
+                            </div>
+
                          <div class="site-footer__bottom-menu-box">
                              <ul class="list-unstyled site-footer__bottom-menu">
                                  <li><a href="javascript:void(0);">Terms of Service</a></li>
@@ -230,6 +241,13 @@
  <script src="assets/js/gsap/SplitText.js"></script>
 
 
+<!-- copyright current year -->
+
+
+<script>
+  document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
+</script>
 
 
  <!-- template js -->

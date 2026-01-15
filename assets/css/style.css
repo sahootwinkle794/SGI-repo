@@ -8972,6 +8972,14 @@ Cta One
 /*==============================================
     Site Footer
 ===============================================*/
+.services-li h4{
+  display: flex;
+  justify-content: center;
+}
+.services-li ul{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .site-footer {
   position: relative;
   display: block;
@@ -23926,3 +23934,9 @@ padding-top: 40px;
         margin-bottom: 33px;
     }
   }
+
+  .why-choose-one__icon img {
+  width: 40px;        /* adjust as needed */
+  height: 40px;
+  object-fit: contain;
+}

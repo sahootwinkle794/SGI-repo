@@ -554,8 +554,12 @@
                         <div class="why-choose-one__single-bg-shape"
                             style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
                         </div>
-                        <div class="why-choose-one__icon">
+                        <!-- <div class="why-choose-one__icon">
                             <span class="icon-satisfication"></span>
+                        </div> -->
+
+                        <div class="why-choose-one__icon">
+                            <img src="assets/images/icon/no-virus.png" alt="Satisfaction Icon">
                         </div>
                         <h4 class="why-choose-one__title">Eliminates bacteria, viruses,<br> fungi, and parasites</h4>
                         <!-- <p class="why-choose-one__text">Dedicated to every stage of farming excellence
@@ -569,8 +573,11 @@
                         <div class="why-choose-one__single-bg-shape"
                             style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
                         </div>
-                        <div class="why-choose-one__icon">
+                        <!-- <div class="why-choose-one__icon">
                             <span class="icon-sustainable"></span>
+                        </div> -->
+                        <div class="why-choose-one__icon">
+                            <img src="assets/images/icon/no-preservatives.png" alt="Satisfaction Icon">
                         </div>
                         <h4 class="why-choose-one__title">Extends shelf life<br> without preservatives
 
@@ -586,8 +593,11 @@
                         <div class="why-choose-one__single-bg-shape"
                             style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
                         </div>
-                        <div class="why-choose-one__icon">
+                        <!-- <div class="why-choose-one__icon">
                             <span class="icon-farmer"></span>
+                        </div> -->
+                        <div class="why-choose-one__icon">
+                            <img src="assets/images/icon/nutrition.png" alt="Satisfaction Icon">
                         </div>
                         <h4 class="why-choose-one__title">Maintains taste, texture,</br> and nutritional value
                         </h4>
@@ -602,8 +612,11 @@
                         <div class="why-choose-one__single-bg-shape"
                             style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
                         </div>
-                        <div class="why-choose-one__icon">
+                        <!-- <div class="why-choose-one__icon">
                             <span class="icon-guarantee"></span>
+                        </div> -->
+                        <div class="why-choose-one__icon">
+                            <img src="assets/images/icon/order.png" alt="Satisfaction Icon">
                         </div>
                         <h4 class="why-choose-one__title">Penetrates sealed<br> and packaged products
                         </h4>
@@ -618,8 +631,11 @@
                         <div class="why-choose-one__single-bg-shape"
                             style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
                         </div>
-                        <div class="why-choose-one__icon">
+                        <!-- <div class="why-choose-one__icon">
                             <span class="icon-product"></span>
+                        </div> -->
+                        <div class="why-choose-one__icon">
+                            <img src="assets/images/icon/harvest.png" alt="Satisfaction Icon">
                         </div>
                         <h4 class="why-choose-one__title">Reduces<br> post-harvest losses
                         </h4>
@@ -634,8 +650,11 @@
                         <div class="why-choose-one__single-bg-shape"
                             style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
                         </div>
-                        <div class="why-choose-one__icon">
+                        <!-- <div class="why-choose-one__icon">
                             <span class="icon-trusted"></span>
+                        </div> -->
+                        <div class="why-choose-one__icon">
+                            <img src="assets/images/icon/save-the-world.png" alt="Satisfaction Icon">
                         </div>
                         <h4 class="why-choose-one__title">Environmentally friendly<br> and residue-free
                         </h4>
@@ -652,8 +671,12 @@
                         <div class="why-choose-one__single-bg-shape"
                             style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
                         </div>
-                        <div class="why-choose-one__icon">
+                        <!-- <div class="why-choose-one__icon">
                             <span class="icon-product"></span>
+                        </div> -->
+
+                        <div class="why-choose-one__icon">
+                            <img src="assets/images/icon/medical-kit.png" alt="Satisfaction Icon">
                         </div>
                         <h4 class="why-choose-one__title">Approved by WHO,<br> FAO, FDA, and AERB
 
@@ -669,8 +692,11 @@
                         <div class="why-choose-one__single-bg-shape"
                             style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
                         </div>
-                        <div class="why-choose-one__icon">
+                        <!-- <div class="why-choose-one__icon">
                             <span class="icon-trusted"></span>
+                        </div> -->
+                        <div class="why-choose-one__icon">
+                            <img src="assets/images/icon/catering-service.png" alt="Satisfaction Icon">
                         </div>
                         <h4 class="why-choose-one__title">Enhances export compliance and food safety standards
 

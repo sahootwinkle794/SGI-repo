@@ -687,7 +687,7 @@
                         <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="100ms">
                             <div class="why-choose-one__single">
                                 <div class="why-choose-one__single-bg-shape"
-                                    style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape.png);">
+                                    style="background-image: url(assets/images/shapes/why-choose-one-single-bg-shape_2_2.png);">
                                 </div>
                                 <div class="why-choose-one__icon">
                                     <img class="chooseus_icon" src="assets/images/icon/safety.png" alt="safety icon">
