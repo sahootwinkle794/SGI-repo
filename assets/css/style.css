@@ -5976,7 +5976,7 @@ About One
   z-index: 1;
 }
 .infa.author-one {
-  padding: 30px;
+      padding: 81px 0 90px;
 }
 
 .author-one__img-box {
@@ -6000,9 +6000,15 @@ About One
   width: 100%;
 }
 .infa_new.author-one__img img {
-  width: 90%;
-  height: 505px;
-  border-radius: 5px;
+  width: 100% !important;
+  /* height: 480px; */
+  border-radius: 5px !important;
+}
+.infa_new.author-one__img_2 img{
+   width: 80% !important;
+  height: 490px !important;
+  border-radius: 5px !important;
+
 }
 
 .author-one__text-box {
@@ -6059,6 +6065,10 @@ About One
   display: block;
   margin-top: 100px;
   text-align: center;
+}
+.author-one__Vission-mission.infa_vegi{
+     margin-top: 28px;
+    margin-left: -87px;
 }
 
 .author-one__Vission-mission-title {
@@ -6148,6 +6158,32 @@ About One
 .author-one__Vission-mission-point li:last-child p::before,
 .author-one__Vission-mission-point li:last-child p::after {
   display: none;
+}
+.author-one__Vission-mission-point.list-unstyled_1 li:last-child p::before,
+.author-one__Vission-mission-point.list-unstyled_1 li:last-child p::after {
+  display:block !important;
+}
+
+.author-one__Vission-mission-point.list-unstyled_1 li p::before {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 7px;
+  background-color: var(--farmology-extra);
+}
+
+.author-one__Vission-mission-point.list-unstyled_1 li p::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--farmology-extra);
 }
 
 .author-one__ratting-box-inner {
@@ -9016,7 +9052,6 @@ Cta One
   position: relative;
   display: block;
   margin-right: 50px;
-  margin-top: 9px;
 }
 
 .footer-widget__about-logo {
@@ -9094,7 +9129,7 @@ Cta One
   color: var(--farmology-white);
   font-weight: 700;
   line-height: 34px;
-  margin-bottom: 32px;
+  margin-bottom: 22px;
   text-transform: capitalize;
 }
 
@@ -23719,6 +23754,11 @@ Product Description
 .infa_new_img_3.about-two__img {
   width: 80% !important;
 }
+@media only screen and (max-width: 767px) {
+    .about-two {
+        padding: 80px 0 10px !important;
+    }
+}
 
 
 
@@ -23940,3 +23980,47 @@ padding-top: 40px;
   height: 40px;
   object-fit: contain;
 }
+/* Edited by trupti media Query */
+
+@media (min-width: 781px) and (max-width: 1500px){
+  .process-one__shape-four{
+    display: none !important;
+  }
+  .why-choose-one__shape-1{
+    display: none !important;
+  }
+  .about-one__shape-1 img{
+    display: none !important;
+  }
+  .new_about_mission.about-two__img-2 {
+        right: -79px !important;
+  }
+
+}
+@media (min-width: 600px) and (max-width: 781px){
+  .new_about_mission.about-two__img-2 {
+        right: -59px !important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 780px){
+
+  
+.infa_new.author-one__img img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 5px !important;
+  
+}
+
+.infa_new.author-one__img_2 img{
+      width: 100% !important;
+    height: 100% !important;
+    border-radius: 5px !important;
+
+}
+.infa.author-one{
+  padding: 30px !important;
+}
+}
+

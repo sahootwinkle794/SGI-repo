@@ -270,8 +270,8 @@
          }, '300');
      });
  </script>
-                           
-<!-- Search script start-->
+<!-- Search script start --><!-- Blog Search Script -->
+
 <script>
 let allBlogs = [];
 
@@ -281,13 +281,17 @@ async function loadBlogs() {
     const res = await fetch("https://gov.silicontechlab.com/sgi_web/api/blogs");
     const data = await res.json();
     allBlogs = data.data || [];
+    
+    // 🔹 Debug: Check image paths
+    console.log(allBlogs.map(b => b.blog_image));
+    
     renderBlogs(allBlogs);
   } catch (err) {
     console.error("Blog loading failed", err);
   }
 }
 
-// 🔹 Render blogs
+// 🔹 Render blogs (full card)
 function renderBlogs(blogs) {
   const wrapper = document.getElementById("blog-container-wrapper");
   wrapper.innerHTML = "";
@@ -298,10 +302,32 @@ function renderBlogs(blogs) {
   }
 
   blogs.forEach(blog => {
+    // 🔹 Correct image handling
+    let imageUrl = 'assets/images/default.png'; // default
+    if (blog.blog_image && blog.blog_image.trim() !== '') {
+      imageUrl = blog.blog_image.startsWith('http')
+        ? blog.blog_image
+        : `https://gov.silicontechlab.com/${blog.blog_image.replace(/^\/?/, '')}`;
+    }
+
     wrapper.innerHTML += `
       <div class="blog-one__single">
-        <h3>${blog.blog_head}</h3>
-        <p>${stripHTML(blog.blog_details).slice(0,150)}...</p>
+        <div class="blog-one__single-inner">
+          <div class="blog-one__img-box">
+            <div class="blog-one__img">
+              <img src="${blog.photo_path}" alt="${blog.blog_head}">
+            </div>
+          </div>
+          <div class="blog-one__content">
+           <h3 class="blog-one__title">
+                  <a href="blog-details?blog_id=${blog.blog_id}">${blog.blog_head}</a>
+                </h3>
+            <p>${stripHTML(blog.blog_details).slice(0, 100)}...</p>
+            <div class="blog-one__read-more mt-3">
+                <a href="blog-details?blog_id=${blog.blog_id}">Read More <span class="fas fa-arrow-right"></span></a>
+              </div>
+          </div>
+        </div>
       </div>
     `;
   });
@@ -314,17 +340,12 @@ function stripHTML(html) {
   return div.textContent || div.innerText || "";
 }
 
-// 🔍 Unified search logic
+// 🔍 Search logic
 function searchBlogs() {
   const keyword = searchInput.value.toLowerCase().trim();
 
-  // 🔄 When search is cleared (❌ icon)
   if (!keyword) {
-    const wrapper = document.getElementById("blog-container-wrapper");
-    wrapper.innerHTML = "";          // force DOM reset
-    setTimeout(() => {
-      renderBlogs(allBlogs);         // clean refresh
-    }, 0);
+    renderBlogs(allBlogs);
     return;
   }
 
@@ -340,10 +361,10 @@ function searchBlogs() {
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 
-// 🔹 Typing search + ❌ clear icon
+// 🔹 Search while typing
 searchInput.addEventListener("input", searchBlogs);
 
-// 🔹 ENTER key
+// 🔹 Enter key triggers search
 searchInput.addEventListener("keydown", e => {
   if (e.key === "Enter") {
     e.preventDefault();
@@ -351,7 +372,7 @@ searchInput.addEventListener("keydown", e => {
   }
 });
 
-// 🔹 Button click
+// 🔹 Button click triggers search
 searchBtn.addEventListener("click", e => {
   e.preventDefault();
   searchBlogs();
@@ -360,6 +381,8 @@ searchBtn.addEventListener("click", e => {
 // 🔹 Load blogs on page load
 document.addEventListener("DOMContentLoaded", loadBlogs);
 </script>
+
+
 
 <!-- header active menu script  -->
 
