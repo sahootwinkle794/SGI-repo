@@ -140,6 +140,18 @@
             align-items: center;
             justify-content: space-between;
         }
+
+        .blog-one__text {
+            display: -webkit-box;        /* needed for line clamping */
+            -webkit-line-clamp: 3 !important;       /* show only 3 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;            /* hide overflow text */
+            text-overflow: ellipsis;     /* adds ... at the end */
+            line-height: 1.5em;          /* optional, adjust spacing */
+            max-height: 4.5em;           /* line-height * 3 lines */
+            }
+
+
     </style>
 </head>
 
@@ -149,12 +161,12 @@
     <div class="custom-cursor__cursor-two"></div>
 
     <!--Start Preloader-->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div class="preloader">
             <span></span>
             <span></span>
         </div>
-    </div>
+    </div> -->
     <!--End Preloader-->
 
     <div id="pageLoader" class="loader-overlay" style="display:none;">
@@ -166,9 +178,9 @@
 
     <a id="button"></a>
 
-    <div class="chat-icon"><button type="button" class="chat-toggler"><i class="fa fa-comment"></i></button></div>
+    <!-- <div class="chat-icon"><button type="button" class="chat-toggler"><i class="fa fa-comment"></i></button></div> -->
     <!--Chat Popup-->
-    <div id="chat-popup" class="chat-popup">
+    <!-- <div id="chat-popup" class="chat-popup">
         <div class="popup-inner">
             <div class="close-chat"><i class="fa fa-times"></i></div>
             <div class="chat-form">
@@ -198,7 +210,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Start sidebar widget content -->
     <div class="xs-sidebar-group info-group info-sidebar">
@@ -317,13 +329,12 @@
                         <div class="main-menu__left">
                             <div class="main-menu__logo">
                                 <a href="index"><img src="assets/images/resources/logo-2.svg" alt="" class="logo-img">
-                                    <!-- <p class="logo-text">Your Trusted Irradiation Partner</p> -->
                                     <p class="logo-text"><?= $lang['logo_tagline']; ?></p>
                                 </a>
 
                             </div>
                         </div>
-                        <div class="main-menu__main-menu-box">
+                        <!-- <div class="main-menu__main-menu-box">
                             <a href="javascript:void(0);" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                             <ul class="main-menu__list">
                                 <li>
@@ -342,9 +353,6 @@
                                 <li>
                                     <a href="product-application"><?= $lang['product-application']; ?></a>
                                 </li>
-                                <!-- <li>
-                                    <a href="javascript:void(0);">Request Facility Tour</a>
-                                </li> -->
                                 <li>
                                     <a href="services"><?= $lang['Our Services']; ?></a>
                                 </li>
@@ -359,8 +367,45 @@
                                     <a href="contact"><?= $lang['Contact']; ?></a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
 
+                        <div class="main-menu__main-menu-box">
+                            <a href="javascript:void(0);" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                            <ul class="main-menu__list">
+                                <li>
+                                    <a href="index">Home </a>
+
+                                </li>
+                                <li>
+                                    <a href="about">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="gamma-irradiation">Gamma Irradiation</a>
+                                </li>
+                                <li>
+                                    <a href="process-line">Process Line</a>
+                                </li>
+                                <li>
+                                    <a href="product-application">Products & Applications</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="javascript:void(0);">Request Facility Tour</a>
+                                </li> -->
+                                <li>
+                                    <a href="services">Our Services</a>
+                                </li>
+
+                                <li>
+                                    <a href="blog">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="faq">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
                         <!-- <div class="main-menu__main-menu-box">
                             <a href="javascript:void(0);" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                             <ul class="main-menu__list">
@@ -378,7 +423,7 @@
                             <a href="?lang=en">EN</a> |
                             <a href="?lang=hi">HI</a>
                         </div> -->
-                        <div class="dropdown">
+                        <!-- <div class="dropdown">
                             <button class="dropbtn">
                                 Language
                                 <span class="arrow">▾</span>
@@ -388,7 +433,7 @@
                                 <a href="?lang=hi">Hindi</a>
                                 <a href="?lang=ta">Tamil</a>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="main-menu__right">
                             <div class="main-menu__nav-sidebar-icon">
@@ -407,7 +452,7 @@
         <div class="stricky-header stricked-menu main-menu">
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
         </div><!-- /.stricky-header -->
-        <script src="assets/js/jquery-latest.js"></script>
+        <!-- <script src="assets/js/jquery-latest.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
         <script src="assets/js/jarallax.min.js"></script>
         <script src="assets/js/jquery.ajaxchimp.min.js"></script>
@@ -431,11 +476,11 @@
         <script src="assets/js/aos.js"></script>
         <script src="assets/js/gsap/gsap.js"></script>
         <script src="assets/js/gsap/ScrollTrigger.js"></script>
-        <script src="assets/js/gsap/SplitText.js"></script>
+        <script src="assets/js/gsap/SplitText.js"></script> -->
 
         <!-- template js -->
-        <script src="assets/js/script.js"></script>
-        <script>
+        <!-- <script src="assets/js/script.js"></script> -->
+        <!-- <script>
             $(document).ready(function() {
 
                 // ==============================
@@ -548,4 +593,4 @@
                 });
 
             });
-        </script>
+        </script> -->

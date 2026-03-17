@@ -5205,6 +5205,7 @@ xs sidebar
   margin-top: 20px;
   margin-bottom: 44px;
   text-align: justify;
+  width:80%
 }
 
 .banner-one__thm-and-other-btn-box {
@@ -5976,7 +5977,7 @@ About One
   z-index: 1;
 }
 .infa.author-one {
-  padding: 30px;
+      padding: 81px 0 90px;
 }
 
 .author-one__img-box {
@@ -6000,9 +6001,15 @@ About One
   width: 100%;
 }
 .infa_new.author-one__img img {
-  width: 90%;
-  height: 505px;
-  border-radius: 5px;
+  width: 100% !important;
+  /* height: 480px; */
+  border-radius: 5px !important;
+}
+.infa_new.author-one__img_2 img{
+   width: 80% !important;
+  height: 490px !important;
+  border-radius: 5px !important;
+
 }
 
 .author-one__text-box {
@@ -6057,8 +6064,12 @@ About One
 .author-one__Vission-mission {
   position: relative;
   display: block;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   text-align: center;
+}
+.author-one__Vission-mission.infa_vegi{
+     margin-top: 28px;
+    /* margin-left: -87px; */
 }
 
 .author-one__Vission-mission-title {
@@ -6078,18 +6089,18 @@ About One
 .author-one__Vission-mission-title::before {
   content: "";
   position: absolute;
-  bottom: -7px;
+  bottom: -19px;
   left: 50%;
   transform: translateX(-50%);
   width: 10px;
-  height: 7px;
+  height: 22px;
   background-color: var(--farmology-extra);
 }
 
 .author-one__Vission-mission-title::after {
   content: "";
   position: absolute;
-  bottom: -16px;
+  bottom: -28px;
   left: 50%;
   transform: translateX(-50%);
   border-left: 10px solid transparent;
@@ -6148,6 +6159,32 @@ About One
 .author-one__Vission-mission-point li:last-child p::before,
 .author-one__Vission-mission-point li:last-child p::after {
   display: none;
+}
+.author-one__Vission-mission-point.list-unstyled_1 li:last-child p::before,
+.author-one__Vission-mission-point.list-unstyled_1 li:last-child p::after {
+  display:block !important;
+}
+
+.author-one__Vission-mission-point.list-unstyled_1 li p::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 20px;
+  background-color: var(--farmology-extra);
+}
+
+.author-one__Vission-mission-point.list-unstyled_1 li p::after {
+  content: "";
+  position: absolute;
+  bottom: -29px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--farmology-extra);
 }
 
 .author-one__ratting-box-inner {
@@ -6949,6 +6986,17 @@ About One
   border-bottom-right-radius: 50px;
   z-index: 2;
 }
+.unpacking{
+ width: 40%;
+    height: 75%;
+    margin-bottom: 20px !important;
+}
+.chooseus_icon{
+      width: 52%;
+    height: 55%;
+    margin-bottom: 0px !important; 
+}
+
 
 .products-one__icon::before {
   content: "";
@@ -8451,6 +8499,44 @@ About One
 /*--------------------------------------------------------------
 # Blog One
 --------------------------------------------------------------*/
+#blog-content{
+  height: 500px;
+  overflow-y: scroll;
+}
+#blog-content p span{
+  font-size: 17px !important;
+}
+#blog-content li  span{
+  font-size: 17px !important;
+}
+#blog-content ul {
+    padding-left: 0;
+}
+
+#blog-content li {
+    list-style: none !important;
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 10px;
+}
+#blog-content h3 span strong{
+  color: var(--farmology-extra) !important;
+  font-size: 30px !important;
+}
+#blog-content h3{
+  margin: 20px 0px !important;
+}
+#blog-content li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(135deg, #429d04f6, #0aedf6e8);
+    border-radius: 10%;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
 .blog-one {
   position: relative;
   display: block;
@@ -8484,6 +8570,8 @@ About One
   display: block;
   overflow: hidden;
   z-index: 1;
+  width: 100%;
+  height: 250px;
 }
 
 .blog-one__img:before {
@@ -8921,6 +9009,14 @@ Cta One
 /*==============================================
     Site Footer
 ===============================================*/
+.services-li h4{
+  display: flex;
+  justify-content: center;
+}
+.services-li ul{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .site-footer {
   position: relative;
   display: block;
@@ -8957,7 +9053,6 @@ Cta One
   position: relative;
   display: block;
   margin-right: 50px;
-  margin-top: 9px;
 }
 
 .footer-widget__about-logo {
@@ -9035,7 +9130,7 @@ Cta One
   color: var(--farmology-white);
   font-weight: 700;
   line-height: 34px;
-  margin-bottom: 32px;
+  margin-bottom: 22px;
   text-transform: capitalize;
 }
 
@@ -9082,7 +9177,7 @@ Cta One
 .footer-widget__contact {
   position: relative;
   display: block;
-  margin-left: -24px;
+  /* margin-left: -24px; */
 }
 
 .footer-widget__contact-list {
@@ -9130,7 +9225,8 @@ Cta One
 
 .footer-widget__contact-list li p {
   position: relative;
-  display: block;
+  /* display: block; */
+  display: grid;
   flex: 1;
   color: rgba(var(--farmology-white-rgb), 0.7);
 }
@@ -9588,7 +9684,7 @@ Cta One
   margin-right: 180px;
 }
 .infa_new_img2.about-two__left {
-  margin-right: 0px !important;
+  /* margin-right: 0px !important; */
 }
 
 .about-two__img-box {
@@ -9622,7 +9718,7 @@ Cta One
 
 .about-two__img-2 {
   position: absolute;
-  bottom: -156px;
+  bottom: 46px;
   right: -145px;
   border-top: 5px solid var(--farmology-white);
   border-left: 5px solid var(--farmology-white);
@@ -18327,6 +18423,19 @@ Site Footer
   height: 51px;
 }
 
+
+
+@media (min-width: 1200px){
+.icon.add-icon{
+  width: 14% !important;
+  height: 51px;
+}
+}
+
+
+
+
+
 .site-footer-four {
   position: relative;
   display: block;
@@ -23653,6 +23762,11 @@ Product Description
 .infa_new_img_3.about-two__img {
   width: 80% !important;
 }
+@media only screen and (max-width: 767px) {
+    .about-two {
+        padding: 80px 0 10px !important;
+    }
+}
 
 
 
@@ -23683,9 +23797,11 @@ img.logo-img {
     width: 218px;
 }
 
+
+
 @media (min-width: 200px) and (max-width: 1200px) {
   .main-menu__right{
-  display: none;
+  display: none !important;
 }
 .main-menu__wrapper-inner{
 justify-content: space-between;
@@ -23783,4 +23899,287 @@ padding: 0 60px !important;
 
 .section-title__title1{
   font-family: "Mukta", sans-serif !important;
+}
+
+
+/*  */
+
+
+
+.add-icon-1{
+  display: none !important;
+}
+
+
+#button{
+    display: inline-block;
+    background-color: #FF9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 120px !important;
+    right: 0px !important;
+    transition: background-color .3s,
+                opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+
+@media (max-width: 1200px) {
+.icon.add-icon {
+  width: 47px !important;
+  height: 51px;
+}
+}
+
+@media (min-width: 300px) and (max-width: 550px) {
+#button{
+  bottom: 20px !important;
+  right: 16px !important;
+}
+}
+@media (min-width: 450px) and (max-width: 800px) {
+    .custom-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1100px) {
+.contact-numbers span{
+display: grid;
+}
+}
+
+@media (min-width: 400px) and (max-width: 470px) {
+.footer-widget__links{
+padding-top: 40px;
+}
+}
+
+@media (min-width:300px) and (max-width:800px){
+ div#blog-content {
+    height: auto !important;
+    overflow-y: visible !important;
+}
+  .sidebar__single.sidebar__category.wow.fadeInUp.blog-cat.animated {
+    display: none !important;
+}
+.blog-details__user-and-meta {
+    flex-direction: row !important;
+    gap: 20px;
+    justify-content: space-between !important;
+}
+}
+
+
+
+@media (min-width: 470px) and (max-width: 780px){
+ 
+    .footer-widget__contact {
+        margin-left: 0;
+        margin-top: 33px;
+    }
+
+    .footer-widget__links {
+        margin-top: 41px;
+        margin-bottom: 33px;
+    }
+  }
+
+  .why-choose-one__icon img {
+  width: 40px;        /* adjust as needed */
+  height: 40px;
+  object-fit: contain;
+}
+/* Edited by trupti media Query */
+
+@media (min-width: 781px) and (max-width: 1500px){
+  .process-one__shape-four{
+    display: none !important;
+  }
+  .why-choose-one__shape-1{
+    display: none !important;
+  }
+  .about-one__shape-1 img{
+    display: none !important;
+  }
+  .new_about_mission.about-two__img-2 {
+        right: -79px !important;
+  }
+
+}
+@media (min-width: 600px) and (max-width: 781px){
+  .new_about_mission.about-two__img-2 {
+        right: -59px !important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 780px){
+
+  
+.infa_new.author-one__img img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 5px !important;
+  
+}
+
+.infa_new.author-one__img_2 img{
+      width: 100% !important;
+    height: 100% !important;
+    border-radius: 5px !important;
+
+}
+.infa.author-one{
+  padding: 30px !important;
+}
+}
+
+
+
+
+
+/* NAv-bar responsive */
+
+@media (min-width: 1200px) and (max-width: 1300px){
+  /* .main-menu__list{
+    display: none !important;
+  } */
+  /* .main-menu__right{
+    display: none !important;
+  } */
+  /* .mobile-nav__toggler{
+    display: block !important;
+  } */
+
+
+  .main-menu .main-menu__list > li + li, .stricky-header .main-menu__list > li + li{
+    margin-left: 10px !important;
+  }
+  img.logo-img{
+    width: 160px !important;
+  }
+  .logo-text{
+    font-size: 11px !important;
+    padding-left: 0 !important;
+  }
+
+}
+
+
+
+
+@media (min-width: 1300px) and (max-width: 1320px){
+  .main-menu .main-menu__list > li + li, .stricky-header .main-menu__list > li + li{
+    margin-left: 12px !important;
+  }
+}
+
+
+/* @media (min-width: 1198px) and (max-width: 1199px) {
+  .main-menu__right {
+    display: none !important;
+  }
+} */
+
+
+@media (width: 1200px) {
+    img.logo-img{
+    width: 150px !important;
+  }
+  .logo-text{
+    font-size: 9px !important;
+    padding-left: 0 !important;
+  }
+  .main-menu__wrapper-inner{
+    padding: 0 50px !important;
+  }
+  .main-menu .main-menu__list > li > a, .stricky-header .main-menu__list > li > a{
+    font-size:16px !important;
+    margin-left: 10px !important;
+  }
+}
+
+
+
+
+/* .infa_new_img2.about-two__left{
+  margin-right: 10px;
+} */
+
+/* .infrastructure_row .row>* {
+
+  width: auto !important;
+
+}
+.infrastructure_row{
+  justify-content: center !important;
+} */
+
+
+
+@media (min-width: 991px) and (max-width: 1320px){
+  .faq-one__right .faq-one-accordion .accordion-title h4{
+    margin: 0 10px !important
+  }
+
+}
+
+@media (min-width: 767px) {
+  .site-footer__top-inner{
+    padding: 111px 50px !important;
+  }
+}
+@media (min-width: 200px) and (max-width: 1320px){
+
+  .con-num{
+    display: grid !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .about-image-two-infrasture{
+    width: 65% !important;
+  }
+.infrasture-row-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+}
+
+
+
+
+.logo-img-footer{
+  width: 300px !important;
+}
+
+.logo-text-footer{
+  font-size: 18px !important;
+  padding-left: 16px !important;
+}
+
+
+
+
+
+@media (min-width: 1200px) and (max-width: 1320px){
+ .product-application-new-style{
+  display: none !important;
+ }
+}
+
+
+
+.author-one__Vission-mission-point li:last-child p::before,
+.author-one__Vission-mission-point li:last-child p::after {
+    display: none;
+    content: none;
 }

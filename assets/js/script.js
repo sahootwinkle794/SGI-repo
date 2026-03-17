@@ -1686,4 +1686,210 @@ if ($(".accordion-grp").length) {
 
 
 
+
+
+
+  // 
+  // 
+  // 
+  // 
+
+
+
+
+
+$(window).on("load", function () {
+
+  jQuery(function ($) {
+
+    var timelines = $('.cd-horizontal-timeline'),
+      eventsMinDistance = 120; // spacing between steps
+
+    if (timelines.length > 0) initTimeline(timelines);
+
+    function initTimeline(timelines) {
+      timelines.each(function () {
+        var timeline = $(this),
+          timelineComponents = {};
+
+        timelineComponents.timelineWrapper = timeline.find('.events-wrapper');
+        timelineComponents.eventsWrapper = timelineComponents.timelineWrapper.children('.events');
+        timelineComponents.fillingLine = timelineComponents.eventsWrapper.children('.filling-line');
+        timelineComponents.timelineEvents = timelineComponents.eventsWrapper.find('a');
+        timelineComponents.timelineNavigation = timeline.find('.cd-timeline-navigation');
+        timelineComponents.eventsContent = timeline.children('.events-content');
+
+        setEventPosition(timelineComponents, eventsMinDistance);
+        var timelineTotWidth = setTimelineWidth(timelineComponents, eventsMinDistance);
+
+        timeline.addClass('loaded');
+
+        /* Navigation */
+        timelineComponents.timelineNavigation.on('click', '.next', function (event) {
+          event.preventDefault();
+          updateSlide(timelineComponents, timelineTotWidth, 'next');
+        });
+
+        timelineComponents.timelineNavigation.on('click', '.prev', function (event) {
+          event.preventDefault();
+          updateSlide(timelineComponents, timelineTotWidth, 'prev');
+        });
+
+        /* Click on step */
+        timelineComponents.eventsWrapper.on('click', 'a', function (event) {
+          event.preventDefault();
+          timelineComponents.timelineEvents.removeClass('selected');
+          $(this).addClass('selected');
+          updateOlderEvents($(this));
+          updateFilling($(this), timelineComponents.fillingLine, timelineTotWidth);
+          updateVisibleContent($(this), timelineComponents.eventsContent);
+        });
+      });
+    }
+
+    /* ---------------- Helper Functions ---------------- */
+
+    function setEventPosition(components, min) {
+      components.timelineEvents.each(function (index) {
+        $(this).css('left', (index + 1) * min + 'px');
+      });
+    }
+
+    function setTimelineWidth(components, width) {
+      var totalWidth = (components.timelineEvents.length + 2) * width;
+      components.eventsWrapper.css('width', totalWidth + 'px');
+      updateFilling(components.timelineEvents.eq(0), components.fillingLine, totalWidth);
+      return totalWidth;
+    }
+
+    function updateSlide(components, totWidth, dir) {
+      var translateValue = getTranslateValue(components.eventsWrapper),
+        wrapperWidth = Number(components.timelineWrapper.width());
+
+      (dir === 'next')
+        ? translateTimeline(components, translateValue - wrapperWidth + eventsMinDistance, wrapperWidth - totWidth)
+        : translateTimeline(components, translateValue + wrapperWidth - eventsMinDistance);
+    }
+
+    function translateTimeline(components, value, width) {
+      value = (value > 0) ? 0 : value;
+      value = (value < width) ? width : value;
+
+      components.eventsWrapper.css("transform", "translateX(" + value + "px)");
+
+      components.timelineNavigation.find('.prev')[value === 0 ? 'addClass' : 'removeClass']('inactive');
+      components.timelineNavigation.find('.next')[value === width ? 'addClass' : 'removeClass']('inactive');
+    }
+
+    function updateFilling(selectedEvent, filling, totWidth) {
+      var left = Number(selectedEvent.css('left').replace('px', '')) +
+        Number(selectedEvent.width()) / 2;
+      filling.css("transform", "scaleX(" + (left / totWidth) + ")");
+    }
+
+    function updateVisibleContent(event, content) {
+      var name = event.data('name');
+      content.find('.selected').removeClass('selected');
+      content.find('[data-name="' + name + '"]').addClass('selected');
+    }
+
+    function updateOlderEvents(event) {
+      event.parent('li').prevAll('li').children('a').addClass('older-event');
+      event.parent('li').nextAll('li').children('a').removeClass('older-event');
+    }
+
+    function getTranslateValue(el) {
+      var matrix = el.css("transform");
+      if (matrix.indexOf('matrix') >= 0)
+        return Number(matrix.split(',')[4]);
+      return 0;
+    }
+
+  });
+
+});
+
+
+
+
+/* Scroll reveal */
+const boxes = document.querySelectorAll(".machine");
+window.addEventListener("scroll",()=>{
+  boxes.forEach(b=>{
+    const r=b.getBoundingClientRect();
+    if(r.top < window.innerHeight-100){
+      b.classList.add("active");
+    }
+  });
+});
+
+/* Floating Particles */
+const c=document.getElementById("particles");
+const ctx=c.getContext("2d");
+c.width=innerWidth;
+c.height=innerHeight;
+
+const particles=[];
+for(let i=0;i<80;i++){
+  particles.push({
+    x:Math.random()*c.width,
+    y:Math.random()*c.height,
+    s:Math.random()*3+1,
+    v:Math.random()*1+0.5
+  });
+}
+
+function animate(){
+  ctx.clearRect(0,0,c.width,c.height);
+  particles.forEach(p=>{
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.s,0,Math.PI*2);
+    ctx.fillStyle="rgba(0,255,255,.5)";
+    ctx.fill();
+    p.y+=p.v;
+    if(p.y>c.height)p.y=0;
+  })
+  requestAnimationFrame(animate);
+}
+animate();
+
+
+
+  
+
+
+// Testing Script
+const points = document.querySelectorAll(".point");
+const title = document.getElementById("event-title");
+const sub = document.getElementById("event-sub");
+const desc = document.getElementById("event-desc");
+
+points.forEach(point=>{
+  point.addEventListener("click", ()=>{
+    
+    document.querySelector(".point.active")?.classList.remove("active");
+    point.classList.add("active");
+
+    title.textContent = point.dataset.title;
+    sub.textContent = point.dataset.sub;
+    desc.textContent = point.dataset.desc;
+  });
+});
+
+  
+
+
+
+
+
+
+
 })(jQuery);
+
+
+
+
+
+
+
+

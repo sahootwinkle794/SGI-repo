@@ -237,3 +237,27 @@
 
 
         <?php include 'footer.php'; ?>
+
+
+
+        <script>
+            window.addEventListener("load", function() {
+                setTimeout(function() {
+                    const firstAccordion = document.querySelector(
+                        ".faq-one-accordion .accordion:first-child"
+                    );
+
+                    if (!firstAccordion) return;
+
+                    const title = firstAccordion.querySelector(".accordion-title");
+                    const content = firstAccordion.querySelector(".accordion-content");
+
+                    // Open using theme logic
+                    if (title) title.click();
+
+                    // Force fallback (important)
+                    firstAccordion.classList.add("active");
+                    if (content) content.style.display = "block";
+                }, 500); // wait for theme & WOW.js
+            });
+        </script>

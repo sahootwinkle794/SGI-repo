@@ -1,4 +1,7 @@
 @media only screen and (min-width: 1200px) and (max-width: 1319px) {
+    .main-menu__right{
+        display: block !important;
+    }
     .feature-one__single {
         padding: 32px 30px 32px;
     }
@@ -359,9 +362,15 @@
 
     .about-two__right {
         max-width: 600px;
-        margin: 150px auto 0;
+        margin: 150px auto 20px;
     }
 
+    .food-irradiation-new-style{
+
+    }
+    .iqf-new-style{
+        margin: 20px auto 20px !important;
+    }
     .about-two__shape-2 {
         display: none;
     }
@@ -680,14 +689,16 @@
 
 
 /* Tablet Layout: 768px. */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 767px) and (max-width: 991px) {
     .banner-one__happy-customer,
-    .banner-one__client-review,.about-one__img-shape-1,.about-one__crop-harvest,.about-one__field-box{
-        display: none;
+    .banner-one__client-review,.about-one__img-shape-1,.about-one__crop-harvest,
+    .about-one__field-box,.about-three__img-shape-2 img{
+        display: none !important;
     }
-    .about-one,.process-one,.products-one,.why-choose-one {
+    .about-one,.process-one,.products-one,.why-choose-one,.about-three {
      padding: 50px 0 50px !important;
     }
+    
     section.banner-one {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -1185,7 +1196,7 @@
 
 
 
-@media  (min-width: 300px) and (max-width: 500px) {
+/* @media  (min-width: 300px) and (max-width: 500px) {
      #button {
         display: inline-block;
         background-color: #FF9800;
@@ -1202,7 +1213,7 @@
         visibility: hidden;
         z-index: 1000;
     }
-}
+} */
 
 
 
@@ -1216,12 +1227,12 @@
         padding-top: 50px;
         padding-bottom: 50px;
     }
-    .about-one,.process-one,.products-one,.video-one,.why-choose-one {
+    .about-one,.process-one,.products-one,.video-one,.why-choose-one,.about-three {
     padding: 50px 0 50px !important;
     }
     .about-one__img-shape-1.float-bob-y img,.about-one__crop-harvest,
-    .about-one__since-box,.about-one__video-box,.process-one__shape-four{
-        display: none;
+    .about-one__since-box,.about-one__video-box,.process-one__shape-four,.about-three__img-shape-2 img{
+        display: none !important;
     }
    
     .custom-cursor__cursor{
@@ -1614,13 +1625,8 @@
         margin-left: 0;
     }
 
-    .footer-widget__contact {
-        margin-left: 0;
-        margin-top: 33px;
-    }
-
-    .footer-widget__links {
-        margin-top: 41px;
+    .footer-widget__services{
+         margin-top: 41px;
         margin-bottom: 33px;
     }
 
@@ -2512,7 +2518,7 @@
     }
 
     .faq-page {
-        padding: 80px 0 80px;
+        padding: 0px 0 80px;
     }
 
     .history-page__line {
@@ -3134,18 +3140,28 @@
 
 
 
+@media (width: 992px){
+    .banner-one__right{
+        display: none !important;
+    }
+    .col-lg-6{
+        width: 100% !important;
+    }
+}
 
 
 
 
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
     .banner-one__title {
         font-size: 45px;
     }
 
     .banner-one__right {
         right: -85px;
+        bottom: 0;
+        width: 60%;
     }
 
     .banner-one__client-review {
@@ -3274,6 +3290,14 @@
 
 
 
+@media (width: 767px){
+.banner-one__happy-customer{
+    display: none !important;
+}
+.banner-one__happy-customer-count-box{
+    display: none !important;
+}
+}
 
 
 
@@ -3283,7 +3307,7 @@
 
 
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 767px) and (max-width: 992px) {
     .banner-one {
         padding: 200px 0 0px;
     }
@@ -3994,3 +4018,156 @@
 
 
 /* The End */
+
+
+
+/* Trupti css  For process line*/
+@media (min-width: 320px) and (max-width: 780px){
+
+  
+.infa_new.infa_new.author-one__img_2 img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 5px !important;
+  
+}
+
+/* .infa_new.author-one__img_2 img{
+      width: 100% !important;
+    height: 100% !important;
+    border-radius: 5px !important;
+
+} */
+.infa.author-one{
+  padding: 30px !important;
+}
+}
+
+
+
+
+@media (min-width: 700px) and (max-width: 900px)
+    
+{
+    .infa_new.author-one__img_2 img {
+    width: 100% !important;
+    height: 100% !important;
+   
+}
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+/*  Process Line */
+.infa_new.author-one__img_2 img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 5px !important;
+}
+
+.infa_row_reverse{
+  width: 50% !important;
+  flex-wrap: nowrap !important;
+}
+.author-one__Vission-mission.infa_vegi {
+    margin-top: 48px !important;
+    margin-left: 3px !important;
+}
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1319px){
+
+
+ .infa_new.author-one__img_2 img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 5px !important;
+}
+
+}
+
+@media only screen and (max-width: 610px){
+ .infa_new.author-one__img_2 img{
+   width:100% !important;
+  /* height: 490px !important; */
+  /* border-radius: 5px !important; */
+
+}
+
+}
+
+@media (min-width: 700px) and (max-width: 900px)
+    
+{
+    .infa_new.author-one__img_2 img {
+    width: 100% !important;
+    height: 100% !important;
+   
+}
+}
+
+
+
+
+
+@media (min-width: 300px) and (max-width: 767px){
+    .about-two__img-2{
+        display: none !important;
+    }
+}
+@media (width: 1199px){
+.banner-one__client-review{
+    display: none !important;
+}
+}
+
+
+
+
+@media (min-width: 1200px) and (max-width: 1320px){
+    .about-two__img-2{
+/* display: none !important; */
+    bottom: -250px !important;
+    }
+    .infa_new_img_3.about-two__img{
+        width: 100% !important;
+    }
+    .new_about_mission.about-two__img-2{
+        bottom: -130px !important;
+    }
+    .new_about_mission.about-two__img-2 img{
+        height: 400px !important;
+    }
+}
+
+
+
+@media (min-width: 1200px) and (max-width: 1201px){
+.infa_new_img_3.about-two__img{
+    width: 130% !important;
+}
+.new_about_mission.about-two__img-2 img{
+    height: 400px !important;
+}
+    .new_about_mission.about-two__img-2{
+        right: -140px !important;
+        bottom: -70px !important;
+    }
+}
+
+@media (min-width: 1199px) and (max-width: 1201px){
+    .application-new-style{
+       position: relative;
+    display: block;
+    margin-right: 180px;
+    margin-bottom: 150px !important;
+    }
+    .about-two__img-box{
+        width: 80% !important;
+
+    }
+   .iqf-new-style{
+        margin: 20px auto 30px !important;
+    }
+
+}

@@ -47,7 +47,7 @@
 <!--About One Start -->
 <section class="about-one about-five">
     <div class="container">
-        <div class="row">
+        <div class="row d-flex justify-content-center align-items-center">
             <div class="col-xl-6">
                 <div class="about-one__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
                     <div class="about-one__img">
@@ -482,7 +482,7 @@
         <img src="assets/images/shapes/about-two-shape-3.png" alt="">
     </div>
     <div class="container">
-        <div class="row">
+        <div class="row infrastructure_row d-flex justify-content-center align-items-center">
 
             <div class="col-xl-6">
                 <div class="about-two__right">
@@ -609,10 +609,10 @@
 
                 </div>
             </div>
-            <div class="col-xl-6">
-                <div class="infa_new_img2 about-two__left wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms">
+            <div class="col-xl-6 infrasture-row-image">
+                <div class="infa_new_img2 about-image-two-infrasture wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms">
                     <div class="about-two__img-box">
-                        <div class="about-two__img">
+                        <div class="about-two__img ">
                             <img src="assets/images/resources/image 20.png" alt="">
                         </div>
                         <!-- <div class="new_product about-two__img-2">
